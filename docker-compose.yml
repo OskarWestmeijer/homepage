@@ -13,6 +13,7 @@ services:
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/:ro
       - ./nginx/index.html:/usr/share/nginx/html/index.html
+      - ./nginx/images:/usr/share/nginx/html
       - ./certbot/www:/var/www/certbot/:ro
       - ./certbot/conf/:/etc/nginx/ssl/:ro
   certbot:
