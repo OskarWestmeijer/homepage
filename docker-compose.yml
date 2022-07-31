@@ -14,7 +14,10 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./nginx/index.html:/usr/share/nginx/html/index.html:ro
       - ./certbot/www:/var/www/certbot/:ro
-
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
   db:
     image: postgres:14.1
     container_name: db
@@ -38,4 +41,3 @@ services:
       - SPRING_DATASOURCE_PASSWORD=password1
     expose:
       - "8080"
-
