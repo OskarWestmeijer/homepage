@@ -9,9 +9,12 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    restart: always
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./nginx/index.html:/usr/share/nginx/html/index.html
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/index.html:/usr/share/nginx/html/index.html:ro
+      - ./certbot/www:/var/www/certbot/:ro
+
   db:
     image: postgres:14.1
     container_name: db
