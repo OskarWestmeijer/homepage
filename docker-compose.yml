@@ -4,8 +4,8 @@ services:
   homepage:
     image: nginx:alpine
     container_name: homepage
-    depends_on:
-      - app
+    networks:
+      - homepage_proxy
     ports:
       - "80:80"
       - "443:443"
@@ -19,12 +19,16 @@ services:
       - ./certbot/conf/:/etc/nginx/ssl/:ro
   certbot:
     image: certbot/certbot:latest
+    networks:
+      - homepage_proxy
     volumes:
       - ./certbot/www/:/var/www/certbot/:rw
       - ./certbot/conf/:/etc/letsencrypt/:rw
-  db:
+  database:
     image: postgres:14.1
-    container_name: db
+    container_name: database
+    networks:
+      - homepage_proxy
     expose:
       - "5432"
     volumes:
@@ -34,14 +38,7 @@ services:
     environment:
       POSTGRES_USER: username1
       POSTGRES_PASSWORD: password1
-  app:
-    image: oskarwestmeijer/weather-api:latest
-    container_name: app
-    depends_on:
-      - db
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/weather
-      - SPRING_DATASOURCE_USERNAME=username1
-      - SPRING_DATASOURCE_PASSWORD=password1
-    expose:
-      - "8080"
+networks:
+  proxy:
+    # bridge on a single host and overlay on a Swarm.
+    driver: bridge
