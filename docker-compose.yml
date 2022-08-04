@@ -42,4 +42,3 @@ networks:
     driver: bridge
 volumes:
   data:
-    external: true
