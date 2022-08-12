@@ -33,7 +33,6 @@ services:
       - ./certbot/conf/:/etc/letsencrypt/:rw
 networks:
   proxy:
-    name: homepage-proxy
     # bridge on a single host and overlay on a Swarm.
     driver: bridge
 
