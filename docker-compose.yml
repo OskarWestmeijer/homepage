@@ -11,7 +11,7 @@ services:
         reservations:
           memory: 250m
     ports:
-      - "1992:3000"
+      - "1992:80"
     restart: always
 networks:
   default:

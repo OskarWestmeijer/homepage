@@ -1,17 +1,27 @@
-# get the base node image
-FROM node:lts-alpine3.16
+# build-stage environment
+FROM node:lts-alpine3.16 as build-stage
 
-# set the working dir for container
-WORKDIR /frontend
+WORKDIR /app
 
-# copy the json file first
-COPY ./package.json /frontend
+ENV PATH /app/node_modules/.bin:$PATH
 
-# install npm dependencies
+COPY package.json ./
+
+COPY package-lock.json ./
+
 RUN npm install
 
-# copy other project files
-COPY . .
+COPY . ./
 
-# build the folder
-CMD [ "npm", "run", "start" ]
+RUN npm run build
+
+# production-stage environment
+FROM nginx:1.23.1-alpine
+
+COPY --from=build-stage /app/build /usr/share/nginx/html
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
