@@ -12,10 +12,13 @@ export default function Navigation() {
                             <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link active" aria-current="page" to="/experience">Experience</NavLink>
+                            <NavLink className="nav-link" aria-current="page" to="/experience">Experience</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink  className="nav-link" to="/values">Values</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink  className="nav-link" to="/projects">Projects</NavLink>
                         </li>
                     </ul>
                 </div>

@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Experience() {
     return (
-        <div className="container-sm mt-5">
-            <h2 className="mb-3">Development experience</h2>
+        <div className="container-sm mt-3">
+            <h2 className="mb-3">Experience</h2>
             <div className="row">
                 <h4 className="mb-3">Technical</h4>
                 <div className="col-md-3 col-sm-12 border">
@@ -48,19 +48,13 @@ export default function Experience() {
             </div>
             <div className="row">
                 <p className="col-md-10 mt-4">Above I listed the main technical setup I have worked with in the past. Furthermore
-                    there were
-                    many more tools or languages I had some contact with. For example, I also have experience in regular web
-                    development.</p>
-                <div className="col-md-2"></div>
+                    there were many more tools or languages I had some contact with. For example, I have experience in regular web
+                    development. This website is build with ReactJs. The application is hosted on my private linux server.</p>
 
-                <h4 className=" mb-3">Preferred workstyle</h4>
-
-                <p className="col-md-10">I like working with the stakeholders and developing software for them. It is fun to figure
-                    out their
-                    requirements and afterwards implementing them in an efficient way. In most projects we had great results
-                    pursuing an incremental development style. This means implementing small features every sprint and
-                    continuously presenting them to the stakeholders.</p>
-                <div className="col-md-2"></div>
+                <h4 className=" mb-3">Working with the stakeholders</h4>
+                <p className="col-md-10">I like working with the stakeholders. It is fun to figure out requirements and understand the business processes.
+                    In most projects we had great results pursuing an incremental development style. This means implementing small features every sprint and
+                    continuously presenting them to the stakeholders. It feels fulfilling to develop stable and thought-out tooling for the users.</p>
             </div>
         </div>
 
