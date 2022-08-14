@@ -10,8 +10,8 @@ services:
           memory: 250m
         reservations:
           memory: 250m
-    expose:
-      - "3000"
+    ports:
+      - "1992:3000"
     restart: always
 networks:
   default:
