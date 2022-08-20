@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   homepage:
-    image: oskarwestmeijer/homepage:1.2
+    image: oskarwestmeijer/homepage:1.2.1
     container_name: homepage
     deploy:
       resources:

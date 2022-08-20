@@ -23,7 +23,7 @@ export default function Experience() {
                         <li>IntelliJ IDEA</li>
                         <li>Jira</li>
                         <li>Github</li>
-                        <li>Jenkins</li>
+                        <li>CI / CD</li>
                         <li>Miro</li>
                     </ul>
                 </div>
@@ -57,7 +57,6 @@ export default function Experience() {
                     continuously presenting them to the stakeholders. It feels fulfilling to develop stable and thought-out tooling for the users.</p>
             </div>
         </div>
-
     );
 
 

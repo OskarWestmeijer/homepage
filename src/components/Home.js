@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Main() {
+export default function Home() {
     return (
         <div className="container-sm mt-3">
             <div className="row">

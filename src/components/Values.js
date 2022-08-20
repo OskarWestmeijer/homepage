@@ -11,10 +11,10 @@ export default function Values() {
 
                     <h4>Personal</h4>
                     <p>I try to maintain a strong moral compass. Openness and honesty are fundamental values to me. Unfairness and egoism are characteristics which I strongly oppose.
-                        I would rather fail or be in a worse position, than to compromise my integrity. These are great words, but I really try to live up to them.</p>
+                        I would rather fail or be in a worse position, than to compromise my integrity.</p>
 
                     <h4>Company culture</h4>
-                    <p>A reliable and transparent workplace is important. Sharing common fundamental values with your
+                    <p>A reliable and transparent workplace is important. Sharing common values with your
                         colleagues, builds trust and general well-being at work. A healthy culture also means, embracing the diversity among the employees.</p>
 
                     <h4>Team decision making</h4>
@@ -24,8 +24,7 @@ export default function Values() {
                         way everyone is heard, and we can gain a common understanding. Minimize the room for misunderstandings.</p>
                     <p>Based on these viewpoints we can decide in a rational and democratic way the best solution. Should I
                         still disagree with the chosen solution, I will voice my concerns. But most of the time it is important to
-                        accept and trust the team decision.
-                        Only in extreme cases would I insist on a prolonged discussion.</p>
+                        accept and trust the team decision. Only in extreme cases would I insist on a prolonged discussion.</p>
                 </div>
                 <div className="col-md2 col-sm-12"></div>
             </div>
