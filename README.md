@@ -10,6 +10,6 @@ npm start
 
 ## build and push
 ```
-docker build -t oskarwestmeijer/homepage:x.x.x .
-docker push oskarwestmeijer/homepage:x.x.x
+docker build -t oskarwestmeijer/homepage:1.3.0 .
+docker push oskarwestmeijer/homepage:1.3.0
 ```
