@@ -4,9 +4,21 @@ import { NavLink } from "react-router-dom";
 export default function Navigation() {
 
     return (
-        <nav className="navbar navbar-expand-sm">
-            <div className="container-fluid">
-                <div className="navbar-collapse justify-content-md-center">
+        <nav className="navbar navbar-expand-md fixed-top">
+            <div className="container">
+                <a href="https://oskar-westmeijer.com" class="navbar-brand">Oskar Westmeijer</a>
+
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navmenu"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div className="collapse navbar-collapse" id="navmenu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink>
@@ -15,10 +27,10 @@ export default function Navigation() {
                             <NavLink className="nav-link" aria-current="page" to="/experience">Experience</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink  className="nav-link" to="/values">Values</NavLink>
+                            <NavLink className="nav-link" to="/values">Values</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink  className="nav-link" to="/projects">Projects</NavLink>
+                            <NavLink className="nav-link" to="/projects">Projects</NavLink>
                         </li>
                     </ul>
                 </div>
