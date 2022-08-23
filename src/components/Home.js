@@ -6,11 +6,13 @@ export default function Home() {
             <div className="container pt-5 mt-4">
                 <header className="">
                     <div className="row">
-                        <div className="col-md-1 col-sm-12 " />
-                        <div className="col-md-4 col-sm-12 ">
+                        <div className="col-lg-1 col-sm-12 " />
+                        <div className="col-lg-4 col-sm-12 mt-2">
                             <img src="images/oskar_westmeijer.jpg" className="rounded img-fluid" alt="Oskar Westmeijer" />
                         </div>
-                        <div className="col-md-6 col-sm-12 pt-5 ms-5" >
+                        <div className="col-lg-6 col-sm-12 ms-5" >
+                            <h2 className="text-center display-6">Oskar Westmeijer</h2>
+                            <h5 className="text-center">Java Software Developer</h5>
                             <p>Hello! This website shares information regarding my personal experiences and interests.</p>
                             <p>In 2018 I completed my apprenticeship as a software developer and am pursuing a career as a Java
                                 developer
@@ -27,16 +29,7 @@ export default function Home() {
                                 This understanding has been beneficial in culturally diverse teams.</p>
                             <p>Feel free to explore this website, to learn more about me and use the links to have a look at my accounts.</p>
                         </div>
-                        <div className="col-md-1 col-sm-12 " />
-                    </div>
-
-                    <div className="row mt-3">
-                        <div className="col-md-1 col-sm-12 " />
-                        <div className="col-md-4 col-sm-12 ">
-                            <h2 className="text-center display-6">Oskar Westmeijer</h2>
-                            <h5 className="text-center">Java Software Developer</h5>
-                        </div>
-                        <div className="col-md-7 col-sm-12 " />
+                        <div className="col-lg-1 col-sm-12 " />
                     </div>
                 </header>
             </div>
