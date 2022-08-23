@@ -38,7 +38,6 @@ export default function Experience() {
                                     <li className="list-group-item">Github</li>
                                     <li className="list-group-item">CI / CD</li>
                                     <li className="list-group-item">Miro</li>
-                                    <li className="list-group-item"></li>
                                 </ul>
                             </div>
                         </div>
