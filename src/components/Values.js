@@ -3,20 +3,20 @@ import React from "react";
 export default function Values() {
 
     return (
-        <div className="container-sm mt-3">
+        <div className="container pt-5 mt-4">
             <div className="row">
-                <div className="col-md-2 col-sm-12"></div>
-                <div className="col-md-8 col-sm-12">
-                    <h2 className="text-center">Values</h2>
-                    <h4 >Personal</h4>
+                <div className="col-lg-2 col-sm-12"></div>
+                <div className="col-lg-8 col-sm-12">
+                    <h2 className="text-center display-6">Values</h2>
+                    <h5 >Personal</h5>
                     <p>I try to maintain a strong moral compass. Openness and honesty are fundamental values to me. Unfairness and egoism are characteristics which I strongly oppose.
                         I would rather fail or be in a worse position, than to compromise my integrity.</p>
 
-                    <h4 >Company culture</h4>
+                    <h5>Company culture</h5>
                     <p>A reliable and transparent workplace is important. Sharing common values with your
                         colleagues, builds trust and general well-being at work. A healthy culture also means, embracing the diversity among the employees.</p>
 
-                    <h4 >Team decision making</h4>
+                    <h5>Team decision making</h5>
                     <p>Solving a problem as a team is always challenging. Every teammate has a viewpoint, but sometimes
                         they do not seem to align very well. I tend to ask my peers what is on their
                         mind and how they would solve the task. Ideally this opinion is shared with the whole team. This
@@ -25,7 +25,7 @@ export default function Values() {
                         still disagree with the chosen solution, I will voice my concerns. But most of the time it is important to
                         accept and trust the team decision. Only in extreme cases would I insist on a prolonged discussion.</p>
                 </div>
-                <div className="col-md2 col-sm-12"></div>
+                <div className="col-mlg-2 col-sm-12"></div>
             </div>
         </div>
 
