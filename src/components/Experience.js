@@ -5,7 +5,7 @@ export default function Experience() {
         <section>
             <div className="container pt-5 mt-4">
                 <h2 className=" text-center display-6">Experience</h2>
-                <div className="row">
+                <div className="mt-3 row">
                     <div className="col-md-2 col-sm-12" />
                     <div className="col-md-4 col-sm-12">
                         <div className="card ci-bg">
@@ -18,9 +18,9 @@ export default function Experience() {
                                     <li className="list-group-item">Java</li>
                                     <li className="list-group-item">Spring Boot</li>
                                     <li className="list-group-item">Maven</li>
-                                    <li className="list-group-item">PostgreSQL</li>
+                                    <li className="list-group-item">ReactJs</li>
                                     <li className="list-group-item">Docker</li>
-                                    <li className="list-group-item">Kubernetes</li>
+                                    <li className="list-group-item">PostgreSQL</li>
                                 </ul>
                             </div>
                         </div>
@@ -37,6 +37,7 @@ export default function Experience() {
                                     <li className="list-group-item">Jira</li>
                                     <li className="list-group-item">Github</li>
                                     <li className="list-group-item">CI / CD</li>
+                                    <li className="list-group-item">Metrics</li>
                                     <li className="list-group-item">Miro</li>
                                 </ul>
                             </div>
@@ -58,7 +59,7 @@ export default function Experience() {
                                     <li className="list-group-item">Unit and Integration testing</li>
                                     <li className="list-group-item">UML (Sequence Diagram)</li>
                                     <li className="list-group-item">SCRUM</li>
-                                    <li className="list-group-item">Teamwork!</li>
+                                    <li className="list-group-item">Working with the stakeholders!</li>
                                 </ul>
                             </div>
                         </div>
@@ -79,22 +80,6 @@ export default function Experience() {
                             <div className="col-md-2 col-sm-12" />
                         </div>
                     </div>
-                </div>
-
-                <div className="row mt-2">
-                    <div className="col-md-2 col-sm-12" />
-                    <p className="col-md-8 mt-2">There were many more tools or languages I have worked with, for example regular web
-                        development. This website is build with ReactJs.</p>
-                    <div className="col-md-2 col-sm-12" />
-
-                    <div className="col-md-2 col-sm-12" />
-                    <div className="mb-5 col-md-8 col-sm-12">
-                        <h5>Working with the stakeholders</h5>
-                        <p>I like working with the stakeholders. It is fun to figure out requirements and understand the business processes.
-                            In most projects we had great results pursuing an incremental development style. This means implementing small features every sprint and
-                            continuously presenting them to the stakeholders. It feels fulfilling to develop stable and thought-out tooling for the users.</p>
-                    </div>
-                    <div className="mb-5 col-md-2 col-sm-12" />
                 </div>
             </div >
         </section>
