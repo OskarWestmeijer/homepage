@@ -6,16 +6,16 @@ export default function Navigation() {
     return (
         <nav className="navbar navbar-expand-md fixed-top">
             <div className="container">
-                <a href="https://oskar-westmeijer.com" class="navbar-brand">Oskar Westmeijer</a>
+                <a href="https://oskar-westmeijer.com" className="navbar-brand">Oskar Westmeijer</a>
 
 
                 <button
-                    class="navbar-toggler"
+                    className="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navmenu"
                 >
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navmenu">
