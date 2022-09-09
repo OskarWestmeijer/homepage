@@ -8,7 +8,7 @@ export default function Home() {
                     <div className="row">
                         <div className="col-lg-1 col-sm-12 " />
                         <div className="col-lg-4 col-sm-12 mt-2">
-                            <img src="images/oskar_westmeijer.jpg" className="rounded img-fluid" alt="Oskar Westmeijer" />
+                            <img src="images/oskar_westmeijer_08_2022.jpg" className="rounded img-fluid" alt="Oskar Westmeijer" />
                         </div>
                         <div className="col-lg-6 col-sm-12 ms-lg-5" >
                             <h2 className="text-center display-6">Oskar Westmeijer</h2>

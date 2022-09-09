@@ -24,7 +24,7 @@ export default function Values() {
                     <h5>Working with the stakeholders</h5>
                     <p>I like working with the stakeholders. It is fun to figure out requirements and understand the business processes.
                         In most projects we had great results pursuing an incremental development style. This means implementing small features every sprint and
-                        continuously presenting them to the stakeholders. It feels fulfilling to develop stable and thought-out tooling for the users.</p>
+                        continuously presenting them to the stakeholders. It feels fulfilling to develop stable and thought-out tooling with the users.</p>
                 </div>
                 <div className="col-lg-2 col-sm-12"></div>
             </div>
