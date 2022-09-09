@@ -16,11 +16,11 @@ export default function Projects() {
                             <h5 className="card-header text-center ci-bg">Weather-Api</h5>
                             <div className="card-body">
                                 <p className="card-text">
-                                    This app requests the OpenWeatherApi every minute for current weather data. It only fetches information for my home town Luebeck (Germany).
+                                    This app requests the OpenWeatherApi every minute for current weather data. It fetches information for several cities.
                                 </p>
-                                <p className="card-text">The app is written in Java (Spring Boot).
-                                    The setup contains a Postgres database, where the data is stored after each request. Everything is dockerized.
-                                    I display this data in a ReactJs UI with nice charts. Furthermore the API is directly accessable.
+                                <p className="card-text">
+                                    The setup contains a postgres database, where the data is stored after each request. Everything is dockerized.
+                                    The weather data is displayed in a ReactJs UI. Furthermore the API is directly accessable via REST.
                                 </p>
                             </div>
                             <div className="card-footer text-end">
@@ -35,7 +35,7 @@ export default function Projects() {
                             <h5 className="card-header text-center ci-bg">Homepage</h5>
                             <div className="card-body">
                                 <p className="card-text">
-                                    This website is built with ReactJs. I had quite some fun working with the framework. Once the groundwork is done, it can be expanded easily.
+                                    This website is built with ReactJs. I had quite some fun working with the framework. Once the groundwork is done, it can be easily expanded.
                                 </p>
                                 <p className="card-text">
                                     The concepts are straight forward. Excellent documentation, a lively plugin system and the big community make this a good choice.
