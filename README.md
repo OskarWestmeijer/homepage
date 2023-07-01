@@ -5,11 +5,6 @@ This project contains my personal homepage. It is created with ReactJs and conta
 ## local development
 
 ```
-npm start
-```
-
-## build and push
-```
-docker build -t oskarwestmeijer/homepage:1.4.3 .
-docker push oskarwestmeijer/homepage:1.4.3
+npm install
+npm run start
 ```
