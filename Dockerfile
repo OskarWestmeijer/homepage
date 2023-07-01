@@ -9,7 +9,7 @@ COPY . ./
 RUN npm run build
 
 # production-stage environment
-FROM nginx:1.23.1-alpine
+FROM nginx:1.25.1-alpine
 COPY --from=build-stage /app/build /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 CMD ["nginx", "-g", "daemon off;"]
