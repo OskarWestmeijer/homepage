@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   homepage:
-    image: oskarwestmeijer/homepage:1.4.3
+    image: oskarwestmeijer/homepage:latest
     container_name: homepage
     deploy:
       resources:
@@ -10,10 +10,6 @@ services:
           memory: 250m
         reservations:
           memory: 250m
-    expose:
-      - "80"
+    ports:
+      - "80:80"
     restart: always
-networks:
-  default:
-    name: proxy
-    external: true

@@ -2,28 +2,8 @@ name: 'deploy-to-gcp'
 
 on:
   workflow_call:
-    inputs:
-      github-sha:
-        description: 'Image tag to deploy'
-        required: true
-        type: string
-      db-alive:
-        description: 'How to scale the database'
-        required: true
-        type: number
-        default: 1
 
   workflow_dispatch:
-    inputs:
-      commit-sha:
-        description: 'Image tag to deploy'
-        required: true
-      db-alive:
-        description: 'How to scale the database'
-        required: true
-        type: number
-        default: 1
-
 
 jobs:
   deploy-to-gcp:
@@ -50,6 +30,4 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
         env:
-          TF_VAR_service_image: ${{ secrets.DOCKER_USERNAME }}/weather-api:sha-${{ inputs.github-sha }}
-          TF_VAR_db_alive: ${{ inputs.db-alive }}
           GOOGLE_CREDENTIALS: ${{ secrets.GCP_INFRA_SERVICE_ACCOUNT }}
