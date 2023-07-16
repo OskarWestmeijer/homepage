@@ -12,13 +12,13 @@ import Projects from './components/Projects';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/oskar_westmeijer_homepage_static_content">
     <Navigation />
     <Routes>
-      <Route path="oskar_westmeijer_homepage_static_content/" element={<Home />} />
-      <Route path="oskar_westmeijer_homepage_static_content/experience" element={<Experience />} />
-      <Route path="oskar_westmeijer_homepage_static_content/values" element={<Values />} />
-      <Route path="oskar_westmeijer_homepage_static_content/projects" element={<Projects />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/experience" element={<Experience />} />
+      <Route path="/values" element={<Values />} />
+      <Route path="/projects" element={<Projects />} />
     </Routes>
     <Footer />
   </BrowserRouter>

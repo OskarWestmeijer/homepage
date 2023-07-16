@@ -14,20 +14,16 @@ export default function Home() {
                             <h2 className="text-center display-6">Oskar Westmeijer</h2>
                             <h5 className="text-center">Java Software Developer</h5>
                             <p>Hello! This website shares information regarding my personal experiences and interests.</p>
-                            <p>In 2018 I completed my apprenticeship as a software developer and am pursuing a career as a Java
-                                developer
-                                ever since.</p>
-                            <p>Currently I am living in the beautiful old town of Luebeck, Germany.
-                                In my free time I like to exercise, a lot! This is a passion I discovered during the covid pandemic.
-                                Bouldering, yoga, lifting and running are my main interests. Furthermore I like to read books and
-                                travel. Besides this, I also code in my free time. This website is running on my own server and I
-                                maintain a dockerized Java application setup in the background.</p>
+                            <p>I am working as a software developer, with main focus on Java application development.</p>
+                            <p>Currently I am living in Hamburg, Germany.
+                                In my free time I like to exercise.
+                                Bouldering, lifting and running are my main interests. Furthermore I like to read books and
+                                travel. Besides this, I also code in my free time.</p>
                             <p>My heritage is mixed, mother finnish, father dutch, I was born in Finland, but I grew up in
                                 Germany.
                                 I have a strong affinity for these three cultures and share great interest in getting to know others as
                                 well.
                                 This understanding has been beneficial in culturally diverse teams.</p>
-                            <p>Feel free to explore this website, to learn more about me and use the links to have a look at my accounts.</p>
                         </div>
                         <div className="col-lg-1 col-sm-12 " />
                     </div>
