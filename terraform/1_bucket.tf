@@ -8,7 +8,6 @@ resource "google_storage_bucket" "oskar_westmeijer_homepage_static_content" {
     not_found_page   = "404.html"
   }
 
-  uniform_bucket_level_access = true
 }
 
 # Make bucket public
