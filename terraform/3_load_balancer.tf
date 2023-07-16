@@ -5,12 +5,7 @@ resource "google_compute_backend_bucket" "homepage_static_site" {
   description = "Contains files needed by the website"
   bucket_name = google_storage_bucket.oskar_westmeijer_homepage_static_content.name
 
-  enable_cdn = true
-  cdn_policy {
-    max_ttl     = 0
-    default_ttl = 0
-    client_ttl  = 0
-  }
+  enable_cdn = false
 }
 
 resource "google_compute_url_map" "homepage_http" {
