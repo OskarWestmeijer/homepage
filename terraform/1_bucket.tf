@@ -5,7 +5,7 @@ resource "google_storage_bucket" "oskar_westmeijer_homepage_static_content" {
 
   website {
     main_page_suffix = "index.html"
-    not_found_page   = "index.html"
+    not_found_page   = "404.html"
   }
 
   uniform_bucket_level_access = true
