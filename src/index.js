@@ -15,10 +15,10 @@ root.render(
   <BrowserRouter>
     <Navigation />
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/experience" element={<Experience />} />
-      <Route path="/values" element={<Values />} />
-      <Route path="/projects" element={<Projects />} />
+      <Route path="oskar_westmeijer_homepage_static_content/" element={<Home />} />
+      <Route path="oskar_westmeijer_homepage_static_content/experience" element={<Experience />} />
+      <Route path="oskar_westmeijer_homepage_static_content/values" element={<Values />} />
+      <Route path="oskar_westmeijer_homepage_static_content/projects" element={<Projects />} />
     </Routes>
     <Footer />
   </BrowserRouter>
