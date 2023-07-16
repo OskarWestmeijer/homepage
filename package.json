@@ -1,5 +1,6 @@
 {
   "name": "homepage",
+  "homepage": "https://storage.googleapis.com/oskar_westmeijer_homepage_static_content",
   "version": "1.4.3",
   "private": true,
   "dependencies": {
