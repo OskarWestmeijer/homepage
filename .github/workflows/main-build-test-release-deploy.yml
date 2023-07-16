@@ -13,10 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/frontend-build-and-test
-      - name: Zip artifact
-        run: zip -r assets-${{ github.sha }}.zip ./build
       - name: Setup - gcloud / gsutil
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@v1
         with:
           service_account_key: ${{ secrets.GCP_INFRA_SERVICE_ACCOUNT }}
           project_id: ${{ secrets.GCS_PROJECT_ID }}
