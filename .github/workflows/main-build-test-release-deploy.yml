@@ -20,8 +20,8 @@ jobs:
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v1'
       - name: Deploy
-        run: |-
-          gsutil -m rsync -R output gs://${{ secrets.GCS_BUCKET }}
+        run: |
+          gsutil -m rsync -R build gs://${{ secrets.GCS_BUCKET }}
 
 
   codeql-check:
