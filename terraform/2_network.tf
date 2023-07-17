@@ -1,37 +1,24 @@
-# Reserve an external IP
-resource "google_compute_global_address" "external_ip" {
-  name         = "homepage-external-lb-ip"
-  provider     = google
-  address_type = "EXTERNAL"
-  ip_version   = "IPV4"
-  project      = var.project_id
-  description  = "External static IP address for React app"
-}
-
-output "external_ip" {
-  value       = google_compute_global_address.external_ip.address
-  description = "External static IP address for React app"
-}
-
 resource "google_compute_network" "homepage_vpc" {
   name                    = "homepage-vpc"
   auto_create_subnetworks = false
+  routing_mode            = "REGIONAL"
 }
 
-resource "google_compute_subnetwork" "homepage_subnet" {
-  name                     = "homepage-subnet"
-  ip_cidr_range            = "10.8.0.0/28"
-  region                   = var.project_region
-  network                  = google_compute_network.homepage_vpc.id
-  private_ip_google_access = true
+resource "google_compute_subnetwork" "default" {
+  name                       = "backend-subnet"
+  ip_cidr_range              = "10.1.2.0/24"
+  network                    = google_compute_network.homepage_vpc.id
+  private_ipv6_google_access = "DISABLE_GOOGLE_ACCESS"
+  purpose                    = "PRIVATE"
+  region                     = "us-west1"
+  stack_type                 = "IPV4_ONLY"
+}
 
-  secondary_ip_range {
-    range_name    = "pod"
-    ip_cidr_range = "10.0.16.0/20"
-  }
-
-  secondary_ip_range {
-    range_name    = "svc"
-    ip_cidr_range = "10.0.32.0/20"
-  }
+resource "google_compute_subnetwork" "proxy_only" {
+  name          = "proxy-only-subnet"
+  ip_cidr_range = "10.129.0.0/23"
+  network       = google_compute_network.homepage_vpc.id
+  purpose       = "REGIONAL_MANAGED_PROXY"
+  region        = "us-west1"
+  role          = "ACTIVE"
 }
