@@ -73,8 +73,3 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-
-  deploy-to-gcp:
-    needs: frontend-build-and-test
-    uses: ./.github/workflows/deploy-to-gcp.yml
-    secrets: inherit

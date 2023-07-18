@@ -12,7 +12,7 @@ import Projects from './components/Projects';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter basename="/oskar_westmeijer_homepage_static_content">
+  <BrowserRouter>
     <Navigation />
     <Routes>
       <Route path="/" element={<Home />} />
