@@ -17,7 +17,6 @@ export default function Experience() {
                                 <ul className="list-group">
                                     <li className="list-group-item">Java</li>
                                     <li className="list-group-item">Spring Boot</li>
-                                    <li className="list-group-item">Maven</li>
                                     <li className="list-group-item">ReactJs</li>
                                     <li className="list-group-item">Docker</li>
                                     <li className="list-group-item">PostgreSQL</li>
@@ -36,9 +35,6 @@ export default function Experience() {
                                     <li className="list-group-item">IntelliJ IDEA</li>
                                     <li className="list-group-item">Jira</li>
                                     <li className="list-group-item">Github</li>
-                                    <li className="list-group-item">Metrics</li>
-                                    <li className="list-group-item">Postman</li>
-                                    <li className="list-group-item">Miro</li>
                                 </ul>
                             </div>
                         </div>
@@ -57,9 +53,8 @@ export default function Experience() {
                                 <ul className="list-group">
                                     <li className="list-group-item">Clean and structured code</li>
                                     <li className="list-group-item">Unit and Integration testing</li>
-                                    <li className="list-group-item">C4-Model documentation</li>
                                     <li className="list-group-item">SCRUM</li>
-                                    <li className="list-group-item">Working with the stakeholders!</li>
+                                    <li className="list-group-item">Working with stakeholders</li>
                                 </ul>
                             </div>
                         </div>
