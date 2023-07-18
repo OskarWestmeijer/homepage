@@ -13,16 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/frontend-build-and-test
-      - name: 'Authenticate to GCP'
-        uses: 'google-github-actions/auth@v1'
-        with:
-          credentials_json: '${{ secrets.GCP_INFRA_SERVICE_ACCOUNT }}'
-      - name: 'Set up Cloud SDK'
-        uses: 'google-github-actions/setup-gcloud@v1'
-      - name: Deploy
-        run: |
-          gsutil -m rsync -R build gs://${{ secrets.GCS_BUCKET }}
-
 
   codeql-check:
     uses: ./.github/workflows/codeql.yml
