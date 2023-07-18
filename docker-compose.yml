@@ -10,6 +10,10 @@ services:
           memory: 250m
         reservations:
           memory: 250m
-    ports:
-      - "80:80"
+    expose:
+      - "80"
     restart: always
+networks:
+  default:
+    name: proxy
+    external: true
