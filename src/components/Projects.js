@@ -25,7 +25,7 @@ export default function Projects() {
                             </div>
                             <div className="card-footer text-end">
                                 <a href="https://github.com/OskarWestmeijer/weather-api" className="btn ci-bg">Github <img className="bi" width="24" height="24" src="images/github.svg" alt="Github logo" /></a>
-                                <a href="https://oskar-westmeijer.com/weather" className="ms-2 btn ci-bg">Live Demo <img className="bi" width="24" height="24" src="images/weather_api.png" alt="Weather-Api logo" /></a>
+                                <a href="https://ui.oskar-westmeijer.com" className="ms-2 btn ci-bg">Live Demo <img className="bi" width="24" height="24" src="images/weather_api.png" alt="Weather-Api logo" /></a>
                             </div>
                         </div>
                     </div>

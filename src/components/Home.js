@@ -13,14 +13,12 @@ export default function Home() {
                         <div className="col-lg-6 col-sm-12 ms-lg-5" >
                             <h2 className="text-center display-6">Oskar Westmeijer</h2>
                             <h5 className="text-center">Java Software Developer</h5>
-                            <p>Hello! This website shares information regarding my personal experiences and interests.</p>
-                            <p>I am working as a software developer, with main focus on Java application development.</p>
-                            <p>Currently I am living in Hamburg, Germany.
+                            <p>Hello, I am working as a software developer, with main focus on Java application development.</p>
+                            <p>Currently I am located in Hamburg, Germany.
                                 In my free time I like to exercise.
-                                Bouldering, lifting and running are my main interests. Furthermore I like to read books and
-                                travel. Besides this, I also code in my free time.</p>
-                            <p>My heritage is mixed, mother finnish, father dutch, I was born in Finland, but I grew up in
-                                Germany.
+                                Bouldering, lifting and running are my main interests. Furthermore I like reading books and
+                                travelling. Besides this, I also code in my free time.</p>
+                            <p>My heritage is a cultural mix of finnish, dutch and german.
                                 I have a strong affinity for these three cultures and share great interest in getting to know others as
                                 well.
                                 This understanding has been beneficial in culturally diverse teams.</p>
