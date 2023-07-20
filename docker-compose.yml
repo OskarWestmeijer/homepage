@@ -7,12 +7,15 @@ services:
     deploy:
       resources:
         limits:
-          memory: 250m
+          memory: 100m
         reservations:
-          memory: 250m
+          memory: 100m
     expose:
       - "80"
     restart: always
+    volumes:
+      - ./certbot/www:/var/www/certbot/:ro
+      - ./certbot/conf/:/etc/nginx/ssl/:ro
 networks:
   default:
     name: proxy
