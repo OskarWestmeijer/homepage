@@ -12,6 +12,7 @@ services:
           memory: 100m
     expose:
       - "80"
+      - "443"
     restart: always
     volumes:
       - ../server-infrastructure/certbot/www:/var/www/certbot/:ro
