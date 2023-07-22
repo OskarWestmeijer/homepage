@@ -15,8 +15,8 @@ services:
       - "443"
     restart: always
     volumes:
-      - ../server-infrastructure/certbot/www:/var/www/certbot/:ro
-      - ../server-infrastructure/certbot/conf/:/etc/nginx/ssl/:ro
+      - ./nginx/conf.d/:/etc/nginx/conf.d/:ro
+
 networks:
   default:
     name: proxy
