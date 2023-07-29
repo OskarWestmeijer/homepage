@@ -17,6 +17,7 @@ export default function Experience() {
                                 <ul className="list-group">
                                     <li className="list-group-item">Java</li>
                                     <li className="list-group-item">Spring Boot</li>
+                                    <li className="list-group-item">OpenApi</li>
                                     <li className="list-group-item">ReactJs</li>
                                     <li className="list-group-item">Docker</li>
                                     <li className="list-group-item">PostgreSQL</li>
@@ -54,7 +55,7 @@ export default function Experience() {
                                     <li className="list-group-item">Clean and structured code</li>
                                     <li className="list-group-item">Unit and Integration testing</li>
                                     <li className="list-group-item">SCRUM</li>
-                                    <li className="list-group-item">Working with stakeholders</li>
+                                    <li className="list-group-item">Working with users</li>
                                 </ul>
                             </div>
                         </div>
