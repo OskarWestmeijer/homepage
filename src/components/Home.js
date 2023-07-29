@@ -14,7 +14,7 @@ export default function Home() {
                             <h2 className="text-center display-6">Oskar Westmeijer</h2>
                             <h5 className="text-center">Java Software Developer</h5>
                             <p>Hello, I am working as a software developer, with main focus on Java application development.</p>
-                            <p>Currently I am located in Hamburg, Germany.
+                            <p>I am located in Hamburg, Germany.
                                 In my free time I like to exercise.
                                 Bouldering, lifting and running are my main interests. Furthermore I like reading books and
                                 travelling. Besides this, I also code in my free time.</p>

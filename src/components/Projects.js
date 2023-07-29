@@ -16,16 +16,22 @@ export default function Projects() {
                             <h5 className="card-header text-center ci-bg">Weather-Api</h5>
                             <div className="card-body">
                                 <p className="card-text">
-                                    This app requests the OpenWeatherApi every minute for current weather data. It fetches information for several cities.
-                                </p>
-                                <p className="card-text">
-                                    The setup contains a postgres database, where the data is stored after each request. Everything is dockerized.
-                                    The weather data is displayed in a ReactJs UI. Furthermore the API is directly accessable via REST.
+                                    This Api provides Weather data for predefined locations. The data is harvested every minute
+                                    from https://openweathermap.org/ and stored in a database.
+
+                                    It serves as a personal hobby project. The goal is to investigate and practice Api-design with Spring-Boot.
+                                    The OpenApi specification is documented with Redoc.
+
+                                    In addition, a ReactJs frontend is available. It displays the weather data in charts over
+                                    time.
+
+                                    This project has no commercial intentions and is free to access for everyone.
                                 </p>
                             </div>
                             <div className="card-footer text-end">
                                 <a href="https://github.com/OskarWestmeijer/weather-api" className="btn ci-bg">Github <img className="bi" width="24" height="24" src="images/github.svg" alt="Github logo" /></a>
-                                <a href="https://ui.oskar-westmeijer.com" className="ms-2 btn ci-bg">Live Demo <img className="bi" width="24" height="24" src="images/weather_api.png" alt="Weather-Api logo" /></a>
+                                <a href="https://ui.oskar-westmeijer.com" className="ms-2 btn ci-bg">UI Dashboard <img className="bi" width="24" height="24" src="images/weather_api.png" alt="Weather-Api logo" /></a>
+                                <a href="https://api.oskar-westmeijer.com" className="ms-2 btn ci-bg">OpenApi Docs <img className="bi" width="24" height="24" src="images/weather_api.png" alt="Weather-Api logo" /></a>
                             </div>
                         </div>
                     </div>
@@ -35,10 +41,7 @@ export default function Projects() {
                             <h5 className="card-header text-center ci-bg">Homepage</h5>
                             <div className="card-body">
                                 <p className="card-text">
-                                    This website is built with ReactJs. I had quite some fun working with the framework. Once the groundwork is done, it can be easily expanded.
-                                </p>
-                                <p className="card-text">
-                                    The concepts are straight forward. Excellent documentation, a lively plugin system and the big community make this a good choice.
+                                    This website is built with ReactJs. It serves only static content.
                                 </p>
                             </div>
                             <div className="card-footer text-end">
@@ -59,11 +62,8 @@ export default function Projects() {
                             <h5 className="card-header text-center ci-bg">Server</h5>
                             <div className="card-body">
                                 <p className="card-text">
-                                    Managing a server is the basis for hosting applications. This server is running on a Linux distribution. All hosted services are dockerized.
-                                </p>
-                                <p className="card-text">
-                                    Over the years I have had many different machines.
-                                    My understanding about securing the setup, increased on each approach. SSL certificates and various other techniques accomplish the job.
+                                    This server is running on a Linux distribution. All hosted services are dockerized.
+                                    Docker networking, Nginx proxy routing, Certificates and connecting the hosts database to containers are some of the learnings I gained with this project.
                                 </p>
                             </div>
                         </div>
