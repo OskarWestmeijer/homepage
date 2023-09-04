@@ -11,7 +11,7 @@ jobs:
   frontend-build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/frontend-build-and-test
 
   codeql-check:
@@ -30,7 +30,7 @@ jobs:
       contents: read
       security-events: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/frontend-check-trivy-image
         with:
           docker-username: ${{ secrets.DOCKER_USERNAME }}
