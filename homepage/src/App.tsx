@@ -1,7 +1,8 @@
-import { Space } from '@mantine/core';
+import { Space, Grid } from '@mantine/core';
 import './App.css';
 import { Introduction } from './components/Introduction';
 import { JobHistory } from './components/JobHistory';
+import { Projects } from './components/Projects';
 
 import '@mantine/core/styles.css';
 
@@ -11,11 +12,12 @@ function App() {
     return (
         <>
             <MantineProvider>
-                <Space h="md" />
+                <Space h={50} />
                 <Introduction />
-                <Space h="xl" />
-                <Space h="xl" />
+                <Space h={100} />
                 <JobHistory />
+                <Space h={100} />
+                <Projects />
             </MantineProvider>
         </>
     );

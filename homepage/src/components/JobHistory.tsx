@@ -1,9 +1,14 @@
-import { Grid, Text, Timeline } from '@mantine/core';
+import { Grid, Text, Timeline, Center, Title } from '@mantine/core';
 
 export function JobHistory() {
     return (
-      <Grid>
-            <Grid.Col span={{ base: 12, md: 3, lg: 3 }} />
+        <Grid>
+            <Grid.Col span={{ base: 12, md: 2, lg: 2 }} />
+            <Grid.Col span={{ base: 12, md: 1, lg: 1 }} >
+            <Center >
+                    <Title size={20} c="orange">Jobs</Title>
+                </Center>
+            </Grid.Col>
             <Grid.Col span={{ base: 12, md: 6, lg: 6 }}>
                 <Timeline color="orange" active={4}>
                     <Timeline.Item title="Otto GmbH - Warehouse logistics">
