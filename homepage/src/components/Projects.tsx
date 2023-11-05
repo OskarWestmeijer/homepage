@@ -6,11 +6,9 @@ export function Projects() {
         <Grid>
             <Grid.Col span={{ base: 12, md: 2, lg: 2 }} />
             <Grid.Col span={{ base: 12, md: 1, lg: 1 }}>
-                <Center>
-                    <Title size={20} c="orange">
-                        Projects
-                    </Title>
-                </Center>
+                <Title ta={'right'} size={20} c="orange">
+                    projects
+                </Title>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 1, lg: 1 }} />
             <Grid.Col span={{ base: 12, md: 4, lg: 4 }}>
@@ -20,8 +18,10 @@ export function Projects() {
                         <Badge color="green">LIVE</Badge>
                     </Group>
                     <Text size="sm" c="dimmed">
-                        With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities
-                        on and around the fjords of Norway
+                        This Api provides Weather data for predefined locations. The backend service harvests weather
+                        data every minute from the external Openweathermap Api. The weather information is stored in a
+                        database. The OpenApi specification is documented with Redoc. An Angular frontend displays the
+                        weather data in charts over time.
                     </Text>
                     <Space h={20}></Space>
                     <SimpleGrid cols={2}>

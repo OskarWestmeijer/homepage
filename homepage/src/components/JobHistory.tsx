@@ -4,10 +4,10 @@ export function JobHistory() {
     return (
         <Grid>
             <Grid.Col span={{ base: 12, md: 2, lg: 2 }} />
-            <Grid.Col span={{ base: 12, md: 1, lg: 1 }} >
-            <Center >
-                    <Title size={20} c="orange">Jobs</Title>
-                </Center>
+            <Grid.Col span={{ base: 12, md: 1, lg: 1 }}>
+                <Title ta="right" size={20} c="orange">
+                    jobs
+                </Title>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 6, lg: 6 }}>
                 <Timeline color="orange" active={4}>

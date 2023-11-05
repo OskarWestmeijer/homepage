@@ -1,4 +1,4 @@
-import { Space, Grid } from '@mantine/core';
+import { Space } from '@mantine/core';
 import './App.css';
 import { Introduction } from './components/Introduction';
 import { JobHistory } from './components/JobHistory';
@@ -11,7 +11,14 @@ import { MantineProvider } from '@mantine/core';
 function App() {
     return (
         <>
-            <MantineProvider>
+            <MantineProvider
+                theme={{
+                    //fontFamily: 'Verdana, sans-serif',
+                    //fontFamilyMonospace: 'Monaco, Courier, monospace',
+                    headings: { fontWeight: '550' },
+                    primaryColor: 'orange'
+                }}
+            >
                 <Space h={50} />
                 <Introduction />
                 <Space h={100} />

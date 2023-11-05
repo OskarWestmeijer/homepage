@@ -24,13 +24,13 @@ export function Introduction() {
                     <Space h="sm" />
                     <Text>
                         I have worked mostly with Java, but in my free time I like to try out other languages and
-                        frameworks too. My Github account features some public projects.
+                        frameworks too.
                     </Text>
                     <Space h="sm" />
                     <Text>
                         Apart from developing, I like to exercise at the gym and read. I am especially interested in
-                        history, different cultures and geography. Furthermore I am intrigued by people and individual
-                        outlooks on life in general. Basically I am constantly learning and reading up on these topics.
+                        history, different cultures and geography. Basically I am constantly learning and reading up on
+                        these topics.
                     </Text>
                     <Space h="sm" />
                     <Center>
