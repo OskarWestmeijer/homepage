@@ -13,7 +13,7 @@ export function Introduction() {
                 </Center>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 4, lg: 4 }}>
-                <Paper mt="70" shadow="md" radius="md" withBorder p="xl">
+                <Paper bg="#f5f5f5" mt="70" shadow="md" radius="md" withBorder p="xl">
                     <Center>
                         <Title order={4}>Oskar Westmeijer</Title>
                     </Center>

@@ -1,7 +1,7 @@
 import { Center, Text, Container } from '@mantine/core';
 
 const footerStyle = {
-    backgroundColor: '#F5F5F5'
+    backgroundColor: '#Eff0f0'
 };
 
 const year = new Date().getFullYear();

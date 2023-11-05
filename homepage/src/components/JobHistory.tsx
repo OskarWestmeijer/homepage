@@ -6,7 +6,7 @@ export function JobHistory() {
             <Grid.Col span={{ base: 12, md: 3, lg: 3 }} />
             <Grid.Col span={{ base: 12, md: 6, lg: 6 }}>
                 <Timeline active={4}>
-                    <Timeline.Item title="Otto GmbH - Warehouse logistics">
+                    <Timeline.Item title="Otto • Warehouse logistics">
                         <Text size="xs" mt={4}>
                             01/2023 - now | software developer
                         </Text>
@@ -23,15 +23,15 @@ export function JobHistory() {
                             <Badge variant="light">google-cloud</Badge>
                         </Group>
                     </Timeline.Item>
-                    <Timeline.Item title="Shopping24 GmbH (refirmed to mrge) - Online advertising services">
+                    <Timeline.Item title="Shopping24 • Online advertising services">
                         <Text size="xs" mt={4}>
-                            03/2019 - 12/2022 | software developer
+                            03/2019 - 12/2022 (part of mrge since 09/2021) | software developer
                         </Text>
                         <Text c="dimmed" size="sm">
                             Advertising products of advertisers on the Internet in order to generate customer-traffic.
                             Worked on a microservice pipeline capable of importing, enriching and publishing millions of
                             products. Furthermore routing requests from the platforms to the respective advertiser
-                            landingpages.
+                            landingpages. Originally part of Otto Group, later sold to mrge.
                         </Text>
                         <Group mt="7">
                             <Badge variant="light">java</Badge>
@@ -40,7 +40,7 @@ export function JobHistory() {
                             <Badge variant="light">kubernetes</Badge>
                         </Group>
                     </Timeline.Item>
-                    <Timeline.Item title="Mach AG">
+                    <Timeline.Item title="Mach • ERP software">
                         <Text size="xs" mt={4}>
                             09/2018 - 12/2018 | software developer
                         </Text>
@@ -53,15 +53,15 @@ export function JobHistory() {
                             <Badge variant="light">java</Badge>
                         </Group>
                     </Timeline.Item>
-                    <Timeline.Item title="Lübecker Hafen-Gesellschaft mbH">
+                    <Timeline.Item title="Lübecker Hafen • Port logistics">
                         <Text size="xs" mt={4}>
                             08/2015 - 07/2018 | apprenticeship software developer
                         </Text>
                         <Text c="dimmed" size="sm">
-                            Biggest baltic sea port. The IT-department maintained an internal harbour-logistics
-                            software-system. I learned programming in Java. Furthermore I learned how a medium sized
-                            company is organized. In addition I spent a lot time with our port-logistics personal, that
-                            used our software/hardware.
+                            Biggest baltic sea port. It maintains an internal harbour-logistics software-system. I was
+                            introduced to programming in Java. Furthermore I learned how a medium sized company is
+                            organized. In addition I spent much time with the port-logistics colleagues, to understand
+                            how they use our software.
                         </Text>
                         <Group mt="7">
                             <Badge variant="light">java</Badge>
@@ -70,7 +70,7 @@ export function JobHistory() {
                     </Timeline.Item>
                     <Timeline.Item title="not IT related experiences">
                         <Text size="xs" mt={4}>
-                            07/2012 - 07/2015 | abitur, jobbing, military-service and not-finsihed university study
+                            07/2012 - 07/2015 | abitur, jobbing, military-service and not-finished university study
                         </Text>
                         <Text c="dimmed" size="sm">
                             Before learning the software-developer profession I had several other stops.

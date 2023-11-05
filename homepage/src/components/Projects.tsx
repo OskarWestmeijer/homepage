@@ -1,4 +1,4 @@
-import { Badge, Button, Space, Card, Group, Text, Grid, Title, Center, Image, SimpleGrid } from '@mantine/core';
+import { Badge, Button, Space, Card, Group, Text, Grid, Center, Image } from '@mantine/core';
 import github from '/images/github.svg';
 
 export function Projects() {
@@ -6,7 +6,7 @@ export function Projects() {
         <Grid>
             <Grid.Col span={{ base: 12, md: 4, lg: 4 }} />
             <Grid.Col span={{ base: 12, md: 4, lg: 4 }}>
-                <Card shadow="sm" radius="md" withBorder>
+                <Card bg="#f5f5f5" shadow="md" radius="md" withBorder>
                     <Group justify="space-between" mt="md" mb="xs">
                         <Text fw={500}>Weather-Api</Text>
                         <Badge variant="light" color="green">
