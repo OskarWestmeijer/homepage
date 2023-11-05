@@ -1,16 +1,19 @@
-import { Blockquote, Grid } from '@mantine/core';
+import { Center, Text, Container } from '@mantine/core';
+
+const footerStyle = {
+    backgroundColor: '#F5F5F5'
+};
+
+const year = new Date().getFullYear();
 
 export function Footer() {
     return (
-        <Grid>
-            <Grid.Col span={{ base: 12, md: 2, lg: 2 }} />
-            <Grid.Col span={{ base: 12, md: 4, lg: 4 }}>
-                <Blockquote color="blue" cite="– Forrest Gump" mt="xl">
-                    Life is like an npm install – you never know what you are going to get.
-                </Blockquote>
-            </Grid.Col>
-
-            <Grid.Col span={{ base: 12, md: 2, lg: 2 }} />
-        </Grid>
+        <div style={footerStyle}>
+            <Container pt={50} pb={50}>
+                <Center>
+                    <Text fw={550}>Oskar Westmeijer - {year}</Text>
+                </Center>
+            </Container>
+        </div>
     );
 }

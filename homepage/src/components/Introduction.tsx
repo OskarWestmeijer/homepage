@@ -1,6 +1,7 @@
-import { Image, Text, Title, Paper, Grid, Center, Space } from '@mantine/core';
+import { Image, Text, Title, Paper, Grid, Center, Space, Group } from '@mantine/core';
 import portrait from '/images/oskar_westmeijer.jpg';
 import github from '/images/github.svg';
+import linkedin from '/images/linkedin.png';
 
 export function Introduction() {
     return (
@@ -12,7 +13,7 @@ export function Introduction() {
                 </Center>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 4, lg: 4 }}>
-                <Paper shadow="md" radius="md" withBorder p="xl">
+                <Paper mt="70" shadow="md" radius="md" withBorder p="xl">
                     <Center>
                         <Title order={4}>Oskar Westmeijer</Title>
                     </Center>
@@ -28,15 +29,20 @@ export function Introduction() {
                     </Text>
                     <Space h="sm" />
                     <Text>
-                        Apart from developing, I like to exercise at the gym and read. I am especially interested in
-                        history, different cultures and geography. Basically I am constantly learning and reading up on
-                        these topics.
+                        Apart from developing, I enjoy working out at the gym. Furthermore I like to read and am
+                        interested in the topics of history, foreign cultures and geography. Basically I am constantly
+                        learning and reading up on these subjects.
                     </Text>
-                    <Space h="sm" />
+                    <Space h="md" />
                     <Center>
-                        <a href="https://github.com/OskarWestmeijer">
-                            <Image h="35" src={github} />
-                        </a>
+                        <Group>
+                            <a href="https://github.com/OskarWestmeijer">
+                                <Image h="35" src={github} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/oskar-westmeijer-488449252/">
+                                <Image h="35" src={linkedin} />
+                            </a>
+                        </Group>
                     </Center>
                 </Paper>
             </Grid.Col>
