@@ -11,7 +11,7 @@ export function Footer() {
         <div style={footerStyle}>
             <Container pt={50} pb={50}>
                 <Center>
-                    <Text fw={550}>Oskar Westmeijer - {year}</Text>
+                    <Text fw={550}>Oskar Westmeijer • {year}</Text>
                 </Center>
             </Container>
         </div>
