@@ -3,6 +3,8 @@ import portrait from '/images/oskar_westmeijer.jpg';
 import github from '/images/github.svg';
 import linkedin from '/images/linkedin.png';
 
+const backgroundColor = '#Eff0f0';
+
 export function Introduction() {
     return (
         <Grid>
@@ -13,7 +15,7 @@ export function Introduction() {
                 </Center>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 4, lg: 4 }}>
-                <Paper bg="#f5f5f5" mt="70" shadow="md" radius="md" withBorder p="xl">
+                <Paper bg={backgroundColor} mt="50" shadow="md" radius="md" withBorder p="xl">
                     <Center>
                         <Title order={4}>Oskar Westmeijer</Title>
                     </Center>
@@ -24,14 +26,13 @@ export function Introduction() {
                     </Center>
                     <Space h="sm" />
                     <Text>
-                        I have worked mostly with Java, but in my free time I like to try out other languages and
-                        frameworks too.
+                        My main focus in my professional work has been Java, but I also enjoy learning various other
+                        programming languages and frameworks during my free time.
                     </Text>
                     <Space h="sm" />
                     <Text>
-                        Apart from developing, I enjoy working out at the gym. Furthermore I like to read and am
-                        interested in the topics of history, foreign cultures and geography. Basically I am constantly
-                        learning and reading up on these subjects.
+                        In addition to coding, I enjoy staying active at the gym. Additionally, I am really into
+                        reading, especially when it comes to history, foreign cultures, and geography.
                     </Text>
                     <Space h="md" />
                     <Center>

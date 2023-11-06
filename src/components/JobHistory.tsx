@@ -11,10 +11,11 @@ export function JobHistory() {
                             01/2023 - now | software developer
                         </Text>
                         <Text c="dimmed" size="sm">
-                            On an international team that is specialised on warehouse processes, with focus on inbound
-                            logistics. Part of a company wide logistics project, that will launch a new warehouse and
-                            software-system. This requires developing new processes for the go-live and at the same time
-                            maintaining existing processes for the old warehouses.
+                            I am a member of an international team specializing in warehouse processes, with a specific
+                            focus on inbound logistics. Our team is part of a company-wide logistics project responsible
+                            for the launch of a new warehouse and software system. This involves developing new
+                            processes for the go-live while simultaneously managing and maintaining existing processes
+                            for the old warehouses.
                         </Text>
                         <Group mt="7">
                             <Badge variant="light">java</Badge>
@@ -28,10 +29,11 @@ export function JobHistory() {
                             03/2019 - 12/2022 (part of mrge since 09/2021) | software developer
                         </Text>
                         <Text c="dimmed" size="sm">
-                            Advertising products of advertisers on the Internet in order to generate customer-traffic.
-                            Worked on a microservice pipeline capable of importing, enriching and publishing millions of
-                            products. Furthermore routing requests from the platforms to the respective advertiser
-                            landingpages. Originally part of Otto Group, later sold to mrge.
+                            The company's primary focus is to promote products from advertisers on the internet, aiming
+                            to boost customer traffic. I was involved in developing a microservice pipeline that could
+                            efficiently import, enhance, and publish a vast number of products. In addition, I also
+                            contributed to the development of our invoicing application and a service responsible for
+                            directing user traffic to the landing pages of advertisers.
                         </Text>
                         <Group mt="7">
                             <Badge variant="light">java</Badge>
@@ -45,9 +47,10 @@ export function JobHistory() {
                             09/2018 - 12/2018 | software developer
                         </Text>
                         <Text c="dimmed" size="sm">
-                            Mach AG develops an ERP-tool. I was on a team responsible for the HR module. This job did
-                            not work out for me, but I learned the first time about SCRUM and modern team-work in
-                            general. These learning were useful for my next job.
+                            Mach AG specializes in the development of an ERP tool. During my stay there, I was part of
+                            the team responsible for the HR module. While the position ultimately was not the right fit
+                            for me, it was during this time that I was introduced to SCRUM and modern team collaboration
+                            practices. These insights proved to be valuable assets in my subsequent job.
                         </Text>
                         <Group mt="7">
                             <Badge variant="light">java</Badge>
@@ -58,22 +61,24 @@ export function JobHistory() {
                             08/2015 - 07/2018 | apprenticeship software developer
                         </Text>
                         <Text c="dimmed" size="sm">
-                            Biggest baltic sea port. It maintains an internal harbour-logistics software-system. I was
-                            introduced to programming in Java. Furthermore I learned how a medium sized company is
-                            organized. In addition I spent much time with the port-logistics colleagues, to understand
-                            how they use our software.
+                            The largest port in the Baltic Sea region, this port operates an in-house harbor logistics
+                            software system. It was here that I was first introduced to Java programming. Additionally,
+                            I gained valuable insights into the organizational structure of a medium-sized company. I
+                            also dedicated a considerable amount of time working closely with my colleagues in port
+                            logistics to better comprehend how they utilize our software.
                         </Text>
                         <Group mt="7">
                             <Badge variant="light">java</Badge>
                             <Badge variant="light">typo3</Badge>
                         </Group>
                     </Timeline.Item>
-                    <Timeline.Item title="not IT related experiences">
+                    <Timeline.Item title="Prior experiences">
                         <Text size="xs" mt={4}>
-                            07/2012 - 07/2015 | abitur, jobbing, military-service and not-finished university study
+                            07/2012 - 07/2015 | abitur, jobbing, military-service and unfinished university study
                         </Text>
                         <Text c="dimmed" size="sm">
-                            Before learning the software-developer profession I had several other stops.
+                            Before pursuing a career as a software developer, I had several other experiences and
+                            positions.
                         </Text>
                     </Timeline.Item>
                 </Timeline>
