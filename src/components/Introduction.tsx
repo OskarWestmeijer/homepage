@@ -7,15 +7,15 @@ const backgroundColor = '#Eff0f0';
 
 export function Introduction() {
     return (
-        <Grid>
-            <Grid.Col span={{ base: 12, md: 2, lg: 2 }} />
-            <Grid.Col span={{ base: 12, md: 4, lg: 4 }}>
+        <Grid justify="center" align="center">
+            <Grid.Col span={{ base: 12, md: 2, lg: 2, xl: 2 }} />
+            <Grid.Col span={{ base: 12, md: 4, lg: 4, xl: 4 }}>
                 <Center>
                     <Image radius="md" height={500} w="auto" fit="contain" src={portrait} />
                 </Center>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, md: 4, lg: 4 }}>
-                <Paper bg={backgroundColor} mt="50" shadow="md" radius="md" withBorder p="xl">
+            <Grid.Col span={{ base: 12, md: 4, lg: 4, xl: 4 }}>
+                <Paper bg={backgroundColor} shadow="md" radius="md" withBorder p="xl">
                     <Center>
                         <Title order={4}>Oskar Westmeijer</Title>
                     </Center>
@@ -48,7 +48,7 @@ export function Introduction() {
                 </Paper>
             </Grid.Col>
 
-            <Grid.Col span={{ base: 12, md: 2, lg: 2 }} />
+            <Grid.Col span={{ base: 12, md: 2, lg: 2, xl: 2 }} />
         </Grid>
     );
 }
