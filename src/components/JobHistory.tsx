@@ -3,8 +3,8 @@ import { Grid, Badge, Text, Timeline, Group, rem, Center } from '@mantine/core';
 export function JobHistory() {
     return (
         <Grid>
-            <Grid.Col span={{ xs: 12, sm: 1, md: 2, lg: 2, xl: 4 }} />
-            <Grid.Col span={{ xs: 12, sm: 10, md: 8, lg: 8, xl: 4 }} style={{ maxWidth: rem(1200) }}>
+            <Grid.Col span={{ xs: 12, sm: 1, md: 2, lg: 2, xl: 3 }} />
+            <Grid.Col span={{ xs: 12, sm: 10, md: 8, lg: 8, xl: 6 }} style={{ maxWidth: rem(1200) }}>
                 <Center>
                     <Timeline active={4}>
                         <Timeline.Item title="Otto • Warehouse logistics">
@@ -82,7 +82,7 @@ export function JobHistory() {
                     </Timeline>
                 </Center>
             </Grid.Col>
-            <Grid.Col span={{ xs: 12, sm: 1, md: 2, lg: 2, xl: 4 }} />
+            <Grid.Col span={{ xs: 12, sm: 1, md: 2, lg: 2, xl: 3 }} />
         </Grid>
     );
 }
