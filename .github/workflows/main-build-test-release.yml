@@ -1,11 +1,14 @@
-name: pull-request-build-test
+name: main-build-test-release
 
 on:
-  pull_request:
+  push:
+    branches:
+      - main
 
 jobs:
   frontend-build-and-test:
     runs-on: ubuntu-latest
+    environment: oskar-westmeijer-environment
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/frontend-build-and-test
@@ -34,26 +37,30 @@ jobs:
           docker-username: ${{ secrets.DOCKER_USERNAME }}
           github-sha: ${{ github.sha }}
 
-  dependabot-automerge:
+  release-frontend-docker-image:
     needs: [ frontend-build-and-test ]
     runs-on: ubuntu-latest
     environment: oskar-westmeijer-environment
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
-      - run: echo "event name is:" ${{ github.event_name }}
-      - run: echo "event type is:" ${{ github.event.action }}
-      - name: Dependabot metadata
-        uses: dependabot/fetch-metadata@v1
+      - name: login to DockerHub
+        uses: docker/login-action@v3
         with:
-          github-token: '${{ secrets.MASTER_TOKEN }}'
-      - name: approve PR
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.MASTER_TOKEN }}
-      - name: Enable auto-merge for Dependabot PRs
-        run: gh pr merge --squash "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.MASTER_TOKEN}}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: image tagging
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ secrets.DOCKER_USERNAME }}/homepage
+          tags: |
+            # set latest tag for master branch
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
+            type=sha,format=long
+      - name: build and push image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
