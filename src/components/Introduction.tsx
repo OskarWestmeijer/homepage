@@ -26,7 +26,7 @@ export function Introduction() {
                         <Title order={4}>Oskar Westmeijer</Title>
                     </Center>
                     <Center>
-                        <Text c="dimmed" size="sm">
+                        <Text size="sm">
                             software developer in Hamburg, Germany
                         </Text>
                     </Center>

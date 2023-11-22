@@ -15,7 +15,7 @@ export function Projects() {
                             LIVE
                         </Badge>
                     </Group>
-                    <Text size="sm" c="dimmed">
+                    <Text size="sm">
                         This API offers weather data. The API usage is documented in an OpenAPI specification. An
                         Angular frontend presents the weather using charts.
                     </Text>

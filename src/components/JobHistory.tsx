@@ -11,12 +11,11 @@ export function JobHistory() {
                             <Text size="xs" mt={4}>
                                 01/2023 - present | software developer
                             </Text>
-                            <Text c="dimmed" size="sm">
-                                I am a member of an international team specializing in warehouse processes, with a
-                                specific focus on inbound logistics. Our team is part of a company-wide logistics
-                                project responsible for the launch of a new warehouse and software system. This involves
-                                developing new processes for the go-live while simultaneously managing and maintaining
-                                existing processes for the old warehouses.
+                            <Text size="sm" mt={4}>
+                                Specializing in inbound warehouse logistics processes. Our team is part of a
+                                company-wide logistics responsible for the launch of a new warehouse and software
+                                system. This involves developing new processes for the go-live while simultaneously
+                                managing and maintaining existing processes for the old warehouses.
                             </Text>
                             <Group mt="7">
                                 <Badge variant="light">java</Badge>
@@ -29,12 +28,12 @@ export function JobHistory() {
                             <Text size="xs" mt={4}>
                                 03/2019 - 12/2022 (part of mrge since 09/2021) | software developer
                             </Text>
-                            <Text c="dimmed" size="sm">
-                                The company's primary focus is to promote products from advertisers on the internet,
-                                aiming to boost customer traffic. I was involved in developing a microservice pipeline
-                                that could efficiently import, enhance, and publish a vast number of products. In
-                                addition, I also contributed to the development of our invoicing application and a
-                                service responsible for directing user traffic to the landing pages of advertisers.
+                            <Text size="sm" mt={4}>
+                                The company promotes products from advertisers on the internet, aiming to boost customer
+                                traffic. I was involved in developing a microservice pipeline that could efficiently
+                                import, enhance, and publish a vast number of products. In addition, I also contributed
+                                to the development of our invoicing application and a service responsible for directing
+                                user traffic to the landing pages of advertisers.
                             </Text>
                             <Group mt="7">
                                 <Badge variant="light">java</Badge>
@@ -47,12 +46,11 @@ export function JobHistory() {
                             <Text size="xs" mt={4}>
                                 09/2018 - 12/2018 | software developer
                             </Text>
-                            <Text c="dimmed" size="sm">
+                            <Text size="sm" mt={4}>
                                 Mach AG specializes in the development of an ERP tool. During my stay there, I was part
                                 of the team responsible for the HR module. While the position ultimately was not the
                                 right fit for me, it was during this time that I was introduced to SCRUM and modern team
-                                collaboration practices. These insights proved to be valuable assets in my subsequent
-                                job.
+                                collaboration practices.
                             </Text>
                             <Group mt="7">
                                 <Badge variant="light">java</Badge>
@@ -62,12 +60,12 @@ export function JobHistory() {
                             <Text size="xs" mt={4}>
                                 08/2015 - 07/2018 | apprenticeship software developer
                             </Text>
-                            <Text c="dimmed" size="sm">
+                            <Text size="sm" mt={4}>
                                 The largest port in the Baltic Sea region, this port operates an in-house harbor
-                                logistics software system. It was here that I was first introduced to Java programming.
-                                Additionally, I gained valuable insights into the organizational structure of a
-                                medium-sized company. I also dedicated a considerable amount of time working closely
-                                with my colleagues in port logistics to better comprehend how they utilize our software.
+                                logistics software system. I gained valuable insights into the organizational structure
+                                of a medium-sized company. I also dedicated a considerable amount of time working
+                                closely with my colleagues in port logistics to better comprehend how they utilize our
+                                software.
                             </Text>
                             <Group mt="7">
                                 <Badge variant="light">java</Badge>
