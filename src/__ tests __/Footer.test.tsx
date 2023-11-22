@@ -1,13 +1,12 @@
 import { Footer } from '../components/Footer';
-import { render } from '../test-utils';
+import { render, screen } from '../test-utils';
 
-test('demo', () => {
-    expect(true).toBe(true);
-});
+describe('Footer component', () => {
+    const currentYear = new Date().getFullYear().toString();
 
-describe('Welcome component', () => {
-    test('Renders the main page', () => {
+    test('Renders author name and current year', () => {
         render(<Footer />);
-        expect(true).toBeTruthy();
+        const authorAndYearElement = screen.getByText(new RegExp(`Oskar Westmeijer • ${currentYear}`, 'i'));
+        expect(authorAndYearElement).toBeInTheDocument();
     });
 });
