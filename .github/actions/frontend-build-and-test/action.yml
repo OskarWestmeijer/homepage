@@ -20,7 +20,7 @@ runs:
         - name: npm run test
           shell: bash
           working-directory: ${{ inputs.frontend-directory }}
-          run: npm ci
+          run: npm run test
         - name: npm run build
           shell: bash
           working-directory: ${{ inputs.frontend-directory }}
