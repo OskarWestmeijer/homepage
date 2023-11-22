@@ -15,20 +15,19 @@ export function Projects() {
                             LIVE
                         </Badge>
                     </Group>
-                    <Text size="sm" c="dimmed">
-                        This API offers weather data for predefined locations. It fetches weather information from the
-                        external Openweathermap API and saves it in a database. The API usage is documented in an
-                        OpenAPI specification, and an Angular dashboard presents the weather data using charts.
+                    <Text size="sm">
+                        This API offers weather data. The API usage is documented in an OpenAPI specification. An
+                        Angular frontend presents the weather using charts.
                     </Text>
                     <Space h={20}></Space>
 
                     <Center>
                         <Group>
-                            <a href="https://github.com/OskarWestmeijer/weather-api">
-                                <Image height={45} w="auto" fit="contain" src={github} />
+                            <a href="https://github.com/OskarWestmeijer/weather-api" aria-label="Weather-Api Github repository">
+                                <Image height={45} w="auto" fit="contain" src={github} alt="Github logo" />
                             </a>
 
-                            <a href="https://ui.oskar-westmeijer.com">
+                            <a href="https://ui.oskar-westmeijer.com" aria-label="Weather-Api angular frontend live deployment">
                                 <Button radius="md">UI Dashboard</Button>
                             </a>
                         </Group>
