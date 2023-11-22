@@ -9,7 +9,7 @@ export function JobHistory() {
                     <Timeline active={4}>
                         <Timeline.Item title="Otto • Warehouse logistics">
                             <Text size="xs" mt={4}>
-                                01/2023 - now | software developer
+                                01/2023 - present | software developer
                             </Text>
                             <Text c="dimmed" size="sm">
                                 I am a member of an international team specializing in warehouse processes, with a
@@ -71,7 +71,6 @@ export function JobHistory() {
                             </Text>
                             <Group mt="7">
                                 <Badge variant="light">java</Badge>
-                                <Badge variant="light">typo3</Badge>
                             </Group>
                         </Timeline.Item>
                         <Timeline.Item title="Prior experiences">
