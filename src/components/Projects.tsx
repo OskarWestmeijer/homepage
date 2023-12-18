@@ -1,4 +1,4 @@
-import { Badge, Button, Space, Card, Group, Text, Center, Image } from '@mantine/core';
+import { Button, Stack, Card, Group, Text, Center, Image } from '@mantine/core';
 import github from '/images/github.svg';
 
 const backgroundColor = '#Eff0f0';
@@ -6,36 +6,52 @@ const backgroundColor = '#Eff0f0';
 export function Projects() {
     return (
         <Group justify="center">
-            <Card bg={backgroundColor} shadow="md" radius="md" withBorder maw={500}>
+            <Card bg={backgroundColor} shadow="md" radius="md" withBorder maw={400}>
                 <Group justify="space-between" mt="md" mb="xs">
-                    <Text fw={500}>Weather-Api</Text>
-                    <Badge variant="light" color="green">
-                        LIVE
-                    </Badge>
+                    <Text fw={500}>Weather</Text>
+                    <a href="https://github.com/OskarWestmeijer/weather" aria-label="Weather Github repository">
+                        <Image height={35} w="auto" fit="contain" src={github} alt="Github logo" />
+                    </a>
                 </Group>
-                <Text size="sm">
-                    This API offers weather data. The API usage is documented in an OpenAPI specification. An Angular
-                    frontend presents the weather using charts.
-                </Text>
-                <Space h={20}></Space>
+                <Stack mt={10} justify="space-between" mih={120}>
+                    <Text size="sm">
+                        Provides weather data for selected locations. The frontend displays the weather in charts. The
+                        backend service offers a public Api.
+                    </Text>
 
-                <Center>
-                    <Group>
+                    <Center>
                         <a
-                            href="https://github.com/OskarWestmeijer/weather-api"
-                            aria-label="Weather-Api Github repository"
+                            href="https://weather.oskar-westmeijer.com"
+                            aria-label="Weather Angular frontend live deployment"
                         >
-                            <Image height={45} w="auto" fit="contain" src={github} alt="Github logo" />
+                            <Button radius="md" variant="gradient">
+                                &#x26C5; Weather
+                            </Button>
                         </a>
+                    </Center>
+                </Stack>
+            </Card>
 
+            <Card bg={backgroundColor} shadow="md" radius="md" withBorder maw={400}>
+                <Group justify="space-between" mt="md" mb="xs">
+                    <Text fw={500}>Maps</Text>
+                    <a href="https://github.com/OskarWestmeijer/maps" aria-label="Maps Github repository">
+                        <Image height={35} w="auto" fit="contain" src={github} alt="Github logo" />
+                    </a>
+                </Group>
+                <Stack mt={10} justify="space-between" mih={120}>
+                    <Text size="sm">Displays Hamburg airport connections on a 3d globe.</Text>
+                    <Center>
                         <a
-                            href="https://ui.oskar-westmeijer.com"
-                            aria-label="Weather-Api angular frontend live deployment"
+                            href="https://maps.oskar-westmeijer.com"
+                            aria-label="Maps Sveltekit frontend live deployment"
                         >
-                            <Button radius="md">UI Dashboard</Button>
+                            <Button radius="md" variant="gradient" >
+                                &#127757; Maps
+                            </Button>
                         </a>
-                    </Group>
-                </Center>
+                    </Center>
+                </Stack>
             </Card>
         </Group>
     );

@@ -1,4 +1,4 @@
-import { Image, Text, Title, Paper, Grid, Center, Space, Group, rem } from '@mantine/core';
+import { Image, Text, Title, Paper, Center, Space, Group, rem } from '@mantine/core';
 import portrait from '/images/oskar_westmeijer.jpg';
 import github from '/images/github.svg';
 import linkedin from '/images/linkedin.png';
@@ -25,7 +25,7 @@ export function Introduction() {
                     <Text size="sm">software developer in Hamburg, Germany</Text>
                 </Center>
                 <Space h="sm" />
-                <Text>I work with Java and enjoy learning other programming languages or frameworks as well.</Text>
+                <Text>I work with Java and enjoy learning other programming languages and frameworks as well.</Text>
                 <Space h="sm" />
                 <Text>
                     In addition to coding, I stay active at the gym. I am into reading, especially when it comes to

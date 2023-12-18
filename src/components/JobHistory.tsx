@@ -3,16 +3,16 @@ import { Badge, Text, Timeline, Group, Center } from '@mantine/core';
 export function JobHistory() {
     return (
         <Center>
-            <Timeline active={4} maw={700}>
+            <Timeline active={4} maw={700} color='orange.7'>
                 <Timeline.Item title="Otto • Warehouse logistics">
                     <Text size="xs" mt={4}>
                         01/2023 - present | software developer
                     </Text>
                     <Text size="sm" mt={4}>
                         Specializing in inbound warehouse logistics processes. Our team is part of a company-wide
-                        logistics responsible for the launch of a new warehouse and software system. This involves
-                        developing new processes for the go-live while simultaneously managing and maintaining existing
-                        processes for the old warehouses.
+                        logistics project. The project includes the launch of a new warehouse and software system. Our
+                        team has to develop new processes for the go-live and at the same time maintain existing
+                        processes for older warehouses.
                     </Text>
                     <Group mt="7">
                         <Badge variant="light">java</Badge>
@@ -23,7 +23,7 @@ export function JobHistory() {
                 </Timeline.Item>
                 <Timeline.Item title="Shopping24 • Online advertising services">
                     <Text size="xs" mt={4}>
-                        03/2019 - 12/2022 (part of mrge since 09/2021) | software developer
+                        03/2019 - 12/2022 | software developer
                     </Text>
                     <Text size="sm" mt={4}>
                         The company promotes products from advertisers on the internet, aiming to boost customer
@@ -44,9 +44,9 @@ export function JobHistory() {
                         09/2018 - 12/2018 | software developer
                     </Text>
                     <Text size="sm" mt={4}>
-                        Mach AG specializes in the development of an ERP tool. During my stay there, I was part of the
-                        team responsible for the HR module. While the position ultimately was not the right fit for me,
-                        it was during this time that I was introduced to SCRUM and modern team collaboration practices.
+                        Mach AG specializes in the development of an ERP tool. I was on a team, which was responsible
+                        for the HR module. While the position ultimately was not the right fit for me, I was introduced
+                        to SCRUM and modern team collaboration practices.
                     </Text>
                     <Group mt="7">
                         <Badge variant="light">java</Badge>
@@ -59,8 +59,8 @@ export function JobHistory() {
                     <Text size="sm" mt={4}>
                         The largest port in the Baltic Sea region, this port operates an in-house harbor logistics
                         software system. I gained valuable insights into the organizational structure of a medium-sized
-                        company. I also dedicated a considerable amount of time working closely with my colleagues in
-                        port logistics to better comprehend how they utilize our software.
+                        company. I also spent much time working with colleagues in port logistics to better
+                        understand how they use our software.
                     </Text>
                     <Group mt="7">
                         <Badge variant="light">java</Badge>
