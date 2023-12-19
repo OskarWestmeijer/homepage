@@ -15,9 +15,9 @@ function App() {
                 <Space h={50} />
                 <Introduction />
                 <Space h={100} />
-                <JobHistory />
-                <Space h={100} />
                 <Projects />
+                <Space h={100} />
+                <JobHistory />
                 <Space h={100} />
                 <Footer />
             </MantineProvider>

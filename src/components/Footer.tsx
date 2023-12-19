@@ -1,4 +1,4 @@
-import { Center, Text, Container, Group, Image } from '@mantine/core';
+import { Center, Title, Container, Group, Image } from '@mantine/core';
 import github from '/images/github.svg';
 import linkedin from '/images/linkedin.svg';
 
@@ -13,9 +13,7 @@ export function Footer() {
         <div style={footerStyle}>
             <Container pt={50} pb={50}>
                 <Center>
-                    <Text ff="Codystar" fz={24} fw={900}>
-                        Oskar Westmeijer &#128526; {year}
-                    </Text>
+                    <Title order={3}>Oskar Westmeijer &#128526; {year}</Title>
                 </Center>
                 <Group mt="md" align="center" justify="center">
                     <a href="https://github.com/OskarWestmeijer" aria-label="Oskar Westmeijer Github profile">
