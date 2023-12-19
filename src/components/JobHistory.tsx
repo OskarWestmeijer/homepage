@@ -3,7 +3,7 @@ import { Badge, Text, Timeline, Group, Center } from '@mantine/core';
 export function JobHistory() {
     return (
         <Center>
-            <Timeline active={4} maw={700} color='orange.7'>
+            <Timeline active={4} miw={375} maw={700} color="orange.7">
                 <Timeline.Item title="Otto • Warehouse logistics">
                     <Text size="xs" mt={4}>
                         01/2023 - present | software developer
@@ -59,8 +59,8 @@ export function JobHistory() {
                     <Text size="sm" mt={4}>
                         The largest port in the Baltic Sea region, this port operates an in-house harbor logistics
                         software system. I gained valuable insights into the organizational structure of a medium-sized
-                        company. I also spent much time working with colleagues in port logistics to better
-                        understand how they use our software.
+                        company. I also spent much time working with colleagues in port logistics to better understand
+                        how they use our software.
                     </Text>
                     <Group mt="7">
                         <Badge variant="light">java</Badge>

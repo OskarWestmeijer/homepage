@@ -6,7 +6,7 @@
         "useDefineForClassFields": true,
         "lib": ["ESNext", "DOM", "DOM.Iterable"],
         "skipLibCheck": true,
-        
+
         "module": "ESNext",
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
@@ -27,7 +27,7 @@
         "paths": {
             "@/*": ["./src/*"],
             "@test-utils": ["./test-utils"]
-          }
+        }
     },
     "include": ["src", "test-utils"],
     "references": [{ "path": "./tsconfig.node.json" }]

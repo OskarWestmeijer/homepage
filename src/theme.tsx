@@ -4,11 +4,14 @@ const themeOverride = createTheme({
     defaultGradient: {
         from: 'orange.4',
         to: 'red.8',
-        deg: 340,
-      },
-    //fontFamily: 'Verdana, sans-serif',
-    //fontFamilyMonospace: 'Monaco, Courier, monospace',
-    headings: { fontWeight: '550' },
+        deg: 340
+    },
+    fontFamily: 'Prompt, sans-serif',
+
+    headings: {
+        fontFamily: 'Bungee Spice',
+        fontWeight: '550'
+    },
     primaryColor: 'orange'
 });
 
