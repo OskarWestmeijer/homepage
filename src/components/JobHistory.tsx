@@ -7,7 +7,7 @@ export function JobHistory() {
             <Timeline mt="md" active={4} miw={375} maw={700} color="orange.7">
                 <Timeline.Item title="Otto • Warehouse logistics">
                     <Text size="xs" mt="xs">
-                        01/2023 - present | software developer
+                        01/2023 - now | software developer
                     </Text>
                     <Text size="sm" mt="sm">
                         My team specializes in the inbound warehouse logistics processes. A company-wide logistics
@@ -66,7 +66,7 @@ export function JobHistory() {
                 </Timeline.Item>
                 <Timeline.Item title="Prior experiences">
                     <Text size="xs" mt="xs">
-                        07/2012 - 07/2015 | abitur, jobbing, military-service and unfinished university study
+                        abitur, jobbing, military-service and unfinished university study
                     </Text>
                 </Timeline.Item>
             </Timeline>
