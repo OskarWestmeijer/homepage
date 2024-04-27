@@ -1,50 +1,45 @@
-# Homepage
+# homepage
 
-![main branch](https://github.com/OskarWestmeijer/homepage/actions/workflows/main-build-test-release.yml/badge.svg)
-[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/vmxf.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+This template should help get you started developing with Vue 3 in Vite.
 
-Showcasing my portfolio and other information about me and my interests.
+## Recommended IDE Setup
 
-## Technologies
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-```
-- Typescript, ReactJs & Vite
-- Mantine
-- Nginx
-```
+## Type Support for `.vue` Imports in TS
 
-## Build & test
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-```bash
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
-npm run build
-npm test
 ```
 
-## Local development
+### Compile and Hot-Reload for Development
 
-```bash
-npm install
+```sh
 npm run dev
 ```
 
-## Prettier
+### Type-Check, Compile and Minify for Production
 
-```bash
-npm run lint
-npx prettier . --write
+```sh
+npm run build
 ```
 
-## Update dependencies
+### Run Unit Tests with [Vitest](https://vitest.dev/)
 
-```bash
-npm install -g npm-check-updates
-ncu
+```sh
+npm run test:unit
+```
 
-# granular updates
-ncu -u --target=patch
-ncu -u --target=minor
+### Lint with [ESLint](https://eslint.org/)
 
-ncu -u
-npm update --save
+```sh
+npm run lint
 ```
