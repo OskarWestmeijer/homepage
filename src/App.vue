@@ -14,15 +14,26 @@ import { RouterLink, RouterView } from 'vue-router'
         <button class="btn">Notes</button>
       </RouterLink>
     </div>
-    <div class="navbar-end"></div>
+    <div class="navbar-end">
+      <a href="https://github.com/OskarWestmeijer" aria-label="Oskar Westmeijer Github profile">
+        <button class="btn">
+          <img alt="Github logo" class="size-7" src="@/assets/github.svg" />
+        </button>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/oskar-westmeijer-488449252/"
+        aria-label="Oskar Westmeijer LinkedIn profile"
+      >
+        <button class="btn">
+          <img alt="Linkedin logo" class="size-6" src="@/assets/linkedin.svg" />
+        </button>
+      </a>
+    </div>
   </div>
 
   <div class="flex flex-col">
     <RouterView />
   </div>
 </template>
-
-<footer class="footer p-10 bg-neutral text-neutral-content">
-</footer>
 
 <style></style>
