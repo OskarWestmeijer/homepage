@@ -3,22 +3,26 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="navbar bg-accent">
+  <div class="navbar glass">
     <div class="navbar-start"></div>
     <div class="navbar-center">
       <RouterLink to="/">
-        <button class="btn">Home</button>
-      </RouterLink>
-
-      <RouterLink to="/about">
         <button class="btn">About</button>
       </RouterLink>
+
+      <RouterLink to="/notes">
+        <button class="btn">Notes</button>
+      </RouterLink>
     </div>
-  <div class="navbar-end">
-</div>
+    <div class="navbar-end"></div>
   </div>
 
-  <RouterView />
+  <div class="flex flex-col">
+    <RouterView />
+  </div>
 </template>
 
-<style scoped></style>
+<footer class="footer p-10 bg-neutral text-neutral-content">
+</footer>
+
+<style></style>
