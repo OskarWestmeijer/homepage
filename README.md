@@ -8,8 +8,8 @@ Showcasing my portfolio and other information about me and my interests.
 ## Technologies
 
 ```
-- Typescript, ReactJs & Vite
-- Mantine
+- Typescript, VueJs & Vite
+- Tailwind & DaisyUi
 - Nginx
 ```
 
@@ -18,7 +18,7 @@ Showcasing my portfolio and other information about me and my interests.
 ```bash
 npm install
 npm run build
-npm test
+npm test:unit
 ```
 
 ## Local development
