@@ -1,5 +1,7 @@
 <template>
-  <div class="mt-4 prose max-w-full lg:w-2/5 m-auto flex flex-col items-center text-base-content">
+  <div
+    class="mt-4 prose w-full lg:w-3/5 xl:w-2/5 m-auto flex flex-col items-center text-base-content"
+  >
     <h2 class="text-center">Item01: My favourite validation libraries in Java</h2>
     <section class="mt-0 font-medium">
       <p>
@@ -81,9 +83,14 @@
 
     <span class="text-orange-500">public</span> <span class="text-info">Location</span> {
       Objects.requireNonNull(locationId, <span class="text-success">"locationId is required"</span>);
-      Preconditions.checkArgument(StringUtils.isNumeric(localZipCode), <span class="text-success">"localZipCode is required and must be numeric"</span>, locationId);
-      Preconditions.checkArgument(!Strings.isNullOrEmpty(countryCode) && <span class="text-purple-500">countryCodePattern</span>.matcher(countryCode).matches(),
+      
+      Preconditions.checkArgument(StringUtils.isNumeric(localZipCode), 
+      <span class="text-success">"localZipCode is required and must be numeric"</span>, locationId);
+
+      Preconditions.checkArgument(!Strings.isNullOrEmpty(countryCode) 
+      && <span class="text-purple-500">countryCodePattern</span>.matcher(countryCode).matches(),
       <span class="text-success">"countryCode is required (ISO 3166-1 alpha-3 code)"</span>, locationId);
+
       weather = List.copyOf(Objects.requireNonNull(weather, <span class="text-success">"weather is required"</span>));
     }
 

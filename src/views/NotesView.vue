@@ -2,7 +2,7 @@
   <div class="max-w-full notes flex flex-col items-center">
     <div
       v-for="item in items"
-      class="mt-4 card lg:w-2/5 w-full bg-base-100 border-2 shadow-xl hover:shadow-md hover:shadow-primary"
+      class="mt-4 card w-full lg:w-3/5 xl:w-2/5 bg-base-100 border-2 shadow-xl hover:shadow-md hover:shadow-primary"
     >
       <RouterLink :to="'/notes/' + item.link">
         <div class="card-body">

@@ -13,18 +13,16 @@
       >
         Oskar Westmeijer
       </h1>
-      <p class="text-center font-bold max-w-lg mb-10">
-        I work as a developer and enjoy learning new technoligies in my free time. In addition to
-        coding, I stay active at the gym. Furthermore, I like to read, especially on topics of
-        history, foreign cultures, and geography.
+      <p class="text-center text-base-content font-bold max-w-lg mb-10">
+        I'm a developer who likes learning new technologies, working out at the gym, and going for
+        runs. I also enjoy reading about history, foreign cultures, and geography.
       </p>
     </div>
   </div>
 </template>
 
 <style scoped>
-.about{
-min-height: 80vh;
-
+.about {
+  min-height: 80vh;
 }
 </style>
