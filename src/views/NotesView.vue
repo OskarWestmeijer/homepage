@@ -35,7 +35,7 @@ export default {
           date: '29-04-2024'
         },
         {
-          title: 'Item02: Immutable or unmodifiable lists in Java',
+          title: 'Item02: Unmodifiable lists in Java',
           badges: ['Java'],
           link: 'item02',
           date: '29-04-2024'
