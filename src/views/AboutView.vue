@@ -14,8 +14,8 @@
         Oskar Westmeijer
       </h1>
       <p class="text-center text-base-content font-bold max-w-lg mb-10">
-        I'm a developer who likes learning new technologies, working out at the gym, and going for
-        runs. I also enjoy reading about history, foreign cultures, and geography.
+        I'm a developer who likes learning new technologies, working out at the gym and going for
+        runs. I also enjoy reading about history, foreign cultures and geography.
       </p>
     </div>
   </div>

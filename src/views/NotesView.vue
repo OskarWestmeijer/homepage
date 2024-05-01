@@ -2,7 +2,7 @@
   <div class="max-w-full notes flex flex-col items-center">
     <div
       v-for="item in items"
-      class="mt-4 card w-full lg:w-3/5 xl:w-2/5 bg-base-100 border-2 shadow-xl hover:shadow-md hover:shadow-primary"
+      class="mt-4 card w-full lg:w-3/5 xl:w-2/4 bg-base-100 border-2 shadow-xl hover:shadow-md hover:shadow-primary"
     >
       <RouterLink :to="'/notes/' + item.link">
         <div class="card-body">
@@ -19,6 +19,7 @@
 
 <script lang="ts">
 import { RouterLink } from 'vue-router'
+import { noteItems } from './notes'
 
 export default {
   components: {
@@ -27,20 +28,7 @@ export default {
 
   data() {
     return {
-      items: [
-        {
-          title: 'Item01: My favourite validation libraries in Java',
-          badges: ['Java'],
-          link: 'item01',
-          date: '29-04-2024'
-        },
-        {
-          title: 'Item02: Unmodifiable lists in Java',
-          badges: ['Java'],
-          link: 'item02',
-          date: '29-04-2024'
-        }
-      ]
+      items: noteItems
     }
   }
 }
