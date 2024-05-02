@@ -1,78 +1,87 @@
 <template>
-    <div
-      class="mt-4 prose w-full lg:w-3/5 xl:w-2/5 m-auto flex flex-col items-center text-base-content"
-    >
-      <h2 class="text-center">Item01: Validation libraries in Java</h2>
-      <section class="mt-0 font-medium">
-        <p>
-          Input parameter validation is important to avoid unexpected side-effects. I mostly apply
-          validations on:
-        </p>
-        <ul>
-          <li>Constructors</li>
-          <li>Public methods</li>
-          <li>Especially mutating public methods</li>
-        </ul>
-        <p>
-          Validations improve safety and force me to write better tests. Another welcoming benefit is
-          that they document the code. Thrown error messages should contain useful information.
-        </p>
-        <p>
-          Instead of writing an own implementation, use well maintained libraries like Guava or Apache
-          Commons. They offer plenty of useful static methods.
-        </p>
-      </section>
-      <div class="overflow-x-auto">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Static method</th>
-              <th>Library</th>
-              <th>Comment</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>Objects.requireNonNull(T obj)</code></td>
-              <td><code>java.util</code> (since 1.7)</td>
-              <td>
-                Throws NullPointerException if reference is null. Otherwise returns the passed Object.
-              </td>
-            </tr>
-            <tr>
-              <td><code>Preconditions.checkArgument(boolean expression)</code></td>
-              <td><code>com.google.common.base</code> (Guava)</td>
-              <td>
-                Throws IllegalArgumentException if condition is not met. Place other valdiation calls
-                inside.
-              </td>
-            </tr>
-            <tr>
-              <td><code>CollectionUtils.isNotEmpty(Collection<> col)</code></td>
-              <td><code>org.apache.commons.collections4</code> (Apache Commons)</td>
-              <td>
-                Returns a boolean and is able to handle null inputs. Therefore it is more flexible
-                than a regular !isEmpty().
-              </td>
-            </tr>
-            <tr>
-              <td><code>StringUtils.isNumeric(CharSequence cs)</code></td>
-              <td><code>org.apache.commons.lang3</code> (Apache Commons)</td>
-              <td>Returns a boolean and is able to handle null inputs.</td>
-            </tr>
-            <tr>
-              <td><code>Strings.isNullOrEmpty(String string)</code></td>
-              <td><code>com.google.common.base</code> (Guava)</td>
-              <td>Returns a boolean and is able to handle null inputs.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-  
-      <p class="font-medium">Validating a Java record during construction.</p>
-  
-      <div class="mockup-code not-prose mb-4 overflow-x-auto">
-        <pre><code><span class="text-orange-500">public record</span> Location(
+  <div
+    class="mt-4 prose w-full lg:w-3/5 xl:w-2/5 m-auto flex flex-col items-center text-base-content"
+  >
+    <h2 class="text-center">Item01: Validation libraries in Java</h2>
+    <section class="mt-0 font-medium">
+      <p>
+        Input parameter validation is important to avoid unexpected side-effects. I prefer to design
+        processes with <a href="#footnote-1" class="underline">fail-fast<sup>1</sup></a> on my mind.
+        Suitable passages to apply validations on:
+      </p>
+      <ul>
+        <li>Constructors</li>
+        <li>Public methods</li>
+        <li>Especially mutating public methods</li>
+      </ul>
+      <p>
+        Validations improve safety and force me to write better tests. Another welcoming benefit is
+        that they document the code. In case of validation failure, the thrown exceptions can be
+        utilized to write meaningful error messages.
+      </p>
+      <p>
+        Instead of coding an own implementation, well maintained libraries like
+        <a href="#footnote-2" class="underline">Guava<sup>2</sup></a> or
+        <a href="#footnote-3" class="underline">Apache Commons<sup>3</sup></a> can be used. They
+        offer plenty of useful static methods.
+      </p>
+    </section>
+    <div class="overflow-x-auto">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Static method</th>
+            <th>Library</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Objects.requireNonNull(T obj)</code></td>
+            <td><code>java.util</code> (since 1.7)</td>
+            <td>
+              Throws <code>NullPointerException</code> if reference is null. Otherwise returns the
+              passed Object. Info! Guava advises using their
+              <code>Preconditions.checkNotNull(Object)</code> implementation instead.
+            </td>
+          </tr>
+          <tr>
+            <td><code>Preconditions.checkArgument(boolean expression)</code></td>
+            <td><code>com.google.common.base</code> (Guava)</td>
+            <td>
+              Throws <code>IllegalArgumentException</code> if condition is not met. Place other
+              valdiation calls inside.
+            </td>
+          </tr>
+          <tr>
+            <td><code>CollectionUtils.isNotEmpty(Collection<> col)</code></td>
+            <td><code>org.apache.commons.collections4</code> (Apache Commons)</td>
+            <td>
+              Returns a boolean and is able to handle <code>null</code> inputs. Therefore it is more
+              flexible than a regular <code>!List.isEmpty()</code>.
+            </td>
+          </tr>
+          <tr>
+            <td><code>StringUtils.isNumeric(CharSequence cs)</code></td>
+            <td><code>org.apache.commons.lang3</code> (Apache Commons)</td>
+            <td>Returns a <code>boolean</code> and is able to handle <code>null</code> inputs.</td>
+          </tr>
+          <tr>
+            <td><code>Strings.isNullOrEmpty(String string)</code></td>
+            <td><code>com.google.common.base</code> (Guava)</td>
+            <td>Returns a <code>boolean</code> and is able to handle <code>null</code> inputs.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="font-medium">
+      Example of validating a Java record during construction. Note the countryCode validation error
+      message. It specifies exactly the required format and enhances debugging.
+    </p>
+
+    <div class="mockup-code not-prose mb-4 overflow-x-auto">
+      <pre><code><span class="text-orange-500">public record</span> Location(
       Integer locationId,
       String localZipCode,
       String countryCode,
@@ -94,16 +103,36 @@
       }
   
     }</code></pre>
-      </div>
     </div>
-  </template>
-  
-  <style scoped>
-  @media (max-width: 768px) {
-    .overflow-x-auto {
-      overflow-x: auto;
-      max-width: 100%; /* Ensure the table fits within the viewport */
-    }
+
+    <div class="divider divider-info mb-0">Footnotes</div>
+
+    <!-- Footnotes -->
+    <div>
+      <p id="footnote-1" class="text-xs text-gray-500">
+        1. <strong>Fail-fast:</strong> Programming concept emphasizing immediate error detection and
+        handling. See
+        <a href="https://en.wikipedia.org/wiki/Fail-fast_system" class="underline">Wikipedia</a>.
+      </p>
+      <p id="footnote-2" class="text-xs text-gray-500">
+        2. <strong>Guava:</strong> Core Java libraries providing essential utilities. See
+        <a href="https://github.com/google/guava" class="underline">GitHub</a>.
+      </p>
+      <p id="footnote-3" class="text-xs text-gray-500">
+        3. <strong>Apache Commons:</strong> Java libraries offering reusable components. See
+        <a href="https://github.com/apache/commons-lang" class="underline">Lang</a> and
+        <a href="https://github.com/apache/commons-collections" class="underline">Collections</a> on
+        GitHub.
+      </p>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+@media (max-width: 768px) {
+  .overflow-x-auto {
+    overflow-x: auto;
+    max-width: 100%; /* Ensure the table fits within the viewport */
   }
-  </style>
-  
+}
+</style>
