@@ -2,7 +2,7 @@
   <div
     class="mt-4 prose w-full lg:w-3/5 xl:w-2/5 m-auto flex flex-col items-center text-base-content"
   >
-    <h2 class="text-center">Item01: Validation libraries in Java</h2>
+    <h2 class="text-center">{{ item.title }}</h2>
     <section class="mt-0 font-medium">
       <p>
         Input parameter validation is important to avoid unexpected side-effects. I prefer to design
@@ -127,6 +127,17 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    item: {
+      type: Object,
+      required: false
+    }
+  }
+}
+</script>
 
 <style scoped>
 @media (max-width: 768px) {

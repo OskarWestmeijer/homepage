@@ -12,7 +12,7 @@ const router = createRouter({
       name: 'about',
       component: AboutView,
       meta: {
-        title: 'About' // Set the title for the about page
+        title: 'About'
       }
     },
     {
@@ -20,7 +20,7 @@ const router = createRouter({
       name: 'projects',
       component: ProjectsView,
       meta: {
-        title: 'Projects' // Set the title for the projects page
+        title: 'Projects'
       }
     },
     {
@@ -28,7 +28,7 @@ const router = createRouter({
       name: 'notes',
       component: NotesView,
       meta: {
-        title: 'Notes' // Set the title for the notes page
+        title: 'Notes'
       }
     }
   ]
@@ -40,6 +40,9 @@ noteItems.forEach((item, index) => {
     path: `/notes/${item.link}`,
     name: `Item${index + 1}`,
     component: () => import(`../views/notes/${item.componentName}.vue`),
+    props: {
+      item: item
+    },
     meta: {
       title: item.title // Set the title for each note item
     }
