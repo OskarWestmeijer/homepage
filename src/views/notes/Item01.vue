@@ -23,7 +23,7 @@
         Instead of coding an own implementation, well maintained libraries like
         <a href="#footnote-2" class="underline">Guava<sup>2</sup></a> or
         <a href="#footnote-3" class="underline">Apache Commons<sup>3</sup></a> can be used. They
-        offer plenty of useful static methods.
+        offer plenty of useful static methods, to validate Strings and Collections.
       </p>
     </section>
     <div class="overflow-x-auto">
@@ -40,8 +40,8 @@
             <td><code>Objects.requireNonNull(T obj)</code></td>
             <td><code>java.util</code> (since 1.7)</td>
             <td>
-              Throws <code>NullPointerException</code> if reference is null. Otherwise returns the
-              passed Object. Info! Guava advises using their
+              Throws <code>NullPointerException</code> if reference is <code>null</code>. Otherwise
+              returns the passed Object. Info! Guava advises using their
               <code>Preconditions.checkNotNull(Object)</code> implementation instead.
             </td>
           </tr>
@@ -57,8 +57,8 @@
             <td><code>CollectionUtils.isNotEmpty(Collection<> col)</code></td>
             <td><code>org.apache.commons.collections4</code> (Apache Commons)</td>
             <td>
-              Returns a boolean and is able to handle <code>null</code> inputs. Therefore it is more
-              flexible than a regular <code>!List.isEmpty()</code>.
+              Returns a <code>boolean</code> and is able to handle <code>null</code> inputs.
+              Therefore it is more flexible than a regular <code>!List.isEmpty()</code>.
             </td>
           </tr>
           <tr>
@@ -76,8 +76,9 @@
     </div>
 
     <p class="font-medium">
-      Example of validating a Java record during construction. Note the countryCode validation error
-      message. It specifies exactly the required format and enhances debugging.
+      Scenario of validating a Java record during its construction phase. Note the countryCodes
+      validation error message, it specifies exactly the required format. In case of exception, the
+      related error log simplifies the troubleshooting process.
     </p>
 
     <div class="mockup-code not-prose mb-4 overflow-x-auto">
@@ -108,7 +109,7 @@
     <div class="divider divider-info mb-0">Footnotes</div>
 
     <!-- Footnotes -->
-    <div>
+    <div class="mb-6">
       <p id="footnote-1" class="text-xs text-gray-500">
         1. <strong>Fail-fast:</strong> Programming concept emphasizing immediate error detection and
         handling. See
