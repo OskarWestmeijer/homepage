@@ -5,9 +5,10 @@
     <h2 class="text-center">{{ item.title }}</h2>
     <section class="mt-0 font-medium">
       <p>
-        Input parameter validation is important to avoid unexpected side-effects. I prefer to design
-        processes with <a href="#footnote-1" class="underline">fail-fast<sup>1</sup></a> on my mind.
-        Suitable passages to apply validations on:
+        <a href="#footnote-1" class="underline">Input parameter validation<sup>1</sup></a> is
+        important to avoid unexpected side-effects. I prefer to design processes with
+        <a href="#footnote-2" class="underline">fail-fast<sup>2</sup></a> on my mind. Suitable
+        passages to apply validations on:
       </p>
       <ul>
         <li>Constructors</li>
@@ -21,8 +22,8 @@
       </p>
       <p>
         Instead of coding an own implementation, well maintained libraries like
-        <a href="#footnote-2" class="underline">Guava<sup>2</sup></a> or
-        <a href="#footnote-3" class="underline">Apache Commons<sup>3</sup></a> can be used. They
+        <a href="#footnote-3" class="underline">Guava<sup>3</sup></a> or
+        <a href="#footnote-4" class="underline">Apache Commons<sup>4</sup></a> can be used. They
         offer plenty of useful static methods, to validate Strings and Collections.
       </p>
     </section>
@@ -111,16 +112,19 @@
     <!-- Footnotes -->
     <div class="mb-6">
       <p id="footnote-1" class="text-xs text-gray-500">
-        1. <strong>Fail-fast:</strong> Programming concept emphasizing immediate error detection and
-        handling. See
-        <a href="https://en.wikipedia.org/wiki/Fail-fast_system" class="underline">Wikipedia</a>.
+        1. <strong>Item 49: Check parameters for validity</strong> - J. Bloch, Effective Java,
+        Edition 3, 2018, p. 227
       </p>
       <p id="footnote-2" class="text-xs text-gray-500">
-        2. <strong>Guava:</strong> Core Java libraries providing essential utilities. See
-        <a href="https://github.com/google/guava" class="underline">GitHub</a>.
+        2. <strong>Prepare for things going wrong: Fail fast</strong> - S. Harrer, Java by
+        Comparison, Edition 1, 2018, p. 74
       </p>
       <p id="footnote-3" class="text-xs text-gray-500">
-        3. <strong>Apache Commons:</strong> Java libraries offering reusable components. See
+        3. <strong>Guava:</strong> Core Java libraries providing essential utilities. See
+        <a href="https://github.com/google/guava" class="underline">GitHub</a>.
+      </p>
+      <p id="footnote-4" class="text-xs text-gray-500">
+        4. <strong>Apache Commons:</strong> Java libraries offering reusable components. See
         <a href="https://github.com/apache/commons-lang" class="underline">Lang</a> and
         <a href="https://github.com/apache/commons-collections" class="underline">Collections</a> on
         GitHub.
