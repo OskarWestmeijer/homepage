@@ -5,8 +5,8 @@
     <h2 class="text-center">{{ item.title }}</h2>
     <section class="mt-0 font-medium">
       <p>
-        Frequently we pass collections to model classes. Depending on the use-case we can
-        assign/publish the collection in different ways:
+        Frequently we pass collections to model classes. Depending on the use-case we can assign the
+        collection in different ways:
       </p>
       <ul>
         <li>Keep it mutable</li>
@@ -14,14 +14,14 @@
         <li>Unmodifiable View</li>
       </ul>
       <p>
-        I would like to analyse these differences with a Java record. A record guarantees, that the
+        I would like to analyze these differences with a Java record. A record ensures, that the
         references held by the record cannot be changed. They are considered <code>final</code>.
-        However, it does not guarantee immutability of the referenced object itself.
+        However, it does not guarantee the immutability of the referenced object itself.
       </p>
     </section>
 
     <h3 class="text-center">Keeping the list mutable</h3>
-    <div class="mockup-code not-prose mb-4 overflow-x-auto">
+    <div class="mockup-code not-prose mb-4 overflow-x-auto w-full">
       <pre><code>
   <span class="text-orange-500">record</span> Order(List&lt;String&gt; items) {
 
@@ -56,8 +56,8 @@
         >
       </p>
       <p>
-        There are two ways to make the access more restrictive. Both ways prevent modification on
-        calling the records getter.
+        There are two approaches to tighten access restrictions. Both methods prevent modifications
+        when calling the records getter.
       </p>
     </section>
 
@@ -85,15 +85,17 @@
       </table>
     </div>
 
-    <p class="font-medium">
-      Recommendation:
-      <a href="#footnote-2" class="underline"
-        >If possible, implement defensive copies.<sup>2</sup></a
-      >
-      If not possible, at least return
-      <a href="#footnote-3" class="underline">read only views from the getter.<sup>3</sup></a>
-    </p>
-
+    <section class="font-medium">
+      <h3>
+        Recommendation:
+        <a href="#footnote-2" class="underline">Prefer defensive copies.<sup>2</sup></a>
+      </h3>
+      <p></p>
+      <p>
+        If the list must remain mutable, it is advisable to safeguard it by returning
+        <a href="#footnote-3" class="underline">read-only views from the getter.<sup>3</sup></a>
+      </p>
+    </section>
     <h3 class="text-center">Comparison of Defensive Copy & Unmodifiable View</h3>
     <div class="mockup-code not-prose mb-4 overflow-x-auto">
       <pre><code>
@@ -166,7 +168,7 @@ export default {
 @media (max-width: 768px) {
   .overflow-x-auto {
     overflow-x: auto;
-    max-width: 100%; /* Ensure the table fits within the viewport */
+    max-width: 100%;
   }
 }
 </style>

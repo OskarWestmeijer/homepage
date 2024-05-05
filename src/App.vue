@@ -42,7 +42,9 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </div>
 
-  <RouterView />
+  <div class="px-4 md:px-0">
+    <RouterView />
+  </div>
 
   <footer class="mt-10 footer footer-center mobile-show">
     <h1 class="text-xl font-bold">Oskar Westmeijer</h1>
