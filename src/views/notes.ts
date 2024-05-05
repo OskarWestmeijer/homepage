@@ -12,5 +12,12 @@ export const noteItems = [
     link: 'item02-defensive-copies-and-views-of-lists-in-java',
     componentName: 'Item02',
     date: '05.05.2024'
+  },
+  {
+    title: 'Item03: Exception Handling - Checked vs. Unchecked',
+    badges: ['Java'],
+    link: 'item03-exception-handling-checked-vs-unchecked',
+    componentName: 'Item03',
+    date: '05.05.2024'
   }
 ]
