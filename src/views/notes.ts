@@ -14,9 +14,9 @@ export const noteItems = [
     date: '05.05.2024'
   },
   {
-    title: 'Item03: Exception Handling - Checked vs. Unchecked',
+    title: 'Item03: Exception handling best practices',
     badges: ['Java'],
-    link: 'item03-exception-handling-checked-vs-unchecked',
+    link: 'item03-exception-handling-best-practices',
     componentName: 'Item03',
     date: '05.05.2024'
   }
