@@ -9,17 +9,25 @@
         checked exceptions need to be declared as part of the method signature, and the compiler
         forces the caller to either catch or declare these exceptions in the method's throws clause.
       </p>
-      <p>Main guidelines from my favourite books and personal experience.</p>
+      <p>Guidelines from my favourite books and personal experience.</p>
       <ul>
-        <li>frequent try-catch blocks decrease readability</li>
+        <li>too many try-catch blocks decrease readability</li>
         <li>have a dedicated unit for error handling</li>
-        <li>favor unchecked over checked exceptions</li>
-        <li>consider rethrowing checked exceptions as unchecked, to avoid signature pollution</li>
+        <li>mostly favor unchecked over checked exceptions</li>
+        <li>avoid signature pollution, by rethrowing checked exceptions as unchecked</li>
+        <li>
+          <a href="#footnote-1" class="underline"
+            >consider replacing exceptions with optionals<sup>1</sup></a
+          >
+        </li>
       </ul>
-      <h2 class="mt-0">Checked or Unchecked?(Effective Java)</h2>
-      <p>I mainly follow this question from Effective Java.</p>
 
-      <p class="underline italic">Can the process recover from this exception?</p>
+      <h2 class="mt-0">Checked or Unchecked?</h2>
+      <p>
+        <a href="#footnote-2" class="underline"
+          >Can the process recover from this exception?<sup>2</sup></a
+        >
+      </p>
       <ul>
         <li>Yes, it can recover → Throw checked exception</li>
         <li>No, the process has to stop/rollback → Throw unchecked exception</li>
@@ -32,49 +40,45 @@
       <p>
         Often an external library forces the handling of a checked exception on us. Should you
         decide that it is not recoverable, it can be rethrown as unchecked. Otherwise the checked
-        exception has to be thrown through the whole calling hierarchy, polluting the signatures.
+        exception has to be thrown through the whole calling hierarchy,
+        <a href="#footnote-3" class="underline">polluting the signatures.<sup>3</sup></a>
       </p>
 
-      <h2 class="mt-0">Where to place exception handling? (software design?)</h2>
+      <h2 class="mt-0">Common place for exception handling</h2>
       <p></p>
       <p>
-        Readability of a process is one of my top priorities, therefore I would like to reduce
-        unnecessary exception handling. Since unchecked exceptions do not need to be caught
-        immediately by the caller, it is advisable to have a dedicated class for exception handling.
-        Frameworks like Spring Boot offer the <code>@ControllerAdvice</code> class. It is meant to
-        catch and <span class="underline">log exceptions</span> prior to responding to the client.
+        I would like to improve readability by avoiding unnecessary exception handling. Since
+        unchecked exceptions do not need to be caught immediately, it is advisable to have a
+        <a href="#footnote-4" class="underline"
+          >dedicated class for exception handling<sup>4</sup></a
+        >. Spring-Boot offers the <code>@ControllerAdvice</code> annotation, to specify exception
+        handling classes. This class is meant to catch and log exceptions prior to handling the
+        client response.
       </p>
     </section>
 
     <section class="mt-0 font-medium">
-      <h2 class="mt-0">Example of rethrowing a checked exception as unchecked</h2>
+      <h2 class="mt-0">Example exception handling</h2>
       <p>
         This code snippet calls an external Api. It can be called either by single or batch request.
-        The Api call throws a checked exception, which is simply rethrown as unchecked.
+        On failure call throws a checked OpenWeatherApiRequestException.
       </p>
       <ul>
-        <li>
-          Batch requests have the requirement, that single failures should not stop the whole
-          import.
-        </li>
-        <li>
-          The process for single request only, should not be recoverable. The exception is thrown
-          further up the callstack. If the single request process was invoked by a http call, it is
-          handled in the <code>@ControllerAdvice</code>.
-        </li>
+        <li>Single requests might fail.</li>
+        <li>On batch requests, single failures should not stop the whole import.</li>
       </ul>
     </section>
+
     <div class="mockup-code not-prose mb-4 overflow-x-auto">
       <code>
         <pre>
 public List&lt;Location> requestWeatherForBatch(List&lt;Location> locations) {
-    checkArgument(CollectionUtils.isNotEmpty(locations), "locations are required");
     return locations.stream()
         .map(location -> {
           try {
             return requestWeather(location);
-          } catch (Exception e) {
-            // single failures should not stop the batch import
+          } catch (OpenWeatherApiRequestException e) {
+            // single failure are recoverable and should not stop the batch import
             log.error("Import failed for locationId: {}", location.locationId(), e);
             return null;
           }
@@ -84,23 +88,22 @@ public List&lt;Location> requestWeatherForBatch(List&lt;Location> locations) {
   }
 
   public Location requestWeather(Location location) {
-    requireNonNull(location, "location is required");
-    var response = requireNonNull(request(location), "response is required");
-    var body = requireNonNull(response.getBody(), "body is required");
+    // failure is not recoverable, OpenWeatherApiRequestException propagates to @ControllerAdvice
+    var body = request(location).getBody();
     return openWeatherApiMapper.mapToLocation(body, location);
   }
 
   private ResponseEntity&lt;GeneratedOpenWeatherApiResponse> request(Location location) {
     try {
       // throws checked WebClientResponseException
-      return generatedOpenWeatherApi.getCurrentWeatherWithHttpInfo(
-          location.latitude(), location.longitude(), "metric", appId).block();
-    } catch (Exception e) {
-      // rethrow as unchecked OpenWeatherApiRequestException, minimize exception handling
-      throw new OpenWeatherApiRequestException("Exception during OpenWeatherApi request.", e);
+      return generatedOpenWeatherApi.getCurrentWeatherWithHttpInfo(location.latitude(), location.longitude()).block();
+    } catch (WebClientResponseException e) {
+      // rethrow as unchecked OpenWeatherApiRequestException, avoid signature pollution
+      throw new OpenWeatherApiRequestException(
+          String.format("Exception during OpenWeatherApi request. locationId: %s", location.locationId()), e);
     }
   }
-    </pre
+          </pre
         >
       </code>
     </div>
@@ -110,17 +113,26 @@ public List&lt;Location> requestWeatherForBatch(List&lt;Location> locations) {
     <!-- Footnotes -->
     <div class="mb-6">
       <p id="footnote-1" class="text-xs text-gray-500">
-        1. <strong>Item 17: Minimize mutability</strong> - J. Bloch, Effective Java, Edition 3,
-        2018, p. 80
+        1. <strong>Item 55: Return optionals judiciously</strong> - J. Bloch, Effective Java,
+        Edition 3, 2018, p. 249
       </p>
       <p id="footnote-2" class="text-xs text-gray-500">
-        2. <strong>Item 50: Make defensive copies when needed</strong> - J. Bloch, Effective Java,
-        Edition 3, 2018, p. 231
+        2.
+        <strong
+          >Item 70: Use exceptions for recoverable conditions and runtime exceptions for programming
+          errors</strong
+        >
+        - J. Bloch, Effective Java, Edition 3, 2018, p. 296
       </p>
       <p id="footnote-3" class="text-xs text-gray-500">
         3.
-        <strong>Design your objects: Avoid Leaking references</strong> - S. Harrer, Java by
-        Comparison, Edition 1, 2018, p. 124
+        <strong>Error Handling: Use Unchecked Exceptions</strong> - Robert C. Martin, Clean Code,
+        2009, p. 107
+      </p>
+      <p id="footnote-4" class="text-xs text-gray-500">
+        4.
+        <strong>10.7 Exception aggregation</strong> - John Ousterhout, A philoshophy of software
+        design, Edition 2, 2022, p. 84
       </p>
     </div>
   </div>
