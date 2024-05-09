@@ -32,10 +32,6 @@
         <li>Yes, it can recover → Throw checked exception</li>
         <li>No, the process has to stop/rollback → Throw unchecked exception</li>
       </ul>
-      <p>
-        Throwing a checked exception forces the caller to catch and implement a exceptional process
-        flow.
-      </p>
       <h2 class="mt-0">Rethrowing checked- as unchecked exceptions</h2>
       <p>
         Often an external library forces the handling of a checked exception on us. Should you
@@ -47,8 +43,7 @@
       <h2 class="mt-0">Common place for exception handling</h2>
       <p></p>
       <p>
-        I would like to improve readability by avoiding unnecessary exception handling. Since
-        unchecked exceptions do not need to be caught immediately, it is advisable to have a
+        Since unchecked exceptions do not need to be caught immediately, it is advisable to have a
         <a href="#footnote-4" class="underline"
           >dedicated class for exception handling<sup>4</sup></a
         >. Spring-Boot offers the <code>@ControllerAdvice</code> annotation, to specify exception
@@ -61,11 +56,11 @@
       <h2 class="mt-0">Example exception handling</h2>
       <p>
         This code snippet calls an external Api. It can be called either by single or batch request.
-        On failure call throws a checked OpenWeatherApiRequestException.
+        On request failure a checked OpenWeatherApiRequestException is thrown.
       </p>
       <ul>
-        <li>Single requests might fail.</li>
-        <li>On batch requests, single failures should not stop the whole import.</li>
+        <li>Single request failures should not be recoverable</li>
+        <li>On batch requests, single failures should not stop the whole batch</li>
       </ul>
     </section>
 
