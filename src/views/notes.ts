@@ -7,9 +7,9 @@ export const noteItems = [
     date: '30.04.2024'
   },
   {
-    title: 'Item02: Defensive copies and views of lists in Java',
+    title: 'Item02: Comparing lists - Mutable, View and Copy',
     badges: ['Java'],
-    link: 'item02-defensive-copies-and-views-of-lists-in-java',
+    link: 'item02-comparing-list-view-and-copy',
     componentName: 'Item02',
     date: '05.05.2024'
   },
@@ -18,6 +18,13 @@ export const noteItems = [
     badges: ['Java'],
     link: 'item03-exception-handling-best-practices',
     componentName: 'Item03',
+    date: '05.05.2024'
+  },
+  {
+    title: 'Item99: Defensive copies and views of lists in Java',
+    badges: ['Java'],
+    link: 'item99-defensive-copies-and-views-of-lists-in-java',
+    componentName: 'Item99',
     date: '05.05.2024'
   }
 ]
