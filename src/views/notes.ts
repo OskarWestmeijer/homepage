@@ -11,13 +11,20 @@ export const noteItems = [
     badges: ['Java'],
     link: 'item02-comparing-list-view-and-copy',
     componentName: 'Item02',
-    date: '05.05.2024'
+    date: '12.05.2024'
   },
   {
-    title: 'Item03: Exception handling best practices',
+    title: 'Item03: Defensive Copy',
     badges: ['Java'],
-    link: 'item03-exception-handling-best-practices',
+    link: 'item03-defensive-copy',
     componentName: 'Item03',
+    date: '12.05.2024'
+  },
+  {
+    title: 'Item04: Exception handling best practices',
+    badges: ['Java'],
+    link: 'item04-exception-handling-best-practices',
+    componentName: 'Item04',
     date: '05.05.2024'
   },
   {
