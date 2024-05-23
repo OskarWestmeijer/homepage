@@ -5,12 +5,12 @@
     <h2 class="text-center">{{ item.title }}</h2>
     <section class="mt-0 font-medium">
       <p>
-        Defensive copies serve as a protective mechanism for the internal state of an object. It's
-        generally advisable to ensure the immutability of an object, which means we should avoid
-        returning direct references to internal mutable state from getters.
+        Defensive copies are supposed to protect the internal state of an object. It's generally
+        advisable to ensure the immutability of an object. This means we should avoid returning
+        direct references to internal mutable state from getters.
       </p>
       <p>
-        In this test, we validate the defensive copying by attempting to modify the list returned by
+        In this test, we attempt to modify the list returned by
         <code>getItems()</code>. As expected, an <code>UnsupportedOperationException</code> is
         thrown, confirming that the original list remains unchanged.
       </p>
@@ -19,7 +19,8 @@
       <ul>
         <li>
           <code>Collections.unmodifiableList(items)</code> returns a view of the original list that
-          cannot be modified. Suitable when memory efficiency is a concern.
+          cannot be modified. Suitable when changes from the original list should propagate to the
+          defensive copy.
         </li>
         <li>
           <code>List.copyOf(items)</code> creates a new immutable list containing the same elements
@@ -53,8 +54,8 @@
     * @return items
     */
     public List&lt;String> getItems() {
-    // alternative: Collections.unmodifiableList(items);
-    return List.copyOf(items);
+      // alternative: Collections.unmodifiableList(items);
+      return List.copyOf(items);
     }
 
   }

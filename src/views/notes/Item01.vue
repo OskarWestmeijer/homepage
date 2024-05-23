@@ -148,7 +148,7 @@ export default {
 @media (max-width: 768px) {
   .overflow-x-auto {
     overflow-x: auto;
-    max-width: 100%; /* Ensure the table fits within the viewport */
+    max-width: 100%;
   }
 }
 </style>

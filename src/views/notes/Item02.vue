@@ -5,14 +5,13 @@
     <h2 class="text-center">{{ item.title }}</h2>
     <section class="mt-0 font-medium">
       <p>
-        When working with collections in Java, managing the mutability and immutability of lists is
-        crucial. Implementing various types of copies, such as shallow, deep, or defensive, requires
-        knowledge of list behaviour.
+        When working with collections in Java, mutability is of concern. Implementing various types
+        of copies, such as shallow, deep, or defensive, requires knowledge of collection behaviour.
+        In this note I focus on lists.
       </p>
       <p>
-        Three common methods stand out: <code>new ArrayList()</code>,
-        <code>Collections.unmodifiableList()</code>, and <code>List.copyOf()</code>. Each serves a
-        distinct purpose, offering varying degrees of mutability and immutability.
+        Three methods stand out, each serving a distinct purpose: <code>new ArrayList()</code>,
+        <code>Collections.unmodifiableList()</code>, and <code>List.copyOf()</code>.
       </p>
     </section>
 

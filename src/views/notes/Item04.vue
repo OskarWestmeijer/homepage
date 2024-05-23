@@ -5,24 +5,23 @@
     <h1 class="text-center">{{ item.title }}</h1>
     <section class="mt-0 font-medium">
       <p>
-        Java distinguishes between checked and unchecked exceptions. The major difference is that
-        checked exceptions need to be declared as part of the method signature, and the compiler
-        forces the caller to either catch or declare these exceptions in the method's throws clause.
+        Java distinguishes between checked and unchecked exceptions. One major difference is that
+        checked exceptions need to be declared as part of the method signature. The compiler forces
+        the caller to either catch or declare these exceptions in the method's throws clause.
       </p>
       <p>Guidelines from my favourite books and personal experience.</p>
       <ul>
         <li>too many try-catch blocks decrease readability</li>
         <li>have a dedicated unit for error handling</li>
-        <li>mostly favor unchecked over checked exceptions</li>
-        <li>avoid signature pollution, by rethrowing checked exceptions as unchecked</li>
+        <li>in general favor unchecked exceptions</li>
+        <li>reduce signature pollution, by rethrowing checked exceptions as unchecked</li>
         <li>
           <a href="#footnote-1" class="underline"
             >consider replacing exceptions with optionals<sup>1</sup></a
           >
         </li>
       </ul>
-
-      <h2 class="mt-0">Checked or Unchecked?</h2>
+      <h2 class="mt-10">Checked or Unchecked?</h2>
       <p>
         <a href="#footnote-2" class="underline"
           >Can the process recover from this exception?<sup>2</sup></a
@@ -32,7 +31,7 @@
         <li>Yes, it can recover → Throw checked exception</li>
         <li>No, the process has to stop/rollback → Throw unchecked exception</li>
       </ul>
-      <h2 class="mt-0">Rethrowing checked- as unchecked exceptions</h2>
+      <h2 class="mt-10">Rethrowing checked- as unchecked exceptions</h2>
       <p>
         Often an external library forces the handling of a checked exception on us. Should you
         decide that it is not recoverable, it can be rethrown as unchecked. Otherwise the checked
@@ -40,7 +39,7 @@
         <a href="#footnote-3" class="underline">polluting the signatures.<sup>3</sup></a>
       </p>
 
-      <h2 class="mt-0">Common place for exception handling</h2>
+      <h2 class="mt-10">Common place for exception handling</h2>
       <p></p>
       <p>
         Since unchecked exceptions do not need to be caught immediately, it is advisable to have a
@@ -50,21 +49,19 @@
         handling classes. This class is meant to catch and log exceptions prior to handling the
         client response.
       </p>
-    </section>
 
-    <section class="mt-0 font-medium">
-      <h2 class="mt-0">Example exception handling</h2>
+      <h2 class="mt-10">Case study</h2>
       <p>
         This code snippet calls an external Api. It can be called either by single or batch request.
-        On request failure a checked OpenWeatherApiRequestException is thrown.
+        On request failure a checked WebClientResponseException is thrown.
       </p>
       <ul>
         <li>Single request failures should not be recoverable</li>
-        <li>On batch requests, single failures should not stop the whole batch</li>
+        <li>On requests for batches, single failures should not stop processing the whole batch</li>
       </ul>
     </section>
 
-    <div class="mockup-code not-prose mb-4 overflow-x-auto">
+    <div class="mockup-code not-prose mt-10 mb-4 overflow-x-auto">
       <code>
         <pre>
 public List&lt;Location> requestWeatherForBatch(List&lt;Location> locations) {

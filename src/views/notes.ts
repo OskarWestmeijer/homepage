@@ -26,12 +26,5 @@ export const noteItems = [
     link: 'item04-exception-handling-best-practices',
     componentName: 'Item04',
     date: '05.05.2024'
-  },
-  {
-    title: 'Item99: Defensive copies and views of lists in Java',
-    badges: ['Java'],
-    link: 'item99-defensive-copies-and-views-of-lists-in-java',
-    componentName: 'Item99',
-    date: '05.05.2024'
   }
 ]
