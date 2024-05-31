@@ -6,8 +6,11 @@
     <section class="mt-0 font-medium">
       <p>
         Defensive copies are supposed to protect the internal state of an object. It's generally
-        advisable to ensure the immutability of an object. This means we should avoid returning
-        direct references to internal mutable state from getters.
+        advisable to ensure the immutability of an object.
+        <a href="#footnote-1" class="underline"
+          >This means we should avoid returning direct references<sup>1</sup></a
+        >
+        to internal mutable state from getters.
       </p>
       <p>
         In this test, we attempt to modify the list returned by
@@ -18,9 +21,11 @@
       <p>Depending on the requirements, the preferred options for defensive copying are:</p>
       <ul>
         <li>
-          <code>Collections.unmodifiableList(items)</code> returns a view of the original list that
-          cannot be modified. Suitable when changes from the original list should propagate to the
-          defensive copy.
+          <a href="#footnote-1" class="underline"
+            ><code>Collections.unmodifiableList(items)</code><sup>2</sup></a
+          >
+          returns a view of the original list that cannot be modified. Suitable when changes from
+          the original list should propagate to the defensive copy.
         </li>
         <li>
           <code>List.copyOf(items)</code> creates a new immutable list containing the same elements
@@ -73,6 +78,19 @@
     System.out.println("items: " + order.getItems()); // items: [one]
   }
     </code></pre>
+    </div>
+
+    <!-- Footnotes -->
+    <div class="divider divider-info mb-0">Footnotes</div>
+    <div class="mb-6">
+      <p id="footnote-1" class="text-xs text-gray-500">
+        1. <strong>Item 50: Make defensive copies when needed</strong> - J. Bloch, Effective Java,
+        Edition 3, 2018, p. 231
+      </p>
+      <p id="footnote-2" class="text-xs text-gray-500">
+        2. <strong>Design Your Objects: Avoid Leaking References</strong> - S. Harrer, Java by
+        Comparison, Edition 1, 2018, p. 124
+      </p>
     </div>
   </div>
 </template>

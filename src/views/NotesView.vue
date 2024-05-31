@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-full notes flex flex-col items-center">
+  <div class="mb-10 max-w-full notes flex flex-col items-center">
     <div
       v-for="item in items"
       class="mt-4 card w-full lg:w-3/5 xl:w-2/4 bg-base-100 border-2 shadow-xl hover:shadow-md hover:shadow-primary"

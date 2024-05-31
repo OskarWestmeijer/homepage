@@ -6,12 +6,15 @@
     <section class="mt-0 font-medium">
       <p>
         When working with collections in Java, mutability is of concern. Implementing various types
-        of copies, such as shallow, deep, or defensive, requires knowledge of collection behaviour.
-        In this note I focus on lists.
+        of copies, such as shallow, deep , or
+        <a href="#footnote-1" class="underline">defensive<sup>1</sup></a
+        >, requires knowledge of collection behaviour. In this note I focus on lists.
       </p>
       <p>
         Three methods stand out, each serving a distinct purpose: <code>new ArrayList()</code>,
-        <code>Collections.unmodifiableList()</code>, and <code>List.copyOf()</code>.
+        <a href="#footnote-1" class="underline"
+          ><code>Collections.unmodifiableList()</code><sup>2</sup></a
+        >, and <code>List.copyOf()</code>.
       </p>
     </section>
 
@@ -73,6 +76,19 @@
     System.out.println("view: " + view); // view: [one, two]
     System.out.println("copy: " + copy); // copy: [one]
   </code></pre>
+    </div>
+
+    <!-- Footnotes -->
+    <div class="divider divider-info mb-0">Footnotes</div>
+    <div class="mb-6">
+      <p id="footnote-1" class="text-xs text-gray-500">
+        1. <strong>Item 50: Make defensive copies when needed</strong> - J. Bloch, Effective Java,
+        Edition 3, 2018, p. 231
+      </p>
+      <p id="footnote-2" class="text-xs text-gray-500">
+        2. <strong>Design Your Objects: Avoid Leaking References</strong> - S. Harrer, Java by
+        Comparison, Edition 1, 2018, p. 124
+      </p>
     </div>
   </div>
 </template>

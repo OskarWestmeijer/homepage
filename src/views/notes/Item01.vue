@@ -107,9 +107,9 @@
     }</code></pre>
     </div>
 
-    <div class="divider divider-info mb-0">Footnotes</div>
-
+    
     <!-- Footnotes -->
+    <div class="divider divider-info mb-0">Footnotes</div>
     <div class="mb-6">
       <p id="footnote-1" class="text-xs text-gray-500">
         1. <strong>Item 49: Check parameters for validity</strong> - J. Bloch, Effective Java,
