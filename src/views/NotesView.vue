@@ -6,7 +6,6 @@
     >
       <RouterLink :to="'/notes/' + item.link">
         <div class="card-body">
-          <p>{{ item.date }}</p>
           <h3 class="card-title">{{ item.title }}</h3>
           <div class="card-actions justify-end">
             <div v-for="badge in item.badges" class="badge badge-primary">{{ badge }}</div>

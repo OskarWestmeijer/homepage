@@ -9,8 +9,8 @@
       <div class="card-body">
         <h2 class="card-title">⛅ Weather</h2>
         <p class="text-base">
-          Provides weather data for selected locations. The frontend displays the weather in charts.
-          The backend offers a public Api.
+          Provides weather data for selected locations. Frontend with weather charts. Backend has a
+          public Api.
         </p>
         <div class="card-actions justify-end">
           <a href="https://github.com/OskarWestmeijer/weather" class="btn btn-ghost rounded-lg">
@@ -29,8 +29,8 @@
       <div class="card-body">
         <h2 class="card-title">🌍 Maps</h2>
         <p class="text-base">
-          Provides Hamburg airport connections. The frontend displays the connections on a 3d globe.
-          Backend offers a public Api.
+          Provides Hamburg airport connections. Frontend with flight connections on a 3D globe.
+          Backend has a public Api.
         </p>
         <div class="card-actions justify-end">
           <a href="https://github.com/OskarWestmeijer/maps" class="btn btn-ghost rounded-lg">
@@ -48,5 +48,9 @@
 <style scoped>
 .projects {
   min-height: 80vh;
+}
+
+.card-body {
+  min-height: 200px;
 }
 </style>

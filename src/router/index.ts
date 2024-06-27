@@ -44,7 +44,7 @@ noteItems.forEach((item, index) => {
       item: item
     },
     meta: {
-      title: item.title // Set the title for each note item
+      title: item.title
     }
   })
 })
