@@ -24,19 +24,19 @@
     </div>
     <div class="card card-compact max-w-md bg-base-100 shadow-xl">
       <figure>
-        <img src="@/assets/maps_project.png" alt="Maps project" />
+        <img src="@/assets/flights_project.png" alt="Flights project" />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">🌍 Maps</h2>
+        <h2 class="card-title">🌍 Flights</h2>
         <p class="text-base">
           Provides Hamburg airport connections. Frontend with flight connections on a 3D globe.
           Backend has a public Api.
         </p>
         <div class="card-actions justify-end">
-          <a href="https://github.com/OskarWestmeijer/maps" class="btn btn-ghost rounded-lg">
+          <a href="https://github.com/OskarWestmeijer/flights" class="btn btn-ghost rounded-lg">
             <img alt="Github logo" class="size-7" src="@/assets/github.svg"
           /></a>
-          <a href="https://maps.oskar-westmeijer.com" class="btn btn-outline btn-info rounded-lg"
+          <a href="https://flights.oskar-westmeijer.com" class="btn btn-outline btn-info rounded-lg"
             >Visit</a
           >
         </div>
