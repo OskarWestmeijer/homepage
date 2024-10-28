@@ -31,7 +31,7 @@
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.13",
     "eslint": "^8.57.1",
-    "eslint-plugin-vue": "^9.29.1",
+    "eslint-plugin-vue": "^9.30.0",
     "jsdom": "^25.0.1",
     "npm-run-all2": "^7.0.1",
     "postcss": "^8.4.47",
