@@ -31,10 +31,13 @@ runs:
 
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+      shell: bash
     - name: Start application
       run: npm run dev
+      shell: bash
     - name: Run Playwright tests
       run: npm run e2e
+      shell: bash
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
