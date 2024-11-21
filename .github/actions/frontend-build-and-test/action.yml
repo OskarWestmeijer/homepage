@@ -33,7 +33,7 @@ runs:
       run: npx playwright install --with-deps
       shell: bash
     - name: Start application
-      run: npm run dev
+      run: npm run dev & sleep 5
       shell: bash
     - name: Run Playwright tests
       run: npm run e2e
