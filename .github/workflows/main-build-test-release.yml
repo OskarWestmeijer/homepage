@@ -20,13 +20,13 @@ jobs:
           node: ${{ env.NODE_VERSION }}
 
   frontend-e2e:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v4
-    - uses: ./.github/actions/frontend-e2e
-      with:
-        frontend-directory: .
-        node: ${{ env.NODE_VERSION }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/frontend-e2e
+        with:
+          frontend-directory: .
+          node: ${{ env.NODE_VERSION }}
 
   codeql-check:
     uses: ./.github/workflows/codeql.yml
