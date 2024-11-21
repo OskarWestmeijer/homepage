@@ -20,13 +20,12 @@
         In my free time, I stay physically active by working out at the gym and going for runs.
       </p>
       <p class="text-center text-base-content font-bold max-w-lg">
-        Furthermore, I love to read and do it a lot. Since I am half Finnish &#x1F1EB;&#x1F1EE;, I like to read books
-        in the Finnish languague to improve my language proficiency. Moreover, I have always been
-        passionately interested in history, geopolitics and maps &#127758; in general.
+        Furthermore, I love to read and do it a lot. Moreover, I have always been passionately
+        interested in history, geopolitics and maps. I really like creating maps with QGIS.
+        &#127758;
       </p>
       <p class="text-center text-base-content font-bold max-w-lg">
-        The purpose of this website is to capture my professional learnings and share them with
-        everyone.
+        During my vacations, I enjoy travelling and exploring museums.
       </p>
     </div>
   </div>

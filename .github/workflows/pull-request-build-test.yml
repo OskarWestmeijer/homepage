@@ -3,6 +3,9 @@ name: pull-request-build-test
 on:
   pull_request:
 
+env:
+  NODE_VERSION: 20.11.1
+
 jobs:
   frontend-build-and-test:
     runs-on: ubuntu-latest
@@ -11,6 +14,16 @@ jobs:
       - uses: ./.github/actions/frontend-build-and-test
         with:
           frontend-directory: .
+          node: ${{ env.NODE_VERSION }}
+
+  frontend-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/frontend-e2e
+        with:
+          frontend-directory: .
+          node: ${{ env.NODE_VERSION }}
 
   codeql-check:
     uses: ./.github/workflows/codeql.yml
@@ -35,7 +48,7 @@ jobs:
           github-sha: ${{ github.sha }}
 
   dependabot-automerge:
-    needs: [frontend-build-and-test]
+    needs: [frontend-build-and-test, frontend-e2e]
     runs-on: ubuntu-latest
     environment: oskar-westmeijer-environment
     if: ${{ github.actor == 'dependabot[bot]' }}
