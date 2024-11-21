@@ -12,6 +12,14 @@ jobs:
         with:
           frontend-directory: .
 
+  frontend-e2e:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
+    - uses: ./.github/actions/frontend-e2e
+      with:
+        frontend-directory: .
+
   codeql-check:
     uses: ./.github/workflows/codeql.yml
     permissions:
@@ -35,7 +43,7 @@ jobs:
           github-sha: ${{ github.sha }}
 
   dependabot-automerge:
-    needs: [frontend-build-and-test]
+    needs: [frontend-build-and-test, frontend-e2e]
     runs-on: ubuntu-latest
     environment: oskar-westmeijer-environment
     if: ${{ github.actor == 'dependabot[bot]' }}
