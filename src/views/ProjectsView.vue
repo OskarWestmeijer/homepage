@@ -13,7 +13,11 @@
           public Api.
         </p>
         <div class="card-actions justify-end">
-          <a href="https://github.com/OskarWestmeijer/weather" aria-label="Weather github link" class="btn btn-ghost rounded-lg">
+          <a
+            href="https://github.com/OskarWestmeijer/weather"
+            aria-label="Weather github link"
+            class="btn btn-ghost rounded-lg"
+          >
             <img alt="Github logo" class="size-7" src="@/assets/github.svg"
           /></a>
           <a href="https://weather.oskar-westmeijer.com" class="btn btn-outline btn-info rounded-lg"

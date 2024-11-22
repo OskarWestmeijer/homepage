@@ -107,7 +107,6 @@
     }</code></pre>
     </div>
 
-    
     <!-- Footnotes -->
     <div class="divider divider-info mb-0">Footnotes</div>
     <div class="mb-6">
