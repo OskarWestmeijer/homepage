@@ -23,7 +23,7 @@ runs:
       run: npm ci
 
     - name: Cache Playwright Browsers
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.cache/ms-playwright
         key: playwright-browsers-${{ runner.os }}-${{ hashFiles('package-lock.json', 'yarn.lock', 'pnpm-lock.yaml') }}
