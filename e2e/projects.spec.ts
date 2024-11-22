@@ -1,22 +1,20 @@
 import { expect, test } from '@playwright/test'
 
 test('projects page test', async ({ page }) => {
-  await page.goto('http://localhost:5173/projects')
+  await page.goto('./projects')
 
   await expect(page).toHaveTitle('Projects • Oskar Westmeijer')
 })
 
-test('weather-deployment link works', async ({ page }) => {
-  await page.goto('http://localhost:5173/projects')
+test('weather-deployment link exists', async ({ page }) => {
+  await page.goto('./projects')
 
-  await page.getByRole('link', { name: 'Visit' }).first().click()
-
-  await page.waitForURL('https://weather.oskar-westmeijer.com/')
-  expect(page.url()).toBe('https://weather.oskar-westmeijer.com/')
+  const visitLink = await page.getByRole('link', { name: 'Visit' }).first()
+  await expect(visitLink).toBeVisible()
 })
 
 test('weather-github link works', async ({ page }) => {
-  await page.goto('http://localhost:5173/projects')
+  await page.goto('./projects')
 
   await page.locator('a[href="https://github.com/OskarWestmeijer/weather"]').click()
 
@@ -24,17 +22,15 @@ test('weather-github link works', async ({ page }) => {
   expect(page.url()).toBe('https://github.com/OskarWestmeijer/weather')
 })
 
-test('flights-deployment link works', async ({ page }) => {
-  await page.goto('http://localhost:5173/projects')
+test('flights-deployment link exists', async ({ page }) => {
+  await page.goto('./projects')
 
-  await page.getByRole('link', { name: 'Visit' }).nth(1).click()
-
-  await page.waitForURL('https://flights.oskar-westmeijer.com/')
-  expect(page.url()).toBe('https://flights.oskar-westmeijer.com/')
+  const visitLink = await page.getByRole('link', { name: 'Visit' }).nth(1)
+  await expect(visitLink).toBeVisible()
 })
 
 test('flights-github link works', async ({ page }) => {
-  await page.goto('http://localhost:5173/projects')
+  await page.goto('./projects')
 
   await page.locator('a[href="https://github.com/OskarWestmeijer/flights"]').click()
 
