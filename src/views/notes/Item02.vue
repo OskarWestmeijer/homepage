@@ -5,16 +5,19 @@
     <h2 class="text-center">{{ item.title }}</h2>
     <section class="mt-0 font-medium">
       <p>
-        When working with collections in Java, mutability is of concern. Implementing various types
-        of copies, such as shallow, deep , or
-        <a href="#footnote-1" class="underline">defensive<sup>1</sup></a
-        >, requires knowledge of collection behaviour. In this note I focus on lists.
+        In Java, when passing collections around in code, we have the possibility to
+        create shallow copies to control mutability and avoid unintentional side effects
+        to the
+        <span class="font-bold">collections structure</span>. One common use case is
+        <a href="#footnote-1" class="underline">defensive copying.<sup>1</sup></a>
       </p>
       <p>
-        Three methods stand out, each serving a distinct purpose: <code>new ArrayList()</code>,
+        This note focuses on lists and compares three techniques:
+        <code>new ArrayList()</code>,
         <a href="#footnote-1" class="underline"
           ><code>Collections.unmodifiableList()</code><sup>2</sup></a
-        >, and <code>List.copyOf()</code>.
+        >, and <code>List.copyOf()</code>. Each approach has its distinct behavior in
+        terms of mutability of structure.
       </p>
     </section>
 
@@ -22,39 +25,49 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Method</th>
+            <th>Technique</th>
             <th>Classification</th>
             <th>Comment</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><code>new ArrayList()</code></td>
-            <td>Mutable Copy</td>
+            <td><code>new ArrayList(original)</code></td>
+            <td>Mutable shallow copy</td>
             <td>
-              Provides a mutable copy of the original list. Changes to the original list do not
-              propagate to the mutable copy.
+              Creates a new list containing references to the original elements.
+              Structural changes to both, original & copy do not affect each other.
+              Mutations to the elements do affect both.
             </td>
           </tr>
           <tr>
-            <td><code>Collections.unmodifiableList()</code></td>
-            <td>Read-only View</td>
+            <td><code>Collections.unmodifiableList(original)</code></td>
+            <td>Read-only view</td>
             <td>
-              Returns a read-only view of the original list. Changes to the original list propagate
-              to the view.
+              Returns a read-only view of the original list. Structural changes to the
+              original list are visible in the view. Mutations to the elements are
+              reflected in the view.
             </td>
           </tr>
           <tr>
-            <td><code>List.copyOf()</code></td>
-            <td>Immutable Copy</td>
+            <td><code>List.copyOf(original)</code></td>
+            <td>Immutable shallow copy</td>
             <td>
-              Creates an immutable copy of the original list. Changes to the original list do not
-              propagate to the copy.
+              Creates an immutable copy of the original list. Structural changes to the
+              original list do not propagate. Mutations to the elements do affect both.
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+
+    <blockquote>
+      Note regarding "immutability":
+      <code>List.copyOf()</code> ensures the immutability of the list's structure.
+      However, if the elements are mutable, their state can still be modified. To ensure
+      true immutability of both the list and its elements, the elements themselves must
+      also be immutable (deep copy).
+    </blockquote>
 
     <h3 class="text-center">Comparison</h3>
     <div class="mockup-code not-prose mb-4 overflow-x-auto">
@@ -62,19 +75,19 @@
     List&lt;String> original = new ArrayList<>();
     original.add("one");
 
-    List&lt;String> mutable = new ArrayList(original);
+    List&lt;String> mutableCopy = new ArrayList(original);
     List&lt;String> view = Collections.unmodifiableList(original);
-    List&lt;String> copy = List.copyOf(original);
+    List&lt;String> immutableCopy = List.copyOf(original);
 
     original.add("two");
-    mutable.add("three");
-    // view.add("three"); -> UnsupportedOperationException!
-    // copy.add("three"); -> UnsupportedOperationException!
+    mutableCopy.add("three");
+    // view.add("four"); -> UnsupportedOperationException!
+    // immutableCopy.add("five"); -> UnsupportedOperationException!
 
-    System.out.println("original: " + original); // original: [one, two]
-    System.out.println("mutable: " + mutable); // mutable: [one, three]
-    System.out.println("view: " + view); // view: [one, two]
-    System.out.println("copy: " + copy); // copy: [one]
+    System.out.println("original: " + original);           // original: [one, two]
+    System.out.println("mutableCopy: " + mutableCopy);     // mutableCopy: [one, three]
+    System.out.println("view: " + view);                   // view: [one, two]
+    System.out.println("immutableCopy: " + immutableCopy); // immutableCopy: [one]
   </code></pre>
     </div>
 
@@ -82,12 +95,12 @@
     <div class="divider divider-info mb-0">Footnotes</div>
     <div class="mb-6">
       <p id="footnote-1" class="text-xs text-gray-500">
-        1. <strong>Item 50: Make defensive copies when needed</strong> - J. Bloch, Effective Java,
-        Edition 3, 2018, p. 231
+        1. <strong>Item 50: Make defensive copies when needed</strong> - J. Bloch,
+        Effective Java, Edition 3, 2018, p. 231
       </p>
       <p id="footnote-2" class="text-xs text-gray-500">
-        2. <strong>Design Your Objects: Avoid Leaking References</strong> - S. Harrer, Java by
-        Comparison, Edition 1, 2018, p. 124
+        2. <strong>Design Your Objects: Avoid Leaking References</strong> - S. Harrer,
+        Java by Comparison, Edition 1, 2018, p. 124
       </p>
     </div>
   </div>
@@ -98,10 +111,10 @@ export default {
   props: {
     item: {
       type: Object,
-      required: false
-    }
-  }
-}
+      required: false,
+    },
+  },
+};
 </script>
 
 <style scoped>

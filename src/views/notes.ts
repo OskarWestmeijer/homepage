@@ -7,7 +7,7 @@ export const noteItems = [
     date: '30.04.2024'
   },
   {
-    title: 'Item02: Comparing lists - Mutable, View and Copy',
+    title: 'Item02: Shallow copies of collections - comparison of techniques',
     badges: ['Java'],
     link: 'item02-comparing-list-view-and-copy',
     componentName: 'Item02',
