@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="navbar-start">
       <div class="mobile-hide">
         <RouterLink to="/">
-          <h1 class="text-xl font-bold">Oskar Westmeijer</h1>
+          <h1 class="btn btn-ghost rounded-lg text-xl font-bold">Oskar Westmeijer</h1>
         </RouterLink>
       </div>
     </div>
@@ -28,7 +28,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="mobile-hide">
         <a href="https://github.com/OskarWestmeijer" aria-label="Oskar Westmeijer Github profile">
           <button class="btn btn-ghost rounded-lg">
-            <img alt="Github logo" class="size-7" src="@/assets/github.svg" />
+            <img alt="Github logo" class="size-6" src="@/assets/github.svg" />
           </button>
         </a>
         <a
