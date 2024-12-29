@@ -1,30 +1,30 @@
 export const noteItems = [
   {
-    title: 'Item01: Validation libraries in Java - Fail-fast',
+    title: '#1 - Mutable vs. Immutable List',
     badges: ['Java'],
-    link: 'item01-validation-libraries-in-java-fail-fast',
-    componentName: 'Item01',
+    link: '1-mutable-vs-immutable-list',
+    componentName: 'Note1',
+    date: '12.05.2024'
+  },
+  {
+    title: '#2 - Shallow copy of List',
+    badges: ['Java'],
+    link: '2-shallow-copy-of-list',
+    componentName: 'Note2',
+    date: '12.05.2024'
+  },
+  {
+    title: '#3 - Defensive Copy of List',
+    badges: ['Java'],
+    link: '3-defensive-copy-of-list',
+    componentName: 'Note3',
+    date: '12.05.2024'
+  },
+  {
+    title: '#4 - Validation libraries (Fail-fast)',
+    badges: ['Java'],
+    link: '4-validation-libraries-fail-fast',
+    componentName: 'Note4',
     date: '30.04.2024'
   },
-  {
-    title: 'Item02: Shallow copies of collections - comparison of techniques',
-    badges: ['Java'],
-    link: 'item02-comparing-list-view-and-copy',
-    componentName: 'Item02',
-    date: '12.05.2024'
-  },
-  {
-    title: 'Item03: Defensive Copy',
-    badges: ['Java'],
-    link: 'item03-defensive-copy',
-    componentName: 'Item03',
-    date: '12.05.2024'
-  },
-  {
-    title: 'Item04: Exception handling best practices',
-    badges: ['Java'],
-    link: 'item04-exception-handling-best-practices',
-    componentName: 'Item04',
-    date: '05.05.2024'
-  }
 ]
