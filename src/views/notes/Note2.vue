@@ -3,6 +3,12 @@
     class="mt-4 prose w-full lg:w-3/5 xl:w-2/5 m-auto flex flex-col items-center text-base-content"
   >
     <h2 class="text-center">{{ item.title }}</h2>
+    <blockquote class="border-primary mb-0">
+      <h2 class="mb-0 mt-0">Goal:</h2>
+      Make a shallow copy of a List. Prove the independence of original & copy. Understand
+      the difference to a deep copy.
+    </blockquote>
+
     <p>
       Every List can be copied. A shallow copy, copies the structure (order) of the
       original list. The original and copy are distinct objects. Subsequent modifications
@@ -22,6 +28,7 @@
 
     <p>
       If the elements are mutable, the changes propagate accross original & shallowCopy.
+      The class <code>BG2Character</code> allows mutability of the name attribute.
     </p>
 
     <img

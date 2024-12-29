@@ -3,6 +3,11 @@
     class="mt-4 prose w-full lg:w-3/5 xl:w-2/5 m-auto flex flex-col items-center text-base-content"
   >
     <h2 class="text-center">{{ item.title }}</h2>
+    <blockquote class="border-primary mb-0">
+      <h2 class="mb-0 mt-0">Goal:</h2>
+      Prove how immutable lists do not allow changes to structure. Understand that
+      immutability of a list does not include immutability of its elements.
+    </blockquote>
     <p>
       Lists can be initialized as mutable or immutable. If no modifications to the list
       are intended, it is advisable to work with a immutable list. The snippet below
@@ -27,9 +32,9 @@
       src="@/assets/notes/note-1-2.png"
     />
     <p>
-      While the immutable list maintains the order of elements, we were able to mutate the element. In case
-      immutability of the element is required, you can use Java <code>records</code>, or
-      Lomboks <code>@Value</code> annotation.
+      While the immutable list maintains the order of elements, we were able to mutate the
+      element. In case immutability of the element is required, you can use Java
+      <code>records</code>, or Lomboks <code>@Value</code> annotation.
     </p>
     <p></p>
   </div>
