@@ -1,7 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="max-w-4xl mx-auto flex flex-col gap-5 mt-5">
+  <div class="max-w-4xl mx-auto flex flex-wrap gap-5 mt-5">
+
     <div class="card card-compact bg-base-100 shadow-xl max-w-xl mx-auto">
       <figure class="h-72 overflow-hidden">
         <img src="@/assets/weather_project.png" class="size-full" alt="Weather project" />
@@ -28,6 +29,7 @@
         </div>
       </div>
     </div>
+
     <div class="card card-compact bg-base-100 shadow-xl max-w-xl mx-auto">
       <figure class="h-72 overflow-hidden">
         <img src="@/assets/flights_project.png" alt="Flights project" />
@@ -53,6 +55,7 @@
         </div>
       </div>
     </div>
+
     <div class="card card-compact bg-base-100 shadow-xl max-w-xl mx-auto">
       <figure class="h-72 overflow-hidden">
         <img
@@ -82,6 +85,7 @@
         </div>
       </div>
     </div>
+    
   </div>
 </template>
 
