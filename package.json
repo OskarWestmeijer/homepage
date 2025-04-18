@@ -24,7 +24,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.49.1",
+    "@playwright/test": "^1.52.0",
     "@rushstack/eslint-patch": "^1.11.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tsconfig/node20": "^20.1.5",
