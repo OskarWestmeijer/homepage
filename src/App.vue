@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="navbar glass">
+  <div class="navbar">
     <div class="navbar-start">
       <div class="mobile-hide">
         <RouterLink to="/">

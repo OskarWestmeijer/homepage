@@ -1,96 +1,61 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="max-w-4xl mx-auto flex flex-wrap gap-5 mt-5">
+  <div class="max-w-4xl mx-auto mt-10 flex flex-col items-center gap-4">
+    <router-link to="/projects/weather" class="project-card">
+      <div class="flex justify-between items-center">
+        <div class="project-title">⛅ weather</div>
+        <div class="badge-custom">java</div>
+      </div>
+    </router-link>
 
-    <div class="card card-compact bg-base-100 shadow-xl max-w-xl mx-auto">
-      <figure class="h-72 overflow-hidden">
-        <img src="@/assets/weather_project.png" class="size-full" alt="Weather project" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">⛅ Weather</h2>
-        <p class="text-base">
-          Provides weather data for selected locations. Frontend with weather charts.
-          Backend has a public Api.
-        </p>
-        <div class="card-actions justify-end">
-          <a
-            href="https://github.com/OskarWestmeijer/weather"
-            aria-label="Weather github link"
-            class="btn btn-ghost rounded-lg"
-          >
-            <img alt="Github logo" class="size-7" src="@/assets/github.svg"
-          /></a>
-          <a
-            href="https://weather.oskar-westmeijer.com"
-            class="btn btn-outline btn-info rounded-lg"
-            >Visit</a
-          >
-        </div>
+    <div class="project-card">
+      <div class="flex justify-between items-center">
+        <div class="project-title">🌍 flights</div>
+        <div class="badge-custom">kotlin</div>
       </div>
     </div>
 
-    <div class="card card-compact bg-base-100 shadow-xl max-w-xl mx-auto">
-      <figure class="h-72 overflow-hidden">
-        <img src="@/assets/flights_project.png" alt="Flights project" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">🌍 Flights</h2>
-        <p class="text-base">
-          Provides Hamburg airport connections. Frontend with flight connections on a 3D
-          globe. Backend has a public Api.
-        </p>
-        <div class="card-actions justify-end">
-          <a
-            href="https://github.com/OskarWestmeijer/flights"
-            class="btn btn-ghost rounded-lg"
-          >
-            <img alt="Github logo" class="size-7" src="@/assets/github.svg"
-          /></a>
-          <a
-            href="https://flights.oskar-westmeijer.com"
-            class="btn btn-outline btn-info rounded-lg"
-            >Visit</a
-          >
-        </div>
+    <div class="project-card">
+      <div class="flex justify-between items-center">
+        <div class="project-title">🧭 maps</div>
+        <div class="badge-custom">svelte</div>
       </div>
     </div>
 
-    <div class="card card-compact bg-base-100 shadow-xl max-w-xl mx-auto">
-      <figure class="h-72 overflow-hidden">
-        <img
-          src="@/assets/maps_project.png"
-          alt="Maps project"
-          class="w-full h-full object-cover"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">&#129517; Maps</h2>
-        <p class="text-base">
-          I create thematic maps with the tool QGIS. Most of the data used for creating the map, is free and
-          provided by the Copernicus project.
-        </p>
-        <div class="card-actions justify-end">
-          <a
-            href="https://github.com/OskarWestmeijer/maps"
-            class="btn btn-ghost rounded-lg"
-          >
-            <img alt="Github logo" class="size-7" src="@/assets/github.svg"
-          /></a>
-          <a
-            href="https://maps.oskar-westmeijer.com"
-            class="btn btn-outline btn-info rounded-lg"
-            >Visit</a
-          >
-        </div>
+    <div class="project-card">
+      <div class="flex justify-between items-center">
+        <div class="project-title">⚙️ kafka-messaging</div>
+        <div class="badge-custom">java</div>
       </div>
     </div>
-    
+
+    <div class="project-card">
+      <div class="flex justify-between items-center">
+        <div class="project-title">🗪 chat-system</div>
+        <div class="badge-custom">java</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="flex justify-between items-center">
+        <div class="project-title">👆 push-the-button</div>
+        <div class="badge-custom">java</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.card-body {
-  min-height: 200px;
+.project-card {
+  @apply w-full max-w-xl p-6 rounded-lg bg-base-100 hover:bg-base-300 transition duration-200 cursor-pointer shadow;
+}
+
+.project-title {
+  @apply text-lg font-semibold;
+}
+
+.badge-custom {
+  @apply badge badge-ghost border border-black text-black text-xs px-2 py-0.5 opacity-50;
 }
 </style>
