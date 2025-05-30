@@ -30,12 +30,12 @@
       </div>
     </router-link>
 
-    <div class="project-card">
+    <router-link to="/projects/chat-system" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">🗪 chat-system</div>
         <div class="badge-custom">java</div>
       </div>
-    </div>
+    </router-link>
 
     <div class="project-card">
       <div class="flex justify-between items-center">

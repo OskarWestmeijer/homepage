@@ -7,6 +7,7 @@ import Weather from '@/views/projects/Weather.vue'
 import Flights from '@/views/projects/Flights.vue'
 import Maps from '@/views/projects/Maps.vue'
 import KafkaEtlPipeline from '@/views/projects/KafkaEtlPipeline.vue'
+import ChatSystem from '@/views/projects/ChatSystem.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -65,6 +66,14 @@ const router = createRouter({
       component: KafkaEtlPipeline,
       meta: {
         title: 'kafka-etl-pipeline'
+      }
+    },
+    {
+      path: '/projects/chat-system',
+      name: 'chat-system',
+      component: ChatSystem,
+      meta: {
+        title: 'chat-system'
       }
     }
   ]
