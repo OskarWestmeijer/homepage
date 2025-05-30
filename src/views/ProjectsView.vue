@@ -16,12 +16,12 @@
       </div>
     </router-link>
 
-    <div class="project-card">
+    <router-link to="/projects/maps" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">🧭 maps</div>
         <div class="badge-custom">svelte</div>
       </div>
-    </div>
+    </router-link>
 
     <div class="project-card">
       <div class="flex justify-between items-center">
