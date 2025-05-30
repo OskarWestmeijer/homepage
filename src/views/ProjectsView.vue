@@ -9,12 +9,12 @@
       </div>
     </router-link>
 
-    <div class="project-card">
+    <router-link to="/projects/flights" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">🌍 flights</div>
         <div class="badge-custom">kotlin</div>
       </div>
-    </div>
+    </router-link>
 
     <div class="project-card">
       <div class="flex justify-between items-center">

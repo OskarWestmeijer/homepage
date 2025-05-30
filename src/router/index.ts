@@ -4,6 +4,7 @@ import ProjectsView from '../views/ProjectsView.vue'
 import NotesView from '../views/NotesView.vue'
 import { noteItems } from '../views/notes'
 import Weather from '@/views/projects/Weather.vue'
+import Flights from '@/views/projects/Flights.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,6 +26,14 @@ const router = createRouter({
       }
     },
     {
+      path: '/notes',
+      name: 'notes',
+      component: NotesView,
+      meta: {
+        title: 'Notes'
+      }
+    },
+    {
       path: '/projects/weather',
       name: 'weather',
       component: Weather,
@@ -33,11 +42,11 @@ const router = createRouter({
       }
     },
     {
-      path: '/notes',
-      name: 'notes',
-      component: NotesView,
+      path: '/projects/flights',
+      name: 'flights',
+      component: Flights,
       meta: {
-        title: 'Notes'
+        title: 'Flights'
       }
     }
   ]
