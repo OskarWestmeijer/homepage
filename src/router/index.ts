@@ -8,6 +8,7 @@ import Flights from '@/views/projects/Flights.vue'
 import Maps from '@/views/projects/Maps.vue'
 import KafkaEtlPipeline from '@/views/projects/KafkaEtlPipeline.vue'
 import ChatSystem from '@/views/projects/ChatSystem.vue'
+import PushTheButton from '@/views/projects/PushTheButton.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,6 +75,14 @@ const router = createRouter({
       component: ChatSystem,
       meta: {
         title: 'chat-system'
+      }
+    },
+    {
+      path: '/projects/push-the-button',
+      name: 'push-the-button',
+      component: PushTheButton,
+      meta: {
+        title: 'push-the-button'
       }
     }
   ]

@@ -37,12 +37,12 @@
       </div>
     </router-link>
 
-    <div class="project-card">
+    <router-link to="/projects/push-the-button" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">👆 push-the-button</div>
         <div class="badge-custom">java</div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
