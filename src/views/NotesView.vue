@@ -1,36 +1,39 @@
 <template>
-  <div class="mb-10 max-w-full notes flex flex-col items-center">
-    <div
+  <div class="max-w-4xl mx-auto mt-10 flex flex-col items-center gap-4 px-4">
+    <router-link
       v-for="item in items"
-      class="mt-4 card w-full lg:w-3/5 xl:w-2/4 bg-base-100 border-2 shadow-xl hover:shadow-md hover:shadow-primary"
+      :key="item.link"
+      :to="'/notes/' + item.link"
+      class="note-card"
     >
-      <RouterLink :to="'/notes/' + item.link">
-        <div class="card-body">
-          <h3 class="card-title">{{ item.title }}</h3>
-          <div class="card-actions justify-end">
-            <div v-for="badge in item.badges" class="badge badge-primary">{{ badge }}</div>
-          </div>
+      <div class="flex justify-between items-center">
+        <h3 class="note-title">{{ item.title }}</h3>
+        <div class="flex gap-1 flex-wrap">
+          <span v-for="badge in item.badges" :key="badge" class="badge-custom">
+            {{ badge }}
+          </span>
         </div>
-      </RouterLink>
-    </div>
+      </div>
+    </router-link>
   </div>
 </template>
 
-<script lang="ts">
-import { RouterLink } from 'vue-router'
-import { noteItems } from './notes'
+<script setup lang="ts">
+import { noteItems } from "./notes";
 
-export default {
-  components: {
-    RouterLink
-  },
-
-  data() {
-    return {
-      items: noteItems
-    }
-  }
-}
+const items = noteItems;
 </script>
 
-<style scoped></style>
+<style scoped>
+.note-card {
+  @apply w-full max-w-xl p-6 rounded-lg bg-base-100 hover:bg-base-300 transition duration-200 cursor-pointer shadow;
+}
+
+.note-title {
+  @apply text-lg font-semibold;
+}
+
+.badge-custom {
+  @apply badge badge-ghost border border-black text-black text-xs px-2 py-0.5 opacity-50;
+}
+</style>
