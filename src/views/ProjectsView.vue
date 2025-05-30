@@ -23,12 +23,12 @@
       </div>
     </router-link>
 
-    <div class="project-card">
+    <router-link to="/projects/kafka-etl-pipeline" class="project-card">
       <div class="flex justify-between items-center">
-        <div class="project-title">⚙️ kafka-messaging</div>
+        <div class="project-title">⚙️ kafka-etl-pipeline</div>
         <div class="badge-custom">java</div>
       </div>
-    </div>
+    </router-link>
 
     <div class="project-card">
       <div class="flex justify-between items-center">

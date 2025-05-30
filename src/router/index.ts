@@ -6,6 +6,7 @@ import { noteItems } from '../views/notes'
 import Weather from '@/views/projects/Weather.vue'
 import Flights from '@/views/projects/Flights.vue'
 import Maps from '@/views/projects/Maps.vue'
+import KafkaEtlPipeline from '@/views/projects/KafkaEtlPipeline.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,7 +16,7 @@ const router = createRouter({
       name: 'about',
       component: AboutView,
       meta: {
-        title: 'About'
+        title: 'about'
       }
     },
     {
@@ -23,7 +24,7 @@ const router = createRouter({
       name: 'projects',
       component: ProjectsView,
       meta: {
-        title: 'Projects'
+        title: 'projects'
       }
     },
     {
@@ -31,7 +32,7 @@ const router = createRouter({
       name: 'notes',
       component: NotesView,
       meta: {
-        title: 'Notes'
+        title: 'notes'
       }
     },
     {
@@ -39,7 +40,7 @@ const router = createRouter({
       name: 'weather',
       component: Weather,
       meta: {
-        title: 'Weather'
+        title: 'weather'
       }
     },
     {
@@ -47,7 +48,7 @@ const router = createRouter({
       name: 'flights',
       component: Flights,
       meta: {
-        title: 'Flights'
+        title: 'flights'
       }
     },
     {
@@ -55,7 +56,15 @@ const router = createRouter({
       name: 'maps',
       component: Maps,
       meta: {
-        title: 'Maps'
+        title: 'maps'
+      }
+    },
+    {
+      path: '/projects/kafka-etl-pipeline',
+      name: 'kafka-etl-pipeline',
+      component: KafkaEtlPipeline,
+      meta: {
+        title: 'kafka-etl-pipeline'
       }
     }
   ]

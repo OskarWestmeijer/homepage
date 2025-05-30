@@ -3,6 +3,14 @@
 <template>
   <div class="max-w-4xl mx-auto mt-10 px-4 flex flex-col gap-6">
     <!-- Title -->
+    <router-link
+      to="/projects"
+      class="text-sm text-black-500 hover:underline flex items-center gap-1"
+    >
+      <span>←</span>
+      <span>Back to Projects</span>
+    </router-link>
+
     <h1 class="text-3xl font-bold flex items-center gap-2">🌍 flights</h1>
 
     <!-- Technology Badges -->

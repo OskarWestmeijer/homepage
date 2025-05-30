@@ -12,49 +12,35 @@
     </router-link>
 
     <!-- Title -->
-    <h1 class="text-3xl font-bold flex items-center gap-2">⛅ weather</h1>
+    <h1 class="text-3xl font-bold flex items-center gap-2">⚙️ kafka-etl-pipeline</h1>
 
     <!-- Technology Badges -->
     <div class="flex gap-2 flex-wrap">
       <span class="tech-badge">java</span>
       <span class="tech-badge">spring-boot</span>
+      <span class="tech-badge">kafka</span>
       <span class="tech-badge">postgres</span>
-      <span class="tech-badge">angular</span>
+      <span class="tech-badge">cloud events</span>
     </div>
 
     <!-- Description -->
     <p class="text-base text-gray-600">
-      Provides weather data for selected locations. The frontend displays the weather in
-      charts. The backend service offers a public API. The weather data is harvested every
-      minute from openweathermap.org. The information is stored in a database.
-      Furthermore, the API is documented with an OpenAPI specification.
+      This service implements a Kafka-based ETL pipeline for product enrichment. The same
+      product passes through multiple Kafka topics, with each step focused on a different
+      enrichment task. At each stage, the service performs an HTTP call to gather
+      additional data, updates the product, saves it to the database, and sends it to the
+      next topic for further processing.
     </p>
 
     <!-- Links -->
     <div class="flex flex-wrap gap-4">
       <a
-        href="https://github.com/OskarWestmeijer/weather"
+        href="https://github.com/OskarWestmeijer/kafka-etl-pipeline"
         target="_blank"
         class="btn btn-outline btn-sm"
       >
         GitHub Repo
       </a>
-      <a
-        href="https://weather.oskar-westmeijer.com"
-        target="_blank"
-        class="btn btn-primary btn-sm"
-      >
-        Live Demo
-      </a>
-    </div>
-
-    <!-- Image -->
-    <div class="mt-4">
-      <img
-        src="@/assets/weather_project.png"
-        alt="Weather App Preview"
-        class="rounded-lg shadow-lg border border-base-300"
-      />
     </div>
   </div>
 </template>
