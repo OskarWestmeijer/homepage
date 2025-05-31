@@ -42,6 +42,24 @@
         GitHub Repo
       </a>
     </div>
+
+    <!-- Image -->
+    <div class="mt-4">
+      <img
+        src="@/assets/projects/kafka-etl-pipeline/c4_container.svg"
+        alt="flights App Preview"
+        class="rounded-lg shadow-lg border border-base-300"
+      />
+    </div>
+
+    <!-- Image -->
+    <div class="mt-4">
+      <img
+        src="@/assets/projects/kafka-etl-pipeline/c4_component.svg"
+        alt="flights App Preview"
+        class="rounded-lg shadow-lg border border-base-300"
+      />
+    </div>
   </div>
 </template>
 

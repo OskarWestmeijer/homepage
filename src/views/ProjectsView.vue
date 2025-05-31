@@ -5,35 +5,50 @@
     <router-link to="/projects/weather" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">⛅ weather</div>
-        <div class="badge-custom">java</div>
+        <div class="flex gap-1">
+          <div class="badge-custom">java</div>
+          <div class="badge-custom">api</div>
+        </div>
       </div>
     </router-link>
 
     <router-link to="/projects/flights" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">🌍 flights</div>
-        <div class="badge-custom">kotlin</div>
+        <div class="flex gap-1">
+          <div class="badge-custom">kotlin</div>
+          <div class="badge-custom">api</div>
+        </div>
       </div>
     </router-link>
 
     <router-link to="/projects/maps" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">🧭 maps</div>
-        <div class="badge-custom">svelte</div>
+        <div class="flex gap-1">
+          <div class="badge-custom">svelte</div>
+          <div class="badge-custom">qgis</div>
+        </div>
       </div>
     </router-link>
 
     <router-link to="/projects/kafka-etl-pipeline" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">⚙️ kafka-etl-pipeline</div>
-        <div class="badge-custom">java</div>
+        <div class="flex gap-1">
+          <div class="badge-custom">java</div>
+          <div class="badge-custom">kafka</div>
+        </div>
       </div>
     </router-link>
 
     <router-link to="/projects/chat-system" class="project-card">
       <div class="flex justify-between items-center">
         <div class="project-title">🗪 chat-system</div>
-        <div class="badge-custom">java</div>
+        <div class="flex gap-1">
+          <div class="badge-custom">java</div>
+          <div class="badge-custom">sockets</div>
+        </div>
       </div>
     </router-link>
 

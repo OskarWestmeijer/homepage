@@ -51,7 +51,15 @@
     <!-- Image -->
     <div class="mt-4">
       <img
-        src="@/assets/weather_project.png"
+        src="@/assets/projects/weather/weather_project.png"
+        alt="Weather App Preview"
+        class="rounded-lg shadow-lg border border-base-300"
+      />
+    </div>
+    <!-- Image -->
+    <div class="mt-4">
+      <img
+        src="@/assets/projects/weather/c4_container.svg"
         alt="Weather App Preview"
         class="rounded-lg shadow-lg border border-base-300"
       />

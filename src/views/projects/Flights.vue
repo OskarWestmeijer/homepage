@@ -48,7 +48,15 @@
     <!-- Image -->
     <div class="mt-4">
       <img
-        src="@/assets/flights_project.png"
+        src="@/assets/projects/flights/flights_project.png"
+        alt="flights App Preview"
+        class="rounded-lg shadow-lg border border-base-300"
+      />
+    </div>
+
+    <div class="mt-4">
+      <img
+        src="@/assets/projects/flights/c4_container.svg"
         alt="flights App Preview"
         class="rounded-lg shadow-lg border border-base-300"
       />
