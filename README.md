@@ -15,7 +15,14 @@ Get to know me and my interests.
 - Nginx
 ```
 
-## Test
+## Build & test
+
+```bash
+npm install
+npm run build
+```
+
+### e2e test
 
 The e2e tests will start the application in local. Ensure the local port 5173 is free.
 
