@@ -7,21 +7,21 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="navbar-start">
       <div class="mobile-hide">
         <RouterLink to="/">
-          <h1 class="btn btn-ghost rounded-lg text-xl font-bold">Oskar Westmeijer</h1>
+          <h1 class="btn btn-ghost rounded-lg text-xl font-bold">🐨 Oskar Westmeijer</h1>
         </RouterLink>
       </div>
     </div>
     <div class="navbar-center">
       <RouterLink to="/">
-        <button class="btn btn-ghost rounded-lg">About</button>
+        <button class="btn btn-ghost rounded-lg">💡 About</button>
       </RouterLink>
 
       <RouterLink to="/projects">
-        <button class="btn btn-ghost rounded-lg">Projects</button>
+        <button class="btn btn-ghost rounded-lg">🔧 Projects</button>
       </RouterLink>
 
       <RouterLink to="/notes">
-        <button class="btn btn-ghost rounded-lg">Notes</button>
+        <button class="btn btn-ghost rounded-lg">✒️ Notes</button>
       </RouterLink>
     </div>
     <div class="navbar-end">
@@ -47,7 +47,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 
   <footer class="mt-10 footer footer-center mobile-show">
-    <h1 class="text-xl font-bold">Oskar Westmeijer</h1>
+    <h1 class="text-xl font-bold">🐨 Oskar Westmeijer</h1>
     <div class="flex flex-row justify-center">
       <a
         href="https://github.com/OskarWestmeijer"
