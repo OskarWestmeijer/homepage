@@ -67,7 +67,9 @@
   </div>
 </template>
 
-<style scoped>
+<style>
+@reference "../../style.css";
+
 .tech-badge {
   @apply badge badge-ghost border border-black text-black text-xs px-2 py-0.5 opacity-50;
 }

@@ -25,6 +25,8 @@ const items = noteItems;
 </script>
 
 <style scoped>
+@reference "../style.css";
+
 .note-card {
   @apply w-full max-w-xl p-6 rounded-lg bg-base-100 hover:bg-base-300 transition duration-200 cursor-pointer shadow;
 }
