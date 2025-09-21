@@ -25,11 +25,10 @@
 
     <!-- Description -->
     <p class="text-base text-gray-600">
-      This service implements a Kafka-based ETL pipeline for product enrichment. The same
-      product passes through multiple Kafka topics, with each step focused on a different
-      enrichment task. At each stage, the service performs an HTTP call to gather
-      additional data, updates the product, saves it to the database, and sends it to the
-      next topic for further processing.
+      This service implements a Kafka-based ETL pipeline for product enrichment. The same product
+      passes through multiple Kafka topics, with each step focused on a different enrichment task.
+      At each stage, the service performs an HTTP call to gather additional data, updates the
+      product, saves it to the database, and sends it to the next topic for further processing.
     </p>
 
     <!-- Links -->

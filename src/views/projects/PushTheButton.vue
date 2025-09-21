@@ -21,8 +21,8 @@
 
     <!-- Description -->
     <p class="text-base text-gray-600">
-      The only way to stop the countdown, is by providing the correct password. Hopefully
-      you can end the madness. Inspired by the tv show "Lost".
+      The only way to stop the countdown, is by providing the correct password. Hopefully you can
+      end the madness. Inspired by the tv show "Lost".
     </p>
 
     <!-- Links -->

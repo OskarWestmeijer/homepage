@@ -24,10 +24,10 @@
 
     <!-- Description -->
     <p class="text-base text-gray-600">
-      Provides weather data for selected locations. The frontend displays the weather in
-      charts. The backend service offers a public API. The weather data is harvested every
-      minute from openweathermap.org. The information is stored in a database.
-      Furthermore, the API is documented with an OpenAPI specification.
+      Provides weather data for selected locations. The frontend displays the weather in charts. The
+      backend service offers a public API. The weather data is harvested every minute from
+      openweathermap.org. The information is stored in a database. Furthermore, the API is
+      documented with an OpenAPI specification.
     </p>
 
     <!-- Links -->
@@ -39,11 +39,7 @@
       >
         GitHub Repo
       </a>
-      <a
-        href="https://weather.oskar-westmeijer.com"
-        target="_blank"
-        class="btn btn-primary btn-sm"
-      >
+      <a href="https://weather.oskar-westmeijer.com" target="_blank" class="btn btn-primary btn-sm">
         Live Demo
       </a>
     </div>

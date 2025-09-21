@@ -22,8 +22,8 @@
 
     <!-- Description -->
     <p class="text-base text-gray-600">
-      I create thematic maps with the tool QGIS. Most of the data used for creating the
-      map, is free and provided by the Copernicus project.
+      I create thematic maps with the tool QGIS. Most of the data used for creating the map, is free
+      and provided by the Copernicus project.
     </p>
 
     <!-- Links -->
@@ -35,11 +35,7 @@
       >
         GitHub Repo
       </a>
-      <a
-        href="https://maps.oskar-westmeijer.com"
-        target="_blank"
-        class="btn btn-primary btn-sm"
-      >
+      <a href="https://maps.oskar-westmeijer.com" target="_blank" class="btn btn-primary btn-sm">
         Live Demo
       </a>
     </div>

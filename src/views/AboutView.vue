@@ -1,42 +1,42 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed } from 'vue'
 
-const language = ref<"en" | "de" | "fi">("en");
+const language = ref<'en' | 'de' | 'fi'>('en')
 
 const content = computed(() => {
   switch (language.value) {
-    case "de":
+    case 'de':
       return {
-        name: "Oskar Westmeijer",
+        name: 'Oskar Westmeijer',
         lines: [
-          "Ich arbeite als Entwickler und lebe in Hamburg.",
-          "In meiner Freizeit gehe ich gerne ins Fitnessstudio, Bouldern und Joggen.",
-          "Ich lese viel und interessiere mich für besonders für Geschichte, Geopolitik und Karten.",
-          "Im Urlaub reise ich gerne und besuche vor allem Museen für Geschichte und Kunst.",
-        ],
-      };
-    case "fi":
+          'Ich arbeite als Entwickler und lebe in Hamburg.',
+          'In meiner Freizeit gehe ich gerne ins Fitnessstudio, Bouldern und Joggen.',
+          'Ich lese viel und interessiere mich für besonders für Geschichte, Geopolitik und Karten.',
+          'Im Urlaub reise ich gerne und besuche vor allem Museen für Geschichte und Kunst.'
+        ]
+      }
+    case 'fi':
       return {
-        name: "Oskar Westmeijer",
+        name: 'Oskar Westmeijer',
         lines: [
-          "Olen kehittäjä ja asun Hampurissa.",
-          "Vapaa-ajallani pysyn aktiivisena käymällä salilla, kiipeilemällä ja juoksemalla.",
-          "Rakastan lukemista, ja olen erityisen kiinnostunut historiasta, geopolitiikasta ja kartoista.",
-          "Lomilla matkustan usein ja käyn mieluiten taide- ja historiamuseoissa.",
-        ],
-      };
+          'Olen kehittäjä ja asun Hampurissa.',
+          'Vapaa-ajallani pysyn aktiivisena käymällä salilla, kiipeilemällä ja juoksemalla.',
+          'Rakastan lukemista, ja olen erityisen kiinnostunut historiasta, geopolitiikasta ja kartoista.',
+          'Lomilla matkustan usein ja käyn mieluiten taide- ja historiamuseoissa.'
+        ]
+      }
     default:
       return {
-        name: "Oskar Westmeijer",
+        name: 'Oskar Westmeijer',
         lines: [
-          "I work as a developer and am located in Hamburg, Germany.",
-          "In my free time, I stay physically active by working out at the gym, bouldering and going for runs.",
+          'I work as a developer and am located in Hamburg, Germany.',
+          'In my free time, I stay physically active by working out at the gym, bouldering and going for runs.',
           "I love to read and do it a lot. I'm also passionate about history, geopolitics, and maps.",
-          "During vacations, I enjoy traveling and exploring history and art museums.",
-        ],
-      };
+          'During vacations, I enjoy traveling and exploring history and art museums.'
+        ]
+      }
   }
-});
+})
 </script>
 
 <template>

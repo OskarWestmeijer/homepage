@@ -23,8 +23,8 @@
 
     <!-- Description -->
     <p class="text-base text-gray-600">
-      Displays Hamburg airport connections on a 3d globe. The backend provides a public
-      Api. The airport connections are refreshed every 10 minutes.
+      Displays Hamburg airport connections on a 3d globe. The backend provides a public Api. The
+      airport connections are refreshed every 10 minutes.
     </p>
 
     <!-- Links -->
@@ -36,11 +36,7 @@
       >
         GitHub Repo
       </a>
-      <a
-        href="https://flights.oskar-westmeijer.com"
-        target="_blank"
-        class="btn btn-primary btn-sm"
-      >
+      <a href="https://flights.oskar-westmeijer.com" target="_blank" class="btn btn-primary btn-sm">
         Live Demo
       </a>
     </div>

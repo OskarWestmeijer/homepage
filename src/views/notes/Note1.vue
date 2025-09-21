@@ -5,13 +5,13 @@
     <h2 class="text-center">{{ item.title }}</h2>
     <blockquote class="border-primary mb-0">
       <h2 class="mb-0 mt-0">Goal:</h2>
-      Prove how immutable lists do not allow changes to structure. Understand that
-      immutability of a list does not include immutability of its elements.
+      Prove how immutable lists do not allow changes to structure. Understand that immutability of a
+      list does not include immutability of its elements.
     </blockquote>
     <p>
-      Lists can be initialized as mutable or immutable. If no modifications to the list
-      are intended, it is advisable to work with a immutable list. The snippet below
-      shows, how modifying the immutable list after initialization throws an exception.
+      Lists can be initialized as mutable or immutable. If no modifications to the list are
+      intended, it is advisable to work with a immutable list. The snippet below shows, how
+      modifying the immutable list after initialization throws an exception.
     </p>
     <img
       alt="Immutable List throws exception on modification"
@@ -19,12 +19,12 @@
       src="@/assets/notes/note-1-1.png"
     />
     <blockquote class="border-primary mb-0">
-      Note! An immutable list only guarantees the structure of the list, it does not
-      prevent the possibility of its elements being mutated.
+      Note! An immutable list only guarantees the structure of the list, it does not prevent the
+      possibility of its elements being mutated.
     </blockquote>
     <p>
-      The example below works with a simple class, which is mutable. To reduce code, I
-      used some annotations from the Lombok library.
+      The example below works with a simple class, which is mutable. To reduce code, I used some
+      annotations from the Lombok library.
     </p>
     <img
       alt="Immutable List does not prevent its elements being mutated"
@@ -32,8 +32,8 @@
       src="@/assets/notes/note-1-2.png"
     />
     <p>
-      While the immutable list maintains the order of elements, we were able to mutate the
-      element. In case immutability of the element is required, you can use Java
+      While the immutable list maintains the order of elements, we were able to mutate the element.
+      In case immutability of the element is required, you can use Java
       <code>records</code>, or Lomboks <code>@Value</code> annotation.
     </p>
     <p></p>
@@ -45,8 +45,8 @@ export default {
   props: {
     item: {
       type: Object,
-      required: false,
-    },
-  },
-};
+      required: false
+    }
+  }
+}
 </script>

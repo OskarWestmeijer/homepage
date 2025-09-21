@@ -42,7 +42,6 @@ npm run dev
 ## Prettier
 
 ```bash
-npm run lint
 npx prettier . --write
 ```
 

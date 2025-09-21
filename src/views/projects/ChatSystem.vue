@@ -23,8 +23,7 @@
     <!-- Description -->
     <p class="text-base text-gray-600">
       TCP based client-server chat system. The server accepts client socket connections to
-      participate in chat with others. Inspired by an example from the book "Head First
-      Java".
+      participate in chat with others. Inspired by an example from the book "Head First Java".
     </p>
 
     <!-- Links -->

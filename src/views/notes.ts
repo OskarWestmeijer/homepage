@@ -26,5 +26,5 @@ export const noteItems = [
     link: '4-validation-libraries-fail-fast',
     componentName: 'Note4',
     date: '30.04.2024'
-  },
+  }
 ]

@@ -19,9 +19,9 @@
 </template>
 
 <script setup lang="ts">
-import { noteItems } from "./notes";
+import { noteItems } from './notes'
 
-const items = noteItems;
+const items = noteItems
 </script>
 
 <style scoped>

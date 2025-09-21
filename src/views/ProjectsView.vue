@@ -62,7 +62,7 @@
 </template>
 
 <style scoped>
- @reference "../style.css";
+@reference "../style.css";
 
 .project-card {
   @apply w-full max-w-xl p-6 rounded-lg bg-base-100 hover:bg-base-300 transition duration-200 cursor-pointer shadow;
