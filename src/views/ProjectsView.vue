@@ -14,7 +14,7 @@
 
     <router-link to="/projects/flights" class="project-card">
       <div class="flex justify-between items-center">
-        <div class="project-title">🌍 flights</div>
+        <div class="project-title">✈️ flights</div>
         <div class="flex gap-1">
           <div class="badge-custom">kotlin</div>
           <div class="badge-custom">api</div>
@@ -39,23 +39,6 @@
           <div class="badge-custom">java</div>
           <div class="badge-custom">kafka</div>
         </div>
-      </div>
-    </router-link>
-
-    <router-link to="/projects/chat-system" class="project-card">
-      <div class="flex justify-between items-center">
-        <div class="project-title">🗪 chat-system</div>
-        <div class="flex gap-1">
-          <div class="badge-custom">java</div>
-          <div class="badge-custom">sockets</div>
-        </div>
-      </div>
-    </router-link>
-
-    <router-link to="/projects/push-the-button" class="project-card">
-      <div class="flex justify-between items-center">
-        <div class="project-title">👆 push-the-button</div>
-        <div class="badge-custom">java</div>
       </div>
     </router-link>
   </div>

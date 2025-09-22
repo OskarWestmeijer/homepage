@@ -16,7 +16,7 @@
 
     <!-- Technology Badges -->
     <div class="flex gap-2 flex-wrap">
-      <span class="tech-badge">svelte</span>
+      <span class="tech-badge">sveltekit</span>
       <span class="tech-badge">qgis</span>
     </div>
 

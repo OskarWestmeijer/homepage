@@ -11,7 +11,7 @@
       <span>Back to Projects</span>
     </router-link>
 
-    <h1 class="text-3xl font-bold flex items-center gap-2">🌍 flights</h1>
+    <h1 class="text-3xl font-bold flex items-center gap-2">✈️ flights</h1>
 
     <!-- Technology Badges -->
     <div class="flex gap-2 flex-wrap">
@@ -44,7 +44,7 @@
     <!-- Image -->
     <div class="mt-4">
       <img
-        src="@/assets/projects/flights/flights_project.png"
+        src="@/assets/projects/flights/flight_screen.png"
         alt="flights App Preview"
         class="rounded-lg shadow-lg border border-base-300"
       />
