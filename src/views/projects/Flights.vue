@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="max-w-4xl mx-auto mt-10 px-4 flex flex-col gap-6">
+  <div class="max-w-4xl mx-auto mt-10 mb-10 px-4 flex flex-col gap-6">
     <!-- Title -->
     <router-link
       to="/projects"
@@ -23,7 +23,7 @@
 
     <!-- Description -->
     <p class="text-base text-gray-600">
-      Displays Hamburg airport connections on a 3d globe. The backend provides a public Api. The
+      Explore daily Hamburg airport flights and connections. Displays network of connections on a 3d globe. The backend provides a public Api. The
       airport connections are refreshed every 10 minutes.
     </p>
 
@@ -37,14 +37,14 @@
         GitHub Repo
       </a>
       <a href="https://flights.oskar-westmeijer.com" target="_blank" class="btn btn-primary btn-sm">
-        Live Demo
+        Visit
       </a>
     </div>
 
     <!-- Image -->
     <div class="mt-4">
       <img
-        src="@/assets/projects/flights/flight_screen.png"
+        src="@/assets/projects/flights/flights_25_09_2025.png"
         alt="flights App Preview"
         class="rounded-lg shadow-lg border border-base-300"
       />

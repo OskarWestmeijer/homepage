@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="max-w-4xl mx-auto mt-10 px-4 flex flex-col gap-6">
+  <div class="max-w-4xl mx-auto mt-10 mb-10 px-4 flex flex-col gap-6">
     <!-- Back Arrow -->
     <router-link
       to="/projects"
@@ -40,7 +40,7 @@
         GitHub Repo
       </a>
       <a href="https://weather.oskar-westmeijer.com" target="_blank" class="btn btn-primary btn-sm">
-        Live Demo
+        Visit
       </a>
     </div>
 
