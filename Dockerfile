@@ -7,7 +7,7 @@ RUN npm install
 RUN npm run build
 
 # production-stage
-FROM 1.29.4-alpine3.23-slim as production-stage
+FROM nginx:1.29.4-alpine3.23-slim as production-stage
 
 COPY --from=build-stage /usr/local/app/dist /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
