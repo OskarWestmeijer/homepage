@@ -27,7 +27,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tsconfig/node20": "^20.1.9",
     "@types/jsdom": "^28.0.1",
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.9.1",
