@@ -34,7 +34,7 @@
     "autoprefixer": "^10.5.0",
     "daisyui": "^5.5.20",
     "jsdom": "^29.1.1",
-    "npm-run-all2": "^8.0.4",
+    "npm-run-all2": "^9.0.0",
     "postcss": "^8.5.15",
     "prettier": "3.8.3",
     "tailwindcss": "^4.3.0",
