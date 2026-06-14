@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin 'daisyui';
+
+/* Show social links only on wider screens */
+@media (max-width: 700px) {
+	.mobile-hide {
+		display: none;
+	}
+}
+
+/* Hide footer by default and show on smaller screens */
+@media (min-width: 701px) {
+	.footer {
+		display: none;
+	}
+}
+
+/* Show footer on smaller screens */
+@media (max-width: 700px) {
+	.mobile-show {
+		display: block;
+	}
+}

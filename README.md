@@ -10,8 +10,9 @@ Get to know me and my interests.
 ## Technologies
 
 ```
-- Typescript, VueJs & Vite
+- Sveltekit (SSG) & Vite
 - Tailwind & DaisyUi
+- Vitest & Playwright
 - Nginx
 ```
 
@@ -22,14 +23,34 @@ npm install
 npm run build
 ```
 
-### e2e test
-
-The e2e tests will start the application in local. Ensure the local port 5173 is free.
+### Vitest Unit test
 
 ```bash
-npm install
+npm run test:unit
+```
+
+### Playwright e2e test
+
+I develop on Linux Fedora, which does not natively support playwright. Use distrobox.
+
+#### Prerequisites
+
+```bash
+sudo dnf install distrobox
+mkdir ~/distrobox
+distrobox create \
+--name ubuntu --image ubuntu:24.04 \
+--home ~/distrobox/ubuntu \
+--additional-packages "git vim nodejs npm"
+```
+
+#### Test execution
+
+```bash
+distrobox enter ubuntu
 npx playwright install --with-deps
-npm run e2e
+npm run test:e2e
+distrobox stop ubuntu
 ```
 
 ## Local development
@@ -42,7 +63,7 @@ npm run dev
 ## Prettier
 
 ```bash
-npx prettier . --write
+npm run format
 ```
 
 ## Update dependencies

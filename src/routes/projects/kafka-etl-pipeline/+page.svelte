@@ -1,0 +1,63 @@
+<div class="max-w-4xl mx-auto mt-10 mb-10 px-4 flex flex-col gap-6">
+	<!-- Back Arrow -->
+	<a href="/projects" class="text-sm text-black-500 hover:underline flex items-center gap-1">
+		<span>←</span>
+		<span>Back to Projects</span>
+	</a>
+
+	<!-- Title -->
+	<h1 class="text-3xl font-bold flex items-center gap-2">⚙️ kafka-etl-pipeline</h1>
+
+	<!-- Technology Badges -->
+	<div class="flex gap-2 flex-wrap">
+		<span class="tech-badge">java</span>
+		<span class="tech-badge">spring-boot</span>
+		<span class="tech-badge">kafka</span>
+		<span class="tech-badge">postgres</span>
+		<span class="tech-badge">cloud events</span>
+	</div>
+
+	<!-- Description -->
+	<p class="text-base text-gray-600">
+		This service implements a Kafka-based ETL pipeline for product enrichment. The same product
+		passes through multiple Kafka topics, with each step focused on a different enrichment task. At
+		each stage, the service performs an HTTP call to gather additional data, updates the product,
+		saves it to the database, and sends it to the next topic for further processing.
+	</p>
+
+	<!-- Links -->
+	<div class="flex flex-wrap gap-4">
+		<a
+			href="https://github.com/OskarWestmeijer/kafka-etl-pipeline"
+			target="_blank"
+			class="btn btn-outline btn-sm"
+		>
+			GitHub Repo
+		</a>
+	</div>
+
+	<!-- Images -->
+	<div class="mt-4">
+		<img
+			src="/projects/kafka-etl-pipeline/c4_container.svg"
+			alt="Kafka ETL Pipeline Container Diagram"
+			class="rounded-lg shadow-lg border border-base-300"
+		/>
+	</div>
+
+	<div class="mt-4">
+		<img
+			src="/projects/kafka-etl-pipeline/c4_component.svg"
+			alt="Kafka ETL Pipeline Component Diagram"
+			class="rounded-lg shadow-lg border border-base-300"
+		/>
+	</div>
+</div>
+
+<style>
+	@reference "../../layout.css";
+
+	.tech-badge {
+		@apply badge border badge-ghost border-black px-2 py-0.5 text-xs text-black opacity-50;
+	}
+</style>
