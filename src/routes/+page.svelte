@@ -55,7 +55,7 @@
 				<button
 					type="button"
 					aria-label="Switch to English"
-					class="w-8 h-6 hover:scale-110 transition-transform"
+					class="w-8 h-6 hover:scale-110 transition-transform cursor-pointer"
 					onclick={() => (language = 'en')}
 				>
 					<img src="/gb.svg" alt="English" class="w-full h-full" />
@@ -64,7 +64,7 @@
 				<button
 					type="button"
 					aria-label="Wechsle zu Deutsch"
-					class="w-8 h-6 hover:scale-110 transition-transform"
+					class="w-8 h-6 hover:scale-110 transition-transform cursor-pointer"
 					onclick={() => (language = 'de')}
 				>
 					<img src="/de.svg" alt="Deutsch" class="w-full h-full" />
@@ -73,7 +73,7 @@
 				<button
 					type="button"
 					aria-label="Vaihda suomeksi"
-					class="w-8 h-6 hover:scale-110 transition-transform"
+					class="w-8 h-6 hover:scale-110 transition-transform cursor-pointer"
 					onclick={() => (language = 'fi')}
 				>
 					<img src="/fi.svg" alt="Suomi" class="w-full h-full" />
