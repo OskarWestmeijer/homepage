@@ -22,8 +22,23 @@ runs:
       working-directory: ${{ inputs.frontend-directory }}
       run: npm ci
 
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+    - name: Cache Playwright browsers
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ runner.os }}-playwright-chromium-${{ hashFiles(format('{0}/package-lock.json', inputs.frontend-directory)) }}
+
+    - name: Install Playwright Chromium
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
+      working-directory: ${{ inputs.frontend-directory }}
+      run: npx playwright install chromium --with-deps
+      shell: bash
+
+    - name: Install Playwright OS dependencies
+      if: steps.playwright-cache.outputs.cache-hit == 'true'
+      working-directory: ${{ inputs.frontend-directory }}
+      run: npx playwright install-deps chromium
       shell: bash
 
     - name: Run Playwright tests
