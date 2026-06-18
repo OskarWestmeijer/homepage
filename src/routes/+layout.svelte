@@ -1,6 +1,12 @@
 <script lang="ts">
 	import './layout.css';
+	import { page } from '$app/state';
 	let { children } = $props();
+
+	const links = [
+		{ href: '/', label: 'About' },
+		{ href: '/projects', label: 'Projects' }
+	];
 </script>
 
 <svelte:head>
@@ -8,58 +14,42 @@
 	<title>Oskar Westmeijer</title>
 </svelte:head>
 
-<!-- Flex column wrapper -->
-<div class="flex min-h-screen flex-col bg-base-100">
-	<div class="navbar">
-		<div class="navbar-start">
-			<div class="mobile-hide">
-				<a href="/" class="btn btn-ghost rounded-lg text-xl font-bold">🐨 Oskar Westmeijer</a>
-			</div>
-		</div>
-		<div class="navbar-center">
-			<a href="/" class="btn btn-ghost rounded-lg">💡 About</a>
-			<a href="/projects" class="btn btn-ghost rounded-lg">🔧 Projects</a>
-		</div>
-		<div class="navbar-end">
-			<div class="mobile-hide">
-				<a href="https://github.com/OskarWestmeijer" aria-label="Oskar Westmeijer Github profile">
-					<button class="btn btn-ghost rounded-lg">
-						<img alt="Github logo" class="size-6" src="/github.svg" />
-					</button>
+<div class="bg-base-100 flex min-h-screen flex-col">
+	<header class="border-base-300 border-b">
+		<nav class="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
+			<a href="/" class="text-base font-bold tracking-tight">Oskar Westmeijer</a>
+
+			<div class="flex items-center gap-5 text-xs tracking-widest uppercase">
+				{#each links as link (link.href)}
+					<a
+						href={link.href}
+						class="hover:text-primary transition-colors"
+						class:text-primary={page.url.pathname === link.href}
+						class:text-base-content={page.url.pathname !== link.href}
+					>
+						{link.label}
+					</a>
+				{/each}
+				<span class="bg-base-300 h-4 w-px" aria-hidden="true"></span>
+				<a
+					href="https://github.com/OskarWestmeijer"
+					aria-label="Oskar Westmeijer GitHub profile"
+					class="opacity-70 transition-opacity hover:opacity-100"
+				>
+					<img alt="" class="size-5" src="/github.svg" />
 				</a>
 				<a
 					href="https://www.linkedin.com/in/oskar-westmeijer-488449252/"
 					aria-label="Oskar Westmeijer LinkedIn profile"
-					class="btn btn-ghost rounded-lg"
+					class="opacity-70 transition-opacity hover:opacity-100"
 				>
-					<img alt="Linkedin logo" class="size-6" src="/linkedin.svg" />
+					<img alt="" class="size-5" src="/linkedin.svg" />
 				</a>
 			</div>
-		</div>
-	</div>
+		</nav>
+	</header>
 
-	<!-- Main grows to push footer down -->
-	<main class="flex-grow">
+	<main class="flex flex-grow flex-col">
 		{@render children?.()}
 	</main>
-
-	<footer class="mt-10 footer footer-center mobile-show">
-		<h1 class="text-xl font-bold">🐨 Oskar Westmeijer</h1>
-		<div class="flex flex-row justify-center">
-			<a
-				href="https://github.com/OskarWestmeijer"
-				aria-label="Oskar Westmeijer Github profile"
-				class="btn btn-ghost rounded-lg"
-			>
-				<img alt="Github logo" class="size-7" src="/github.svg" />
-			</a>
-			<a
-				href="https://www.linkedin.com/in/oskar-westmeijer-488449252/"
-				aria-label="Oskar Westmeijer LinkedIn profile"
-				class="btn btn-ghost rounded-lg"
-			>
-				<img alt="Linkedin logo" class="size-6" src="/linkedin.svg" />
-			</a>
-		</div>
-	</footer>
 </div>

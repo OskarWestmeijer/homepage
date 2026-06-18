@@ -5,18 +5,18 @@
 		switch (language) {
 			case 'de':
 				return {
-					name: 'Oskar Westmeijer',
+					role: 'Softwareentwickler · Hamburg',
 					lines: [
 						'Ich arbeite als Entwickler und lebe in Hamburg.',
 						'In meiner Freizeit gehe ich gerne ins Fitnessstudio, Bouldern und Joggen.',
-						'Ich lese viel und interessiere mich für besonders für Geschichte, Geopolitik und Karten.',
+						'Ich lese viel und interessiere mich besonders für Geschichte, Geopolitik und Karten.',
 						'Im Urlaub reise ich gerne und besuche vor allem Museen für Geschichte und Kunst.'
 					]
 				};
 
 			case 'fi':
 				return {
-					name: 'Oskar Westmeijer',
+					role: 'Ohjelmistokehittäjä · Hampuri',
 					lines: [
 						'Olen kehittäjä ja asun Hampurissa.',
 						'Vapaa-ajallani pysyn aktiivisena käymällä salilla, kiipeilemällä ja juoksemalla.',
@@ -27,7 +27,7 @@
 
 			default:
 				return {
-					name: 'Oskar Westmeijer',
+					role: 'Software Developer · Hamburg',
 					lines: [
 						'I work as a developer and am located in Hamburg, Germany.',
 						'In my free time, I stay physically active by working out at the gym, bouldering and going for runs.',
@@ -37,60 +37,62 @@
 				};
 		}
 	});
+
+	const languages = [
+		{ code: 'en', label: 'EN' },
+		{ code: 'de', label: 'DE' },
+		{ code: 'fi', label: 'FI' }
+	] as const;
 </script>
 
-<section class="min-h-[80vh] flex items-center justify-center px-4 py-12">
-	<div class="flex flex-col md:flex-row items-center gap-10 max-w-4xl w-full">
-		<!-- Profile Image -->
+<svelte:head>
+	<title>Oskar Westmeijer</title>
+</svelte:head>
+
+<section class="mx-auto w-full max-w-2xl px-4 py-16 sm:py-24">
+	<!-- Header row: portrait + name -->
+	<div class="flex flex-col gap-8 sm:flex-row sm:items-center">
 		<img
 			src="/oskar_westmeijer.jpg"
 			alt="Portrait of Oskar Westmeijer"
-			class="rounded-xl shadow-lg w-64 h-auto object-cover"
+			class="border-base-300 h-40 w-40 shrink-0 rounded-md border object-cover object-top sm:h-44 sm:w-44"
 		/>
 
-		<!-- Text Content -->
-		<div class="flex-1 text-center md:text-left">
-			<!-- Language Flags -->
-			<div class="flex justify-center md:justify-end mb-4 gap-4">
+		<div>
+			<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Oskar Westmeijer</h1>
+			<p class="text-primary mt-3 text-sm font-medium tracking-widest uppercase">{content.role}</p>
+		</div>
+	</div>
+
+	<div class="border-base-content/80 my-10 w-16 border-t-2"></div>
+
+	<!-- Bio -->
+	<div class="space-y-5">
+		{#each content.lines as line, index (index)}
+			<p class="text-base leading-relaxed text-base-content sm:text-lg">{line}</p>
+		{/each}
+	</div>
+
+	<!-- Footer row: CTA + language -->
+	<div class="mt-12 flex flex-wrap items-center justify-between gap-6">
+		<a href="/projects" class="btn btn-primary rounded-none text-xs tracking-widest uppercase">
+			View Projects
+			<span aria-hidden="true">→</span>
+		</a>
+
+		<div class="flex items-center gap-4 text-xs tracking-widest uppercase">
+			{#each languages as lang (lang.code)}
 				<button
 					type="button"
-					aria-label="Switch to English"
-					class="w-8 h-6 hover:scale-110 transition-transform cursor-pointer"
-					onclick={() => (language = 'en')}
+					class="cursor-pointer transition-colors"
+					class:text-primary={language === lang.code}
+					class:text-base-content={language !== lang.code}
+					class:opacity-50={language !== lang.code}
+					onclick={() => (language = lang.code)}
 				>
-					<img src="/gb.svg" alt="English" class="w-full h-full" />
+					{lang.label}
 				</button>
-
-				<button
-					type="button"
-					aria-label="Wechsle zu Deutsch"
-					class="w-8 h-6 hover:scale-110 transition-transform cursor-pointer"
-					onclick={() => (language = 'de')}
-				>
-					<img src="/de.svg" alt="Deutsch" class="w-full h-full" />
-				</button>
-
-				<button
-					type="button"
-					aria-label="Vaihda suomeksi"
-					class="w-8 h-6 hover:scale-110 transition-transform cursor-pointer"
-					onclick={() => (language = 'fi')}
-				>
-					<img src="/fi.svg" alt="Suomi" class="w-full h-full" />
-				</button>
-			</div>
-
-			<h1
-				class="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-900 via-cyan-600 to-teal-500 text-transparent bg-clip-text"
-			>
-				{content.name}
-			</h1>
-
-			<ul class="space-y-4 text-base text-base-content font-medium leading-relaxed">
-				{#each content.lines as line, index}
-					<li>{line}</li>
-				{/each}
-			</ul>
+			{/each}
 		</div>
 	</div>
 </section>
