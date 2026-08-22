@@ -68,7 +68,11 @@
 				<img
 					src={image.src}
 					alt="{project.title} — {image.caption}"
-					class="border-base-300 w-full border"
+					width={image.width}
+					height={image.height}
+					loading="lazy"
+					decoding="async"
+					class="border-base-300 h-auto w-full border"
 				/>
 				<figcaption class="text-base-content/50 mt-3 text-xs tracking-widest uppercase">
 					{image.caption}

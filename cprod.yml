@@ -1,6 +1,6 @@
 services:
   homepage:
-    image: oskarwestmeijer/homepage:latest
+    image: oskarwestmeijer/homepage:${HOMEPAGE_IMAGE_TAG:-latest}
     container_name: homepage
     deploy:
       resources:

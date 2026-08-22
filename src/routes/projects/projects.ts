@@ -1,6 +1,9 @@
 export interface ProjectImage {
 	src: string;
 	caption: string;
+	/** Intrinsic size, rendered as width/height attributes to reserve layout space. */
+	width: number;
+	height: number;
 }
 
 export interface Project {
@@ -34,8 +37,18 @@ export const projects: Project[] = [
 		repo: 'https://github.com/OskarWestmeijer/weather',
 		visit: 'https://weather.oskar-westmeijer.com',
 		images: [
-			{ src: '/projects/weather/weather_project.png', caption: 'Application' },
-			{ src: '/projects/weather/c4_container.svg', caption: 'Container diagram' }
+			{
+				src: '/projects/weather/weather_22_08_2026.webp',
+				caption: 'Application',
+				width: 1536,
+				height: 864
+			},
+			{
+				src: '/projects/weather/c4_container.svg',
+				caption: 'Container diagram',
+				width: 812,
+				height: 717
+			}
 		]
 	},
 	{
@@ -53,8 +66,18 @@ export const projects: Project[] = [
 		repo: 'https://github.com/OskarWestmeijer/flights',
 		visit: 'https://flights.oskar-westmeijer.com',
 		images: [
-			{ src: '/projects/flights/flights_25_09_2025.png', caption: 'Application' },
-			{ src: '/projects/flights/c4_container.svg', caption: 'Container diagram' }
+			{
+				src: '/projects/flights/flights_22_08_2026.webp',
+				caption: 'Application',
+				width: 1536,
+				height: 864
+			},
+			{
+				src: '/projects/flights/c4_container.svg',
+				caption: 'Container diagram',
+				width: 698,
+				height: 631
+			}
 		]
 	},
 	{
@@ -71,7 +94,9 @@ export const projects: Project[] = [
 		],
 		repo: 'https://github.com/OskarWestmeijer/maps',
 		visit: 'https://maps.oskar-westmeijer.com',
-		images: [{ src: '/projects/maps/maps_25_09_2025-min.png', caption: 'Map' }]
+		images: [
+			{ src: '/projects/maps/maps_22_08_2026.webp', caption: 'Gallery', width: 1536, height: 864 }
+		]
 	},
 	{
 		slug: 'kafka-etl-pipeline',
@@ -87,8 +112,18 @@ export const projects: Project[] = [
 		],
 		repo: 'https://github.com/OskarWestmeijer/kafka-etl-pipeline',
 		images: [
-			{ src: '/projects/kafka-etl-pipeline/c4_container.svg', caption: 'Container diagram' },
-			{ src: '/projects/kafka-etl-pipeline/c4_component.svg', caption: 'Component diagram' }
+			{
+				src: '/projects/kafka-etl-pipeline/c4_container.svg',
+				caption: 'Container diagram',
+				width: 1085,
+				height: 723
+			},
+			{
+				src: '/projects/kafka-etl-pipeline/c4_component.svg',
+				caption: 'Component diagram',
+				width: 1145,
+				height: 603
+			}
 		]
 	}
 ];

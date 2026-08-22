@@ -12,20 +12,40 @@ execute_command() {
     fi
 }
 
+# Image tag to deploy (defaults to latest; pass a specific tag, e.g. sha-<commit-sha>, to roll back).
+# A bare 40-char commit SHA is normalized to the sha-<commit-sha> tag docker/metadata-action pushes.
+image_tag="${1:-latest}"
+if [[ "$image_tag" =~ ^[0-9a-f]{40}$ ]]; then
+    image_tag="sha-${image_tag}"
+fi
+export HOMEPAGE_IMAGE_TAG="$image_tag"
+
 # Start deploy homepage script
-echo 'Start deploy homepage script.'
+echo "Start deploy homepage script (image tag: $HOMEPAGE_IMAGE_TAG)."
 
 # Commands to execute
-compose_down="docker compose down"
-list_images="docker images"
-rm_latest_homepage="docker image rm oskarwestmeijer/homepage:latest"
-compose_up="docker compose up -d"
+compose_down="docker compose -f cprod.yml down"
+compose_pull="docker compose -f cprod.yml pull"
+compose_up="docker compose -f cprod.yml up -d"
 
 # Execute the commands
 execute_command "$compose_down"
-execute_command "$list_images"
-execute_command "$rm_latest_homepage"
+execute_command "$compose_pull"
 execute_command "$compose_up"
+
+# Clean up images left behind by the deploy
+echo 'Cleaning up unused images.'
+execute_command "docker image prune -f"
+
+# Compare full-length IDs from docker inspect/--no-trunc; short IDs from different
+# docker/compose commands aren't guaranteed to be formatted consistently.
+running_image_id=$(docker inspect --format '{{.Image}}' homepage)
+old_homepage_image_ids=$(docker images oskarwestmeijer/homepage --no-trunc --format '{{.ID}}' | sort -u | grep -vF "$running_image_id")
+if [ -n "$old_homepage_image_ids" ]; then
+    execute_command "docker image rm -f $(echo "$old_homepage_image_ids" | tr '\n' ' ')"
+else
+    echo 'No unused homepage images to remove.'
+fi
 
 # Finish deploy homepage script
 echo 'Finish deploy homepage script.'
