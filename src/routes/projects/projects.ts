@@ -81,8 +81,31 @@ export const projects: Project[] = [
 		]
 	},
 	{
-		slug: 'maps',
+		slug: 'kuntakilpailu',
 		index: '03',
+		emoji: '🗺️',
+		title: 'kuntakilpailu',
+		tags: ['ai'],
+		summary:
+			'Ranks all Finnish municipalities on an interactive map, scored by unemployment, income, education and more.',
+		description: [
+			'Ranks the 308 Finnish municipalities using six statistics from Statistics Finland: unemployment, population change, median income, higher education, average age, and gender balance.',
+			'Each indicator is converted to a percentile rank, and categories can be toggled on or off to instantly recalculate the ranking on the map.'
+		],
+		repo: 'https://github.com/OskarWestmeijer/kuntakilpailu',
+		visit: 'https://kuntakilpailu.oskar-westmeijer.com',
+		images: [
+			{
+				src: '/projects/kuntakilpailu/kuntakilpailu_03_09_2026.webp',
+				caption: 'Application',
+				width: 1440,
+				height: 900
+			}
+		]
+	},
+	{
+		slug: 'maps',
+		index: '04',
 		emoji: '🧭',
 		title: 'maps',
 		tags: ['sveltekit', 'qgis'],
@@ -100,7 +123,7 @@ export const projects: Project[] = [
 	},
 	{
 		slug: 'kafka-etl-pipeline',
-		index: '04',
+		index: '05',
 		emoji: '⚙️',
 		title: 'kafka-etl-pipeline',
 		tags: ['java', 'spring-boot', 'kafka', 'postgres', 'cloud events'],
