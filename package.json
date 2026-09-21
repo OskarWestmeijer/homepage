@@ -41,6 +41,6 @@
 		"vitest": "^5.0.1"
 	},
 	"dependencies": {
-		"daisyui": "^5.7.38"
+		"daisyui": "^5.7.42"
 	}
 }
